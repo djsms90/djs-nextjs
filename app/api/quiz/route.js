@@ -44,8 +44,9 @@ export async function POST(req) {
               <tr><td colspan="2" style="padding:12px;background:#111;color:#f7e400;font-weight:900;font-size:13px;letter-spacing:1px;text-transform:uppercase">QUIZ ANSWERS</td></tr>
               ${answersHtml}
             </table>
-            <div style="margin-top:24px;text-align:center">
-              <a href="https://meetings-na2.hubspot.com/sweis" style="display:inline-block;background:#0467b1;color:white;padding:14px 32px;border-radius:4px;text-decoration:none;font-weight:700;font-size:15px">Book a Strategy Call →</a>
+            <div style="margin-top:24px;text-align:center;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+              <a href="https://djsmarketingservices.com/blog.html" style="display:inline-block;background:#111;color:white;padding:12px 24px;border-radius:4px;text-decoration:none;font-weight:700;font-size:14px">Read the Blog →</a>
+              <a href="https://djsmarketingservices.com/playbook.html" style="display:inline-block;background:#f7e400;color:#c20000;padding:12px 24px;border-radius:4px;text-decoration:none;font-weight:700;font-size:14px">Get BOOST365 Playbook →</a>
             </div>
           </div>
         </div>
