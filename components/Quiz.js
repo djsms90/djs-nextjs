@@ -3,6 +3,7 @@ import { useState } from 'react'
 
 const questions = [
   {
+    step: 1,
     q: 'How consistent is your brand across all platforms — website, LinkedIn, Instagram, Google?',
     opts: [
       { label: 'Fully consistent — same look, voice, and message everywhere', val: 5 },
@@ -12,6 +13,7 @@ const questions = [
     ],
   },
   {
+    step: 2,
     q: 'When someone searches for what you do in your city, where do you show up?',
     opts: [
       { label: 'Top 3 on Google — I show up consistently', val: 5 },
@@ -21,6 +23,7 @@ const questions = [
     ],
   },
   {
+    step: 3,
     q: 'How are you currently generating new leads?',
     opts: [
       { label: 'Multiple channels — paid ads, organic, referrals, and content all working together', val: 5 },
@@ -30,76 +33,86 @@ const questions = [
     ],
   },
   {
-    q: 'Do you have an automated follow-up system for leads?',
+    step: 4,
+    q: 'What happens after someone expresses interest in your services?',
     opts: [
-      { label: 'Yes — automated email sequences, retargeting, and nurture campaigns', val: 5 },
-      { label: 'Basic email follow-up but nothing automated', val: 3 },
-      { label: 'I follow up manually when I remember', val: 1 },
-      { label: 'No follow-up system at all', val: 0 },
+      { label: 'Automated follow-up sequence — emails, nurture content, and booking flow running 24/7', val: 5 },
+      { label: 'I follow up manually when I remember', val: 3 },
+      { label: 'I follow up sometimes, it\'s inconsistent', val: 1 },
+      { label: 'Nothing formal — they either convert or they don\'t', val: 0 },
     ],
   },
   {
-    q: 'How are you currently measuring marketing performance?',
+    step: 5,
+    q: 'Do you know your cost per lead and which marketing channels are generating the best ROI?',
     opts: [
-      { label: 'Full analytics dashboard — I track leads, conversions, cost per acquisition', val: 5 },
-      { label: 'Basic metrics — website traffic and social followers', val: 3 },
-      { label: 'I check occasionally but have no system', val: 1 },
-      { label: "I don't track marketing performance", val: 0 },
+      { label: 'Yes — I track everything and review performance monthly', val: 5 },
+      { label: 'I have some data but don\'t review it consistently', val: 3 },
+      { label: 'I have analytics set up but rarely look at them', val: 1 },
+      { label: 'No tracking in place', val: 0 },
     ],
   },
 ]
 
-function getTier(score) {
-  if (score >= 20) return { tier: '🏆 Marketing Leader', msg: "You're firing on all cylinders. Let's talk about scaling what's working." }
-  if (score >= 13) return { tier: '📈 Growth Ready', msg: 'Strong foundation. A few strategic upgrades could unlock serious momentum.' }
-  if (score >= 6)  return { tier: '🔧 Tune-Up Needed', msg: 'Gaps in your system are costing you leads. Let\'s fix them.' }
-  return { tier: '🚀 Starting Point', msg: "You're leaving money on the table. The good news: the upside is massive." }
+function getResult(score) {
+  if (score >= 80) return { tier: 'You Are Scaling', msg: 'Your marketing foundation is strong. The opportunity now is optimization and acceleration — tightening the system, improving conversion rates, and compounding what is already working. A strategy call will identify the highest-leverage moves.', color: '#0467b1' }
+  if (score >= 55) return { tier: 'Building Momentum', msg: 'You have solid pieces in place, but there are clear gaps in your system — likely in consistency, automation, or tracking. A strategy call will pinpoint exactly where the leaks are and what to fix first for the fastest impact.', color: '#f7e400' }
+  if (score >= 30) return { tier: 'Needs a System', msg: 'Your marketing is running on effort, not a system. Results are inconsistent, follow-up is manual, and growth depends on how much time you have. A well-built system changes this faster than most people expect.', color: '#c20000' }
+  return { tier: 'Time to Build', msg: 'Your marketing does not have a foundation yet — and that is okay. Every strong system starts somewhere. A strategy call will show you the fastest path from where you are now to consistent, predictable leads.', color: '#c20000' }
 }
 
 export default function Quiz({ onClose }) {
-  const [step, setStep] = useState(0)       // 0-4 = questions, 5 = results
-  const [selected, setSelected] = useState(Array(5).fill(null))
-  const [submitted, setSubmitted] = useState(false)
+  const [step, setStep] = useState(1)        // 1–5 = questions, 6 = results
+  const [selected, setSelected] = useState({}) // { stepNum: val }
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [error, setError] = useState('')
+  const [submitting, setSubmitting] = useState(false)
+  const [done, setDone] = useState(false)
 
-  const current = selected[step]
-  const score = selected.reduce((sum, v) => sum + (v?.val ?? 0), 0)
-  const { tier, msg } = getTier(score)
-  const progress = step >= 5 ? 100 : (step / 5) * 100
+  const totalRaw = Object.values(selected).reduce((a, b) => a + b, 0)
+  const score = Math.round((totalRaw / 25) * 100)
+  const progress = step > 5 ? 100 : ((step - 1) / 5) * 100
+  const { tier, msg, color } = getResult(score)
 
-  const handleSelect = (opt) => {
-    const next = [...selected]
-    next[step] = opt
-    setSelected(next)
+  const handleNext = () => {
+    if (step < 5) setStep(step + 1)
+    else setStep(6)
   }
 
-  const handleNext = async () => {
-    if (step < 4) {
-      setStep(step + 1)
-    } else {
-      // Submit
-      setStep(5)
-      try {
-        await fetch('/api/quiz', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            score,
-            tier,
-            answers: questions.map((q, i) => ({
-              question: q.q,
-              answer: selected[i]?.label ?? 'Not answered',
-            })),
-          }),
-        })
-        setSubmitted(true)
-      } catch (e) {
-        setSubmitted(true) // still show results even if email fails
-      }
+  const handleSubmit = async () => {
+    const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+    if (!name.trim() || !emailOk) {
+      setError('Please enter your name and a valid email.')
+      return
     }
+    setError('')
+    setSubmitting(true)
+    try {
+      await fetch('/api/quiz', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: name.trim(),
+          email: email.trim(),
+          score,
+          tier,
+          answers: questions.map(q => ({
+            question: q.q,
+            answer: q.opts.find(o => o.val === selected[q.step])?.label ?? 'Not answered',
+          })),
+        }),
+      })
+    } catch (e) {
+      // still proceed even if email fails
+    }
+    setDone(true)
+    setSubmitting(false)
+    window.open('https://meetings-na2.hubspot.com/sweis', '_blank')
   }
 
   return (
-    <div className="quiz-overlay visible" id="quizOverlay">
+    <div className="quiz-overlay visible" onClick={(e) => { if (e.target === e.currentTarget) onClose() }}>
       <div className="quiz-box">
         <button className="quiz-close" onClick={onClose} aria-label="Close">✕</button>
         <div className="quiz-header">
@@ -112,56 +125,94 @@ export default function Quiz({ onClose }) {
         </div>
         <div className="quiz-body">
 
-          {step < 5 ? (
+          {/* QUESTIONS */}
+          {step <= 5 && (
             <div className="quiz-step active">
-              <p className="quiz-q-num">Question {step + 1} of 5</p>
-              <p className="quiz-q-text">{questions[step].q}</p>
+              <p className="quiz-q-num">Question {step} of 5</p>
+              <p className="quiz-q-text">{questions[step - 1].q}</p>
               <div className="quiz-options">
-                {questions[step].opts.map((opt, i) => (
+                {questions[step - 1].opts.map((opt, i) => (
                   <div
                     key={i}
-                    className={`quiz-option${selected[step]?.label === opt.label ? ' selected' : ''}`}
-                    onClick={() => handleSelect(opt)}
+                    className={`quiz-option${selected[step] === opt.val ? ' selected' : ''}`}
+                    onClick={() => setSelected({ ...selected, [step]: opt.val })}
                   >
                     {opt.label}
                   </div>
                 ))}
               </div>
               <div className="quiz-nav">
-                {step === 0
+                {step === 1
                   ? <button className="quiz-btn-skip" onClick={onClose}>Skip for now</button>
                   : <button className="quiz-btn-skip" onClick={() => setStep(step - 1)}>← Back</button>
                 }
                 <button
                   className="quiz-btn"
-                  disabled={!selected[step]}
+                  disabled={selected[step] === undefined}
                   onClick={handleNext}
                 >
-                  {step === 4 ? 'See My Score →' : 'Next →'}
+                  {step === 5 ? 'See My Score →' : 'Next →'}
                 </button>
               </div>
             </div>
-          ) : (
+          )}
+
+          {/* RESULTS */}
+          {step === 6 && (
             <div className="quiz-result active">
-              <div className="score-circle">
-                <span className="score-num">{score}</span>
-                <span className="score-label">/ 25</span>
+              <div className="score-circle" style={{ borderColor: color }}>
+                <span className="score-num" style={{ color }}>{score}</span>
+                <span className="score-label">/ 100</span>
               </div>
               <p className="score-tier">{tier}</p>
               <p className="score-message">{msg}</p>
-              <a
-                href="https://meetings-na2.hubspot.com/sweis"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="quiz-cta-btn"
-              >
-                Book a Free Strategy Call →
-              </a>
+
+              {!done ? (
+                <div style={{ margin: '20px 0 10px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                  <input
+                    type="text"
+                    placeholder="Your name"
+                    autoComplete="name"
+                    value={name}
+                    onChange={e => setName(e.target.value)}
+                    style={{ padding: '12px 16px', border: '1.5px solid #e0e0e0', borderRadius: '8px', fontSize: '15px', fontFamily: 'Inter, sans-serif', outline: 'none' }}
+                    onFocus={e => e.target.style.borderColor = '#0467b1'}
+                    onBlur={e => e.target.style.borderColor = '#e0e0e0'}
+                  />
+                  <input
+                    type="email"
+                    placeholder="Your email"
+                    autoComplete="email"
+                    value={email}
+                    onChange={e => setEmail(e.target.value)}
+                    style={{ padding: '12px 16px', border: '1.5px solid #e0e0e0', borderRadius: '8px', fontSize: '15px', fontFamily: 'Inter, sans-serif', outline: 'none' }}
+                    onFocus={e => e.target.style.borderColor = '#0467b1'}
+                    onBlur={e => e.target.style.borderColor = '#e0e0e0'}
+                  />
+                  {error && <p style={{ color: '#c20000', fontSize: '13px', margin: 0 }}>{error}</p>}
+                  <button
+                    className="quiz-cta-btn"
+                    onClick={handleSubmit}
+                    disabled={submitting}
+                    style={{ opacity: submitting ? 0.6 : 1 }}
+                  >
+                    {submitting ? 'Sending...' : 'Claim Your Free Strategy Call'}
+                  </button>
+                </div>
+              ) : (
+                <div style={{ marginTop: '16px' }}>
+                  <button className="quiz-cta-btn" onClick={() => window.open('https://meetings-na2.hubspot.com/sweis', '_blank')}>
+                    Booking page opened! Click to reopen →
+                  </button>
+                </div>
+              )}
+
               <button className="quiz-dismiss" onClick={onClose}>
-                No thanks, I&apos;ll figure it out myself
+                I&apos;ll explore on my own for now
               </button>
             </div>
           )}
+
         </div>
       </div>
     </div>

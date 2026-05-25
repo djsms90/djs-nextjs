@@ -127,19 +127,23 @@ export default function Home() {
     })
 
     // ── Quiz ──
-    let shown = false
-    const showQuizFn = () => { if (!shown) { shown = true; setShowQuiz(true) } }
-
-    const timer = setTimeout(showQuizFn, 15000)
-    const exitHandler = (e) => {
-      if (e.clientY < 20) { showQuizFn(); document.removeEventListener('mouseleave', exitHandler) }
+    let quizShown = false
+    const showQuizFn = () => {
+      if (!quizShown) {
+        quizShown = true
+        setTimeout(() => setShowQuiz(true), 800)
+      }
     }
-    document.addEventListener('mouseleave', exitHandler)
+
+    const scrollQuizCheck = () => {
+      const scrollPct = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100
+      if (scrollPct > 40) showQuizFn()
+    }
+    window.addEventListener('scroll', scrollQuizCheck, { passive: true })
 
     return () => {
-      clearTimeout(timer)
-      document.removeEventListener('mouseleave', exitHandler)
       window.removeEventListener('scroll', handleScroll)
+      window.removeEventListener('scroll', scrollQuizCheck)
     }
   }, [])
 
