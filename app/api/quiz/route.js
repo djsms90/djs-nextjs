@@ -45,7 +45,7 @@ export async function POST(req) {
               ${answersHtml}
             </table>
             <div style="margin-top:24px;text-align:center;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-              <a href="https://djsmarketingservices.com/blog.html" style="display:inline-block;background:#111;color:white;padding:12px 24px;border-radius:4px;text-decoration:none;font-weight:700;font-size:14px">Latest Marketing Insights →</a>
+              <a href="https://djsmarketingservices.com/blog.html" style="display:inline-block;background:#111;color:white;padding:12px 24px;border-radius:4px;text-decoration:none;font-weight:700;font-size:14px">Marketing Insights →</a>
               <a href="https://djsmarketingservices.com/playbook.html" style="display:inline-block;background:#f7e400;color:#c20000;padding:12px 24px;border-radius:4px;text-decoration:none;font-weight:700;font-size:14px">Get BOOST365 Playbook →</a>
             </div>
           </div>
