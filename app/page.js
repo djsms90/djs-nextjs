@@ -117,9 +117,7 @@ export default function Home() {
     // ── Hello bar ──
     const helloBar = document.getElementById('helloBar')
     const hbClose = document.getElementById('hbClose')
-    if (!sessionStorage.getItem('hbClosed')) {
-      setTimeout(() => helloBar?.classList.add('visible'), 3000)
-    }
+    setTimeout(() => helloBar?.classList.add('visible'), 3000)
     hbClose?.addEventListener('click', () => {
       helloBar?.classList.remove('visible')
       sessionStorage.setItem('hbClosed', '1')
@@ -598,7 +596,7 @@ export default function Home() {
 
       {/* FOOTER */}
       <footer>
-        <a href="/"><Image src="/logo-white-red.jpg" alt="DJS Marketing Services" width={160} height={44} style={{ height:'44px', width:'auto' }} /></a>
+        <a href="/"><Image src="/logo-footer.jpg" alt="DJS Marketing Services" width={160} height={44} style={{ height:'44px', width:'auto' }} /></a>
         <div className="footer-contact">
           <p>© {new Date().getFullYear()} DJS Marketing Services. All Rights Reserved.</p>
           <p><a href="mailto:marketing@djs90.com">marketing@djs90.com</a> &nbsp;|&nbsp; <a href="tel:+16199284669">(619) 928-4669</a></p>
