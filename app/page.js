@@ -126,40 +126,36 @@ export default function Home() {
     // ── Quiz ──
     const overlay = document.getElementById('quizOverlay')
     const quizClose = document.getElementById('quizClose')
-    let scores = []
     let shown = false
 
     const showQuiz = () => {
       overlay?.classList.add('visible')
-      updateProgress(1)
-    }
-
-    if (!sessionStorage.getItem('quizDone') && !sessionStorage.getItem('quizDismissed')) {
-      const timer = setTimeout(() => {
-        if (!shown) { shown = true; showQuiz() }
-      }, 45000)
-      const exitHandler = (e) => {
-        if (e.clientY < 20 && !shown) { shown = true; showQuiz(); document.removeEventListener('mouseleave', exitHandler) }
-      }
-      document.addEventListener('mouseleave', exitHandler)
-      return () => {
-        clearTimeout(timer)
-        document.removeEventListener('mouseleave', exitHandler)
-        window.removeEventListener('scroll', handleScroll)
-      }
-    }
-
-    const updateProgress = (step) => {
       const bar = document.getElementById('quizProgressBar')
-      if (bar) bar.style.width = `${((step - 1) / 5) * 100}%`
+      if (bar) bar.style.width = '0%'
     }
+
+    const timer = setTimeout(() => {
+      if (!shown) { shown = true; showQuiz() }
+    }, 15000)
+
+    const exitHandler = (e) => {
+      if (e.clientY < 20 && !shown) {
+        shown = true
+        showQuiz()
+        document.removeEventListener('mouseleave', exitHandler)
+      }
+    }
+    document.addEventListener('mouseleave', exitHandler)
 
     quizClose?.addEventListener('click', () => {
       overlay?.classList.remove('visible')
-      sessionStorage.setItem('quizDismissed', '1')
     })
 
-    return () => { window.removeEventListener('scroll', handleScroll) }
+    return () => {
+      clearTimeout(timer)
+      document.removeEventListener('mouseleave', exitHandler)
+      window.removeEventListener('scroll', handleScroll)
+    }
   }, [])
 
   // Quiz step functions
