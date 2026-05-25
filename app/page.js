@@ -529,16 +529,16 @@ export default function Home() {
           </div>
           <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(280px,1fr))', gap:'24px' }}>
             {[
-              { tag:'Video Marketing', title:'How Professional Service Providers Are Using YouTube to Generate Inbound Clients', desc:'The exact strategy we used to take a client from zero to 1M+ views and make YouTube their #1 inbound source. Zero cold outreach.' },
-              { tag:'SEO & AEO', title:'What Is Answer Engine Optimization and Why Your Clients Need It Now', desc:"How we're getting clients appearing in AI-generated search answers before competitors know AEO exists." },
-              { tag:'Paid Advertising', title:'Google PMax Updates: What Every Agency Owner Needs to Know', desc:'Customer list exclusions and channel reporting finally arrived. Here\'s what to do in your campaigns today.' },
+              { tag:'Video Marketing', title:'How Professional Service Providers Are Using YouTube to Generate Inbound Clients', desc:'The exact strategy we used to take a client from zero to 1M+ views and make YouTube their #1 inbound source. Zero cold outreach.', href:'/blog-youtube.html' },
+              { tag:'SEO & AEO', title:'What Is Answer Engine Optimization and Why Your Clients Need It Now', desc:"How we're getting clients appearing in AI-generated search answers before competitors know AEO exists.", href:'/blog-aeo.html' },
+              { tag:'Paid Advertising', title:'Google PMax Updates: What Every Agency Owner Needs to Know', desc:'Customer list exclusions and channel reporting finally arrived. Here\'s what to do in your campaigns today.', href:'/blog-pmax.html' },
             ].map((b, i) => (
-              <div key={i} style={{ background:'white', border:'1px solid var(--border)', borderTop:'4px solid var(--blue)', borderRadius:'4px', padding:'24px' }}>
+              <a key={i} href={b.href} style={{ background:'white', border:'1px solid var(--border)', borderTop:'4px solid var(--blue)', borderRadius:'4px', padding:'24px', textDecoration:'none', color:'inherit', display:'block' }}>
                 <p style={{ fontSize:'10px', fontWeight:'900', letterSpacing:'2px', textTransform:'uppercase', color:'var(--blue)', marginBottom:'8px' }}>{b.tag}</p>
                 <h3 style={{ fontSize:'18px', fontWeight:'800', color:'var(--text)', marginBottom:'8px', lineHeight:'1.3' }}>{b.title}</h3>
                 <p style={{ fontSize:'13px', color:'var(--text-mid)', lineHeight:'1.6', marginBottom:'16px' }}>{b.desc}</p>
-                <a href="/blog.html" style={{ fontSize:'12px', fontWeight:'800', color:'var(--blue)', textDecoration:'none', letterSpacing:'1px', textTransform:'uppercase' }}>Read More →</a>
-              </div>
+                <span style={{ fontSize:'12px', fontWeight:'800', color:'var(--blue)', letterSpacing:'1px', textTransform:'uppercase' }}>Read More →</span>
+              </a>
             ))}
           </div>
         </div>
