@@ -230,7 +230,8 @@ export default function Home() {
 
       {/* NAV */}
       <nav role="navigation" aria-label="Main navigation">
-        <a href="/"><Image src="/logo-main-hq.jpg" alt="DJS Marketing Services" width={160} height={48} priority style={{ height: '48px', width: 'auto' }} /></a>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <a href="/"><img src="/logo-nav.jpg" alt="DJS Marketing Services" style={{ height: '56px', width: 'auto', display: 'block' }} /></a>
         <button className="hamburger" id="hamburger" aria-label="Menu"><span /><span /><span /></button>
         <ul className="nav-links" style={{ listStyle: 'none', margin: 0, padding: 0 }}>
           <li><a href="#services">Services</a></li>
