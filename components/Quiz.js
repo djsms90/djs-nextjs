@@ -163,7 +163,7 @@ export default function Quiz({ onClose }) {
           {step === 6 && (
             <div className="quiz-result active">
               <div className="score-circle" style={{ borderColor: color }}>
-                <span className="score-num" style={{ color }}>{score}</span>
+                <span className="score-num" style={{ color: '#0467b1' }}>{score}</span>
                 <span className="score-label">/ 100</span>
               </div>
               <p className="score-tier">{tier}</p>

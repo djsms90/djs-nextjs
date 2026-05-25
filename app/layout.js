@@ -16,6 +16,15 @@ const inter = Inter({
 })
 
 export const metadata = {
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/favicon.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon-512.png', sizes: '512x512', type: 'image/png' },
+    ],
+    apple: '/apple-touch-icon.png',
+  },
   title: 'DJS Marketing Services | San Diego Digital Marketing Agency',
   description: 'DJS Marketing Services builds done-for-you digital marketing systems that turn your expertise into leads, clients, and revenue. SEO, paid ads, social media, web design & AI-powered marketing for niche service businesses in San Diego.',
   keywords: 'digital marketing agency San Diego, SEO San Diego, paid ads agency, social media management, real estate marketing, BOOST365, Danny Sweis, DJS Marketing Services',
