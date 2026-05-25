@@ -214,7 +214,7 @@ export default function Home() {
       {/* HELLO BAR */}
       <div className="hello-bar" id="helloBar">
         <span>🎯 Get the FREE BOOST365© Playbook, the system behind real results</span>
-        <a href="/playbook.html">Get the Free Playbook</a>
+        <a href="/playbook">Get the Free Playbook</a>
         <button className="hb-close" id="hbClose" aria-label="Close">✕</button>
       </div>
 
@@ -227,7 +227,7 @@ export default function Home() {
           <li><a href="#services">Services</a></li>
           <li><a href="#boost">BOOST365</a></li>
           <li><a href="#results">Results</a></li>
-          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/blog">Blog</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="https://meetings-na2.hubspot.com/sweis" target="_blank" rel="noopener noreferrer" className="nav-cta">Book Free Strategy Call</a></li>
         </ul>
@@ -239,7 +239,7 @@ export default function Home() {
         <a href="#services">Services</a>
         <a href="#boost">BOOST365</a>
         <a href="#results">Results</a>
-        <a href="/blog.html">Blog</a>
+        <a href="/blog">Blog</a>
         <a href="#about">About</a>
         <a href="https://meetings-na2.hubspot.com/sweis" target="_blank" rel="noopener noreferrer">Book Free Strategy Call</a>
       </div>
@@ -425,7 +425,7 @@ export default function Home() {
           </div>
           <div style={{ textAlign:'center', marginTop:'40px' }}>
             <p style={{ fontSize:'15px', color:'var(--text-mid)', marginBottom:'16px' }}>Get the full system, free. No fluff, no filler. Just the framework.</p>
-            <a href="/playbook.html" style={{ display:'inline-block', background:'var(--blue)', color:'white', fontSize:'13px', fontWeight:'900', letterSpacing:'2px', textTransform:'uppercase', padding:'16px 40px', borderRadius:'4px', textDecoration:'none' }}>Download the Free BOOST365© Playbook</a>
+            <a href="/playbook" style={{ display:'inline-block', background:'var(--blue)', color:'white', fontSize:'13px', fontWeight:'900', letterSpacing:'2px', textTransform:'uppercase', padding:'16px 40px', borderRadius:'4px', textDecoration:'none' }}>Download the Free BOOST365© Playbook</a>
           </div>
         </div>
       </section>
@@ -526,7 +526,7 @@ export default function Home() {
               <p style={{ fontSize:'11px', fontWeight:'900', letterSpacing:'3px', textTransform:'uppercase', color:'var(--red)', marginBottom:'8px' }}>Latest Insights</p>
               <h2 style={{ fontFamily:'Bebas Neue, sans-serif', fontSize:'clamp(32px,5vw,52px)', color:'var(--text)' }}>Marketing Intelligence</h2>
             </div>
-            <a href="/blog.html" style={{ fontSize:'13px', fontWeight:'800', letterSpacing:'2px', textTransform:'uppercase', color:'var(--blue)', textDecoration:'none', border:'2px solid var(--blue)', padding:'10px 24px', borderRadius:'4px' }}>View All Posts →</a>
+            <a href="/blog" style={{ fontSize:'13px', fontWeight:'800', letterSpacing:'2px', textTransform:'uppercase', color:'var(--blue)', textDecoration:'none', border:'2px solid var(--blue)', padding:'10px 24px', borderRadius:'4px' }}>View All Posts →</a>
           </div>
           <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(280px,1fr))', gap:'24px' }}>
             {blogPosts.slice(0, 3).map((b, i) => (
