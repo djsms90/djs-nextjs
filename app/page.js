@@ -348,7 +348,7 @@ export default function Home() {
         <div className="results-inner">
           <div className="results-header">
             <div className="eyebrow">We Don&apos;t Sell Followers. We Build Systems That Generate Revenue.</div>
-            <h2>Real Results. Real Businesses.</h2>
+            <h2>Real Results.<br />Real Businesses.</h2>
           </div>
           <div className="results-grid">
             <div className="result-card">
@@ -529,7 +529,7 @@ export default function Home() {
           </div>
           <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(280px,1fr))', gap:'24px' }}>
             {[
-              { tag:'Video Marketing', title:'How Probate Real Estate Agents Can Dominate YouTube', desc:'The exact strategy we used to take a client from zero to 1M+ views and make YouTube their #1 inbound source.' },
+              { tag:'Video Marketing', title:'How Professional Service Providers Are Using YouTube to Generate Inbound Clients', desc:'The exact strategy we used to take a client from zero to 1M+ views and make YouTube their #1 inbound source. Zero cold outreach.' },
               { tag:'SEO & AEO', title:'What Is Answer Engine Optimization and Why Your Clients Need It Now', desc:"How we're getting clients appearing in AI-generated search answers before competitors know AEO exists." },
               { tag:'Paid Advertising', title:'Google PMax Updates: What Every Agency Owner Needs to Know', desc:'Customer list exclusions and channel reporting finally arrived. Here\'s what to do in your campaigns today.' },
             ].map((b, i) => (
@@ -575,7 +575,7 @@ export default function Home() {
         </div>
         <div className="cta-inner">
           <h2>Ready to Build a System <span>That Actually Works?</span></h2>
-          <p>Whether your system needs optimization, a complete rebuild, or you&apos;re ready to scale what&apos;s already working — the call starts with a straight conversation about where you are and where you want to go. No pitch deck. No pressure.</p>
+          <p>Whether your system needs optimization, a complete rebuild, or you&apos;re ready to scale what&apos;s already working. The call starts with a straight conversation about where you are and where you want to go. No pitch deck. No pressure.</p>
           <a href="https://meetings-na2.hubspot.com/sweis" className="btn-cta" target="_blank" rel="noopener noreferrer">Claim Your Free Strategy Call</a>
         </div>
       </section>
