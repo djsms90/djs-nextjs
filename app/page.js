@@ -212,7 +212,7 @@ export default function Home() {
 
       {/* HELLO BAR */}
       <div className="hello-bar" id="helloBar">
-        <span>🎯 Get the FREE BOOST365© Marketing Playbook — used by real estate &amp; service professionals to scale their marketing</span>
+        <span>🎯 Get the FREE BOOST365© Playbook — the system behind real results</span>
         <a href="/playbook.html">Get the Free Playbook</a>
         <button className="hb-close" id="hbClose" aria-label="Close">✕</button>
       </div>
