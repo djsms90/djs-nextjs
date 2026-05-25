@@ -520,5 +520,7 @@ footer p { font-size:12px; color:var(--text-light); }
   .featured-in { padding:48px 20px; }
   .featured-row { flex-direction:column; }
   .featured-card { max-width:100%; }
+  .pillars-grid .pillar-card:last-child:nth-child(odd) { grid-column: 1 / -1; max-width:50%; margin:0 auto; }
+  .tiers .tier:last-child:nth-child(odd) { grid-column: 1 / -1; max-width:50%; margin:0 auto; }
   .hello-bar { padding:10px 40px 10px 16px; font-size:12px; flex-direction:column; gap:8px; }
 }
