@@ -21,7 +21,7 @@ export default function BlogPage() {
 
         <div className="blog-grid">
           {blogPosts.map((post, i) => (
-            <Link key={i} href={post.href.replace('.html', '').replace('/blog-', '/blog/')} className="blog-card">
+            <Link key={i} href={post.href} className="blog-card">
               <span className="card-tag">{post.tag}</span>
               <p className="card-meta">{post.date}</p>
               <h3>{post.title}</h3>
