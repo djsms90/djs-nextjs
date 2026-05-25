@@ -67,6 +67,7 @@ export default function Quiz({ onClose }) {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [phone, setPhone] = useState('')
+  const [consent, setConsent] = useState(false)
   const [error, setError] = useState('')
   const [submitting, setSubmitting] = useState(false)
   const [done, setDone] = useState(false)
@@ -85,6 +86,10 @@ export default function Quiz({ onClose }) {
     const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
     if (!name.trim() || !emailOk) {
       setError('Please enter your name and a valid email.')
+      return
+    }
+    if (!consent) {
+      setError('Please agree to our privacy policy to continue.')
       return
     }
     setError('')
@@ -201,12 +206,24 @@ export default function Quiz({ onClose }) {
                     onFocus={e => e.target.style.borderColor = '#0467b1'}
                     onBlur={e => e.target.style.borderColor = '#e0e0e0'}
                   />
+                  <label style={{ display:'flex', alignItems:'flex-start', gap:'10px', fontSize:'12px', color:'#777', cursor:'pointer', lineHeight:'1.5' }}>
+                    <input
+                      type="checkbox"
+                      checked={consent}
+                      onChange={e => setConsent(e.target.checked)}
+                      style={{ marginTop:'2px', flexShrink:0, accentColor:'#0467b1', width:'16px', height:'16px' }}
+                    />
+                    <span>
+                      I agree to be contacted by DJS Marketing Services regarding my quiz results and marketing services. My information will never be sold or shared with third parties.{' '}
+                      <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" style={{ color:'#0467b1', fontWeight:'700' }}>View Privacy Policy</a>
+                    </span>
+                  </label>
                   {error && <p style={{ color: '#c20000', fontSize: '13px', margin: 0 }}>{error}</p>}
                   <button
                     className="quiz-cta-btn"
                     onClick={handleSubmit}
-                    disabled={submitting}
-                    style={{ opacity: submitting ? 0.6 : 1 }}
+                    disabled={submitting || !consent}
+                    style={{ opacity: (submitting || !consent) ? 0.6 : 1, cursor: !consent ? 'not-allowed' : 'pointer' }}
                   >
                     {submitting ? 'Sending...' : 'Claim Your Free Strategy Call'}
                   </button>
