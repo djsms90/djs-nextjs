@@ -1,7 +1,8 @@
 'use client'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import Quiz from '../components/Quiz'
 
 const logos = [
   { src: '/logo-ilumni.jpg',      alt: 'The Ilumni Institute' },
@@ -65,6 +66,8 @@ const quizData = [
 ]
 
 export default function Home() {
+  const [showQuiz, setShowQuiz] = useState(false)
+
   useEffect(() => {
     // ── Nav hide on scroll ──
     let lastScroll = 0
@@ -124,32 +127,14 @@ export default function Home() {
     })
 
     // ── Quiz ──
-    const overlay = document.getElementById('quizOverlay')
-    const quizClose = document.getElementById('quizClose')
     let shown = false
+    const showQuizFn = () => { if (!shown) { shown = true; setShowQuiz(true) } }
 
-    const showQuiz = () => {
-      overlay?.classList.add('visible')
-      const bar = document.getElementById('quizProgressBar')
-      if (bar) bar.style.width = '0%'
-    }
-
-    const timer = setTimeout(() => {
-      if (!shown) { shown = true; showQuiz() }
-    }, 15000)
-
+    const timer = setTimeout(showQuizFn, 15000)
     const exitHandler = (e) => {
-      if (e.clientY < 20 && !shown) {
-        shown = true
-        showQuiz()
-        document.removeEventListener('mouseleave', exitHandler)
-      }
+      if (e.clientY < 20) { showQuizFn(); document.removeEventListener('mouseleave', exitHandler) }
     }
     document.addEventListener('mouseleave', exitHandler)
-
-    quizClose?.addEventListener('click', () => {
-      overlay?.classList.remove('visible')
-    })
 
     return () => {
       clearTimeout(timer)
@@ -615,7 +600,8 @@ export default function Home() {
       <a href="#" className="scroll-top" id="scrollTop" aria-label="Back to top">↑</a>
 
       {/* QUIZ POPUP */}
-      <div className="quiz-overlay" id="quizOverlay">
+      {showQuiz && <Quiz onClose={() => setShowQuiz(false)} />}
+      <div style={{display:'none'}} id="quizOverlay">
         <div className="quiz-box">
           <button className="quiz-close" id="quizClose" aria-label="Close marketing quiz">✕</button>
           <div className="quiz-header">
