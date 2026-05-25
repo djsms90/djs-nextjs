@@ -263,7 +263,7 @@ nav img { height: 48px; }
 }
 .logo-pill { display:flex; align-items:center; justify-content:center; flex-shrink:0; opacity:1; transition:opacity 0.2s; background:transparent; border:none; padding:0 24px; }
 .logo-pill:hover { opacity:1; }
-.logo-pill img { display:block; width:140px; height:56px; object-fit:contain; }
+.logo-pill img { display:block; width:180px; height:72px; object-fit:contain; }
 
 /* RESULTS */
 .results {

@@ -327,7 +327,7 @@ export default function Home() {
             <div className="logos-ticker">
               {[...logos, ...logos].map((l, i) => (
                 <div key={i} className="logo-pill">
-                  <Image src={l.src} alt={l.alt} width={140} height={56} style={{ objectFit: 'contain', width: '140px', height: '56px' }} />
+                  <Image src={l.src} alt={l.alt} width={180} height={72} style={{ objectFit: 'contain', width: '180px', height: '72px' }} />
                 </div>
               ))}
             </div>
