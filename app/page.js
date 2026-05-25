@@ -19,18 +19,18 @@ const logos = [
 
 const quizData = [
   {
-    q: 'How consistent is your brand across all platforms — website, LinkedIn, Instagram, Google?',
+    q: 'How consistent is your brand across all platforms: website, LinkedIn, Instagram, Google?',
     opts: [
-      { label: 'Fully consistent — same look, voice, and message everywhere', val: 5 },
-      { label: 'Somewhat consistent — a few gaps but mostly aligned', val: 3 },
-      { label: 'Inconsistent — every platform looks and sounds different', val: 1 },
+      { label: 'Fully consistent: same look, voice, and message everywhere', val: 5 },
+      { label: 'Somewhat consistent, with a few gaps but mostly aligned', val: 3 },
+      { label: 'Inconsistent. Every platform looks and sounds different', val: 1 },
       { label: "I haven't thought about this", val: 0 },
     ],
   },
   {
     q: 'When someone searches for what you do in your city, where do you show up?',
     opts: [
-      { label: 'Top 3 on Google — I show up consistently', val: 5 },
+      { label: 'Top 3 on Google. I show up consistently', val: 5 },
       { label: 'Page 1, but not top 3', val: 3 },
       { label: 'Page 2 or further back', val: 1 },
       { label: "I don't know where I rank", val: 0 },
@@ -39,8 +39,8 @@ const quizData = [
   {
     q: 'How are you currently generating new leads?',
     opts: [
-      { label: 'Multiple channels — paid ads, organic, referrals, and content all working together', val: 5 },
-      { label: 'Mostly referrals — I depend on word of mouth', val: 3 },
+      { label: 'Multiple channels: paid ads, organic, referrals, and content all working together', val: 5 },
+      { label: 'Mostly referrals. I depend on word of mouth', val: 3 },
       { label: 'Occasionally running ads but no consistent system', val: 1 },
       { label: "I'm not generating leads consistently", val: 0 },
     ],
@@ -48,7 +48,7 @@ const quizData = [
   {
     q: 'Do you have an automated follow-up system for leads?',
     opts: [
-      { label: 'Yes — automated email sequences, retargeting, and nurture campaigns', val: 5 },
+      { label: 'Yes: automated email sequences, retargeting, and nurture campaigns', val: 5 },
       { label: 'Basic email follow-up but nothing automated', val: 3 },
       { label: 'I follow up manually when I remember', val: 1 },
       { label: 'No follow-up system at all', val: 0 },
@@ -57,8 +57,8 @@ const quizData = [
   {
     q: 'How are you currently measuring marketing performance?',
     opts: [
-      { label: 'Full analytics dashboard — I track leads, conversions, cost per acquisition', val: 5 },
-      { label: 'Basic metrics — website traffic and social followers', val: 3 },
+      { label: 'Full analytics dashboard. I track leads, conversions, cost per acquisition', val: 5 },
+      { label: 'Basic metrics: website traffic and social followers', val: 3 },
       { label: 'I check occasionally but have no system', val: 1 },
       { label: "I don't track marketing performance", val: 0 },
     ],
@@ -212,7 +212,7 @@ export default function Home() {
 
       {/* HELLO BAR */}
       <div className="hello-bar" id="helloBar">
-        <span>🎯 Get the FREE BOOST365© Playbook — the system behind real results</span>
+        <span>🎯 Get the FREE BOOST365© Playbook, the system behind real results</span>
         <a href="/playbook.html">Get the Free Playbook</a>
         <button className="hb-close" id="hbClose" aria-label="Close">✕</button>
       </div>
@@ -289,9 +289,9 @@ export default function Home() {
               { n: 'Myth #1', m: '"I just need more followers."', t: <>Followers don&apos;t pay bills. Systems do. A <strong>500-follower account with a real funnel</strong> beats a 50,000-follower account with no strategy.</> },
               { n: 'Myth #2', m: '"SEO takes too long."', t: <>Bad SEO takes forever. <strong>Strategic SEO with AEO optimization</strong> starts showing results in 60–90 days when done right.</> },
               { n: 'Myth #3', m: '"I tried ads. They didn\'t work."', t: <>Ads don&apos;t fail. Ad strategy fails. Most businesses run ads without proper <strong>targeting, landing pages, or follow-up systems.</strong></> },
-              { n: 'Myth #4', m: '"My referrals are enough."', t: <>Referrals are great — until they stop. A real marketing system creates <strong>consistent, predictable lead flow</strong> independent of your network.</> },
+              { n: 'Myth #4', m: '"My referrals are enough."', t: <>Referrals are great, until they stop. A real marketing system creates <strong>consistent, predictable lead flow</strong> independent of your network.</> },
               { n: 'Myth #5', m: '"Marketing is too expensive."', t: <>The real cost is the revenue you&apos;re not generating. <strong>A proper system pays for itself.</strong> Guesswork is what&apos;s expensive.</> },
-              { n: 'Myth #6', m: '"We need to go viral."', t: <><strong>Sustainable growth</strong> doesn&apos;t come from viral moments. It comes from systems that compound — every single month.</> },
+              { n: 'Myth #6', m: '"We need to go viral."', t: <><strong>Sustainable growth</strong> doesn&apos;t come from viral moments. It comes from systems that compound every single month.</> },
             ].map((c, i) => (
               <div key={i} className="myth-card">
                 <div className="myth-label">{c.n}</div>
@@ -360,13 +360,13 @@ export default function Home() {
             <div className="result-card">
               <div className="r-stat">90%+</div>
               <h4>Full System Build, National Designation Program</h4>
-              <p>A national real estate designation program needed everything rebuilt — sales funnels, automated marketing campaigns, standardized systems, and AI-powered AEO positioning across the country. We documented, automated, and scaled their entire operation.</p>
+              <p>A national real estate designation program needed everything rebuilt: sales funnels, automated marketing campaigns, standardized systems, and AI-powered AEO positioning across the country. We documented, automated, and scaled their entire operation.</p>
               <div className="result-lead">→ 90%+ agent retention. Nationwide visibility. More agents staying = more recurring program revenue.</div>
             </div>
             <div className="result-card">
               <div className="r-stat">End-to-End</div>
               <h4>AI-Powered Revenue System, Custom Apparel</h4>
-              <p>A custom apparel company needed an entire AI-powered revenue machine — graphics automation, persuasive copy, landing pages, funnels, automated purchasing flows, and nurture campaigns. Built, integrated, and running on autopilot.</p>
+              <p>A custom apparel company needed an entire AI-powered revenue machine: graphics automation, persuasive copy, landing pages, funnels, automated purchasing flows, and nurture campaigns. Built, integrated, and running on autopilot.</p>
               <div className="result-lead">→ Fully automated revenue system, more orders, more repeat buyers, owner focused on growth not operations.</div>
             </div>
           </div>
@@ -378,7 +378,7 @@ export default function Home() {
         <div className="positioning-inner">
           <div>
             <h2>Some Need a Tune-Up.<br />Others Need to <span>Build From Scratch.</span><br />Both Need BOOST365©.</h2>
-            <p>Some clients come to us with something already in place — a presence, a website, a foundation. It got them this far. But it&apos;s not performing the way it should. <strong>We fix it, optimize it, and make it run the way it was meant to.</strong></p>
+            <p>Some clients come to us with something already in place: a presence, a website, a foundation. It got them this far. But it&apos;s not performing the way it should. <strong>We fix it, optimize it, and make it run the way it was meant to.</strong></p>
             <p>Others come with a vision and nothing built yet. They want infrastructure, strategy, and execution as one complete system. <strong>We build it.</strong></p>
             <p>And when the foundation is solid and the system is ready, BOOST365© goes to work. The framework that scales what&apos;s functioning into compounding revenue.</p>
           </div>
@@ -389,11 +389,11 @@ export default function Home() {
             </div>
             <div className="stage gold">
               <h4>The Custom Build</h4>
-              <p>You have the vision. We build the infrastructure, strategy, execution, and systems — delivered as one complete marketing operation.</p>
+              <p>You have the vision. We build the infrastructure, strategy, execution, and systems, delivered as one complete marketing operation.</p>
             </div>
             <div className="stage red">
               <h4>The BOOST</h4>
-              <p>Foundation is solid. Now we scale it. BOOST365© is the framework that takes a functioning system and compounds it — more visibility, more leads, more revenue.</p>
+              <p>Foundation is solid. Now we scale it. BOOST365© is the framework that takes a functioning system and compounds it, more visibility, more leads, more revenue.</p>
             </div>
           </div>
         </div>
@@ -439,7 +439,7 @@ export default function Home() {
           <div className="services-list">
             {[
               'Search Engine Optimization (SEO & AEO)',
-              'Paid Advertising — Meta, Google, LinkedIn, TikTok',
+              'Paid Advertising: Meta, Google, LinkedIn, TikTok',
               'Social Media Management & Content Creation',
               'Email Marketing & Automation',
               'Video Production & Strategy',
@@ -475,13 +475,13 @@ export default function Home() {
         <div className="ai-inner">
           <div>
             <h2>Faster. Smarter. <span>Built for 2026</span> and Beyond.</h2>
-            <p>We&apos;ve integrated AI into every stage of our process — content creation, campaign optimization, reporting, and search positioning. The result: <strong>you get more output, faster turnaround, and marketing that compounds.</strong></p>
+            <p>We&apos;ve integrated AI into every stage of our process: content creation, campaign optimization, reporting, and search positioning. The result: <strong>you get more output, faster turnaround, and marketing that compounds.</strong></p>
             <p>While your competitors are still doing everything manually, your brand runs on a system built for the speed of today&apos;s market.</p>
             <ul className="ai-points">
-              <li>AI-powered content production — consistent output at scale</li>
+              <li>AI-powered content production, consistent output at scale</li>
               <li>AEO positioning: your brand in AI-generated search answers</li>
               <li>Automated reporting: you see results without waiting for a meeting</li>
-              <li>Real-time campaign optimization — data-driven decisions, not guesses</li>
+              <li>Real-time campaign optimization, data-driven decisions, not guesses</li>
             </ul>
           </div>
           <div className="ai-badge">
@@ -498,7 +498,7 @@ export default function Home() {
             <span className="about-s">S</span>
             <h2>The S Stands for More Than a Name.</h2>
             <p>The S in our logo stands for Sweis. It also stands for the belief that when a business needs help, someone should actually show up and fix it. <strong>No excuses. No runaround. Just results.</strong></p>
-            <p>Danny Sweis has spent 30+ years navigating adversity, building businesses, and learning what actually moves the needle. DJS Marketing Services isn&apos;t a template agency — it&apos;s a system built from real experience and a genuine commitment to winning for every client we take on.</p>
+            <p>Danny Sweis has spent 30+ years navigating adversity, building businesses, and learning what actually moves the needle. DJS Marketing Services isn&apos;t a template agency, it&apos;s a system built from real experience and a genuine commitment to winning for every client we take on.</p>
             <p><strong>We don&apos;t take on clients we can&apos;t win for.</strong></p>
           </div>
           <div className="about-quote">
@@ -512,8 +512,8 @@ export default function Home() {
       <section className="newsletter">
         <div className="newsletter-inner">
           <h2>Join the #Abbreciate Community</h2>
-          <p>Every month, straight from Danny — hard-won lessons from 30+ years of building, failing, growing, and genuinely appreciating every step of the journey. No fluff. Just real perspective from someone still in the game.</p>
-          <a href="https://q55uc.share-na2.hsforms.com/2XF4Khm9LQY-WxgbupQE9kg" target="_blank" rel="noopener noreferrer" className="newsletter-btn">Join the #Abbreciate Community — It&apos;s Free</a>
+          <p>Every month, straight from Danny, hard-won lessons from 30+ years of building, failing, growing, and genuinely appreciating every step of the journey. No fluff. Just real perspective from someone still in the game.</p>
+          <a href="https://q55uc.share-na2.hsforms.com/2XF4Khm9LQY-WxgbupQE9kg" target="_blank" rel="noopener noreferrer" className="newsletter-btn">Join the #Abbreciate Community, It&apos;s Free</a>
         </div>
       </section>
 
@@ -552,7 +552,7 @@ export default function Home() {
           </div>
           <div className="faq-grid">
             {[
-              { q: 'What makes DJSMS different from other marketing agencies?', a: "We don't just offer services — we build complete marketing systems using the BOOST365© framework. Every strategy is custom-built for your niche, powered by AI for faster delivery, and tracked so you always know what's working." },
+              { q: 'What makes DJSMS different from other marketing agencies?', a: "We don't just offer services, we build complete marketing systems using the BOOST365© framework. Every strategy is custom-built for your niche, powered by AI for faster delivery, and tracked so you always know what's working." },
               { q: 'How long does it take to see results?', a: 'Most clients see measurable improvements in visibility and lead quality within 60-90 days. SEO and content compound over time, paid ads and social can move faster. We set clear benchmarks so you\'re never guessing.' },
               { q: 'Do you work with businesses outside of real estate?', a: "Yes. While we have deep expertise in real estate, legal, and financial services, we work with any niche service business that needs a done-for-you marketing system. If you have expertise and a target audience, we can build the system around it." },
               { q: 'What is the BOOST365© Playbook?', a: 'BOOST365© is our proprietary 5-pillar marketing framework covering Branding, Optimization, Outreach, Sales Funnels, and Tracking. It\'s the system we use with every client to build a marketing operation that compounds over time. Download the free version above.' },
