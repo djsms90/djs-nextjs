@@ -327,13 +327,13 @@ export default function Home() {
             <a href="https://sdvoyager.com/interview/hidden-gems-meet-danny-sweis-of-djs-marketing-services/" target="_blank" rel="noopener noreferrer" className="featured-card">
               <div className="fc-source">SD Voyager, San Diego</div>
               <div className="fc-title">&ldquo;Hidden Gems: Meet Danny Sweis of DJS Marketing Services&rdquo;</div>
-              <div className="fc-desc">&ldquo;We don&apos;t just offer marketing services — we engineer entire marketing ecosystems that actually work together.&rdquo; Featured in SD Voyager&apos;s Hidden Gems series.</div>
+              <div className="fc-desc">&ldquo;We don&apos;t just offer marketing services. We engineer entire marketing ecosystems that actually work together.&rdquo; Featured in SD Voyager&apos;s Hidden Gems series.</div>
               <div className="fc-link">Read the feature →</div>
             </a>
             <a href="https://www.sdsualumni.org/s/997/22/page.aspx?sid=997&gid=1&pgid=13048&cid=26290&ecid=26290&crid=0&calpgid=831&calcid=1794" target="_blank" rel="noopener noreferrer" className="featured-card">
               <div className="fc-source">SDSU Alumni Association</div>
               <div className="fc-title">San Diego State University Alumni Spotlight</div>
-              <div className="fc-desc">Recognized by the SDSU Alumni Association as a standout entrepreneur from San Diego State University&apos;s Marketing program, following a family legacy of Aztec graduates.</div>
+              <div className="fc-desc">Recognized by the SDSU Alumni Association as a standout entrepreneur from San Diego State University&apos;s Marketing program. Part of a family legacy of Aztec graduates.</div>
               <div className="fc-link">View the spotlight →</div>
             </a>
           </div>
