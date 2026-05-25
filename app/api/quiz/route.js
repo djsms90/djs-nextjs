@@ -3,7 +3,7 @@ import nodemailer from 'nodemailer'
 
 export async function POST(req) {
   try {
-    const { name, email, score, tier, answers } = await req.json()
+    const { name, email, phone, score, tier, answers } = await req.json()
 
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST || 'smtp.gmail.com',
@@ -36,6 +36,7 @@ export async function POST(req) {
               <tr><td style="padding:12px;background:#0467b1;color:#f7e400;font-weight:900;font-size:13px;letter-spacing:1px;text-transform:uppercase">LEAD INFO</td><td style="padding:12px;background:#0467b1"></td></tr>
               <tr><td style="padding:10px 12px;font-weight:600;border-bottom:1px solid #eee">Name</td><td style="padding:10px 12px;border-bottom:1px solid #eee">${name}</td></tr>
               <tr><td style="padding:10px 12px;font-weight:600;border-bottom:1px solid #eee">Email</td><td style="padding:10px 12px;border-bottom:1px solid #eee"><a href="mailto:${email}">${email}</a></td></tr>
+              <tr><td style="padding:10px 12px;font-weight:600;border-bottom:1px solid #eee">Phone</td><td style="padding:10px 12px;border-bottom:1px solid #eee">${phone || 'Not provided'}</td></tr>
               <tr><td style="padding:10px 12px;font-weight:600;border-bottom:1px solid #eee">Score</td><td style="padding:10px 12px;border-bottom:1px solid #eee;font-weight:800;font-size:18px;color:#0467b1">${score}/100</td></tr>
               <tr><td style="padding:10px 12px;font-weight:600">Result Tier</td><td style="padding:10px 12px;font-weight:700">${tier}</td></tr>
             </table>

@@ -66,6 +66,7 @@ export default function Quiz({ onClose }) {
   const [selected, setSelected] = useState({}) // { stepNum: val }
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
+  const [phone, setPhone] = useState('')
   const [error, setError] = useState('')
   const [submitting, setSubmitting] = useState(false)
   const [done, setDone] = useState(false)
@@ -95,6 +96,7 @@ export default function Quiz({ onClose }) {
         body: JSON.stringify({
           name: name.trim(),
           email: email.trim(),
+          phone: phone.trim(),
           score,
           tier,
           answers: questions.map(q => ({
@@ -185,6 +187,16 @@ export default function Quiz({ onClose }) {
                     autoComplete="email"
                     value={email}
                     onChange={e => setEmail(e.target.value)}
+                    style={{ padding: '12px 16px', border: '1.5px solid #e0e0e0', borderRadius: '8px', fontSize: '15px', fontFamily: 'Inter, sans-serif', outline: 'none' }}
+                    onFocus={e => e.target.style.borderColor = '#0467b1'}
+                    onBlur={e => e.target.style.borderColor = '#e0e0e0'}
+                  />
+                  <input
+                    type="tel"
+                    placeholder="Your phone number"
+                    autoComplete="tel"
+                    value={phone}
+                    onChange={e => setPhone(e.target.value)}
                     style={{ padding: '12px 16px', border: '1.5px solid #e0e0e0', borderRadius: '8px', fontSize: '15px', fontFamily: 'Inter, sans-serif', outline: 'none' }}
                     onFocus={e => e.target.style.borderColor = '#0467b1'}
                     onBlur={e => e.target.style.borderColor = '#e0e0e0'}
