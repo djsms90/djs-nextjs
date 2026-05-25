@@ -44,7 +44,7 @@ export async function POST(req) {
               ${answersHtml}
             </table>
             <div style="margin-top:24px;text-align:center">
-              <a href="https://meetings-na2.hubspot.com/sweis" style="background:#0467b1;color:white;padding:14px 32px;border-radius:4px;text-decoration:none;font-weight:900;font-size:13px;letter-spacing:2px;text-transform:uppercase">Book Strategy Call with ${name}</a>
+              <a href="https://meetings-na2.hubspot.com/sweis" style="display:inline-block;background:#0467b1;color:white;padding:14px 32px;border-radius:4px;text-decoration:none;font-weight:700;font-size:15px">Book a Strategy Call →</a>
             </div>
           </div>
         </div>
