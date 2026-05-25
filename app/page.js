@@ -598,7 +598,7 @@ export default function Home() {
 
       {/* FOOTER */}
       <footer>
-        <a href="/"><Image src="/logo-main-hq.jpg" alt="DJS Marketing Services" width={160} height={44} style={{ height:'44px', width:'auto' }} /></a>
+        <a href="/"><Image src="/logo-white-red.jpg" alt="DJS Marketing Services" width={160} height={44} style={{ height:'44px', width:'auto' }} /></a>
         <div className="footer-contact">
           <p>© {new Date().getFullYear()} DJS Marketing Services. All Rights Reserved.</p>
           <p><a href="mailto:marketing@djs90.com">marketing@djs90.com</a> &nbsp;|&nbsp; <a href="tel:+16199284669">(619) 928-4669</a></p>
