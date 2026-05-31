@@ -4,6 +4,7 @@ import blogPosts from '../../data/blog-posts'
 export const metadata = {
   title: 'Marketing Intelligence Blog | DJS Marketing Services',
   description: 'Insights on paid ads, SEO, AEO, social media, video marketing, and AI-powered marketing systems from DJS Marketing Services.',
+  alternates: { canonical: 'https://djsmarketingservices.com/blog' },
 }
 
 export default function BlogPage() {

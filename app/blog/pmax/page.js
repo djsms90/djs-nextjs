@@ -1,8 +1,9 @@
 import BlogLayout from '../../../components/BlogLayout'
 
 export const metadata = {
-  title: 'Google PMax Just Gave Advertisers What They Have Been Asking For | DJS Marketing Services',
+  title: 'Google PMax New Features: What Advertisers Need to Know | DJS',
   description: 'Customer list exclusions and channel-level reporting finally arrived in Performance Max. Here is what changed and what to do in your campaigns this week.',
+  alternates: { canonical: 'https://djsmarketingservices.com/blog/pmax' },
 }
 
 export default function BlogPost() {

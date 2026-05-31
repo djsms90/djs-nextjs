@@ -16,6 +16,7 @@ const inter = Inter({
 })
 
 export const metadata = {
+  metadataBase: new URL('https://djsmarketingservices.com'),
   icons: {
     icon: [
       { url: '/favicon.ico' },
@@ -30,7 +31,7 @@ export const metadata = {
   keywords: 'digital marketing agency San Diego, SEO San Diego, paid ads agency, social media management, real estate marketing, BOOST365, Danny Sweis, DJS Marketing Services',
   authors: [{ name: 'Danny Sweis, DJS Marketing Services' }],
   robots: 'index, follow',
-  canonical: 'https://djsmarketingservices.com/',
+  alternates: { canonical: '/' },
   openGraph: {
     type: 'website',
     url: 'https://djsmarketingservices.com/',

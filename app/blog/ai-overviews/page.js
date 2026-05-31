@@ -1,8 +1,9 @@
 import BlogLayout from '../../../components/BlogLayout'
 
 export const metadata = {
-  title: 'Google AI Overviews Are Stealing Your Clicks: Here Is How to Fight Back | DJS Marketing Services',
+  title: 'Google AI Overviews: How to Keep Your Clicks | DJS Marketing',
   description: 'AI Overviews are answering questions before users click anything. Here is the strategy to get your brand cited inside those answers.',
+  alternates: { canonical: 'https://djsmarketingservices.com/blog/ai-overviews' },
 }
 
 export default function BlogPost() {

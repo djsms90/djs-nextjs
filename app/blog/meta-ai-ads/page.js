@@ -1,8 +1,9 @@
 import BlogLayout from '../../../components/BlogLayout'
 
 export const metadata = {
-  title: 'Meta Just Made AI the Default for All Ads: Should You Let It Run Yours? | DJS Marketing Services',
+  title: 'Meta AI Default Ads: Should You Let It Run? | DJS Marketing',
   description: 'Meta expanded its AI Business Assistant to every advertiser and made Advantage+ automation the default for all new campaigns. Here is what that means for your budget and brand.',
+  alternates: { canonical: 'https://djsmarketingservices.com/blog/meta-ai-ads' },
 }
 
 export default function MetaAiAds() {

@@ -208,6 +208,7 @@ export default function Home() {
 
   return (
     <>
+      <link rel="canonical" href="https://djsmarketingservices.com" />
       {/* SKIP NAV */}
       <a href="#main-content" className="skip-nav">Skip to main content</a>
 

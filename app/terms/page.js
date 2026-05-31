@@ -3,6 +3,7 @@ import Link from 'next/link'
 export const metadata = {
   title: 'Terms & Conditions | DJS Marketing Services',
   description: 'Terms and Conditions for DJS Marketing Services. Read the rules and guidelines governing use of our website and services.',
+  alternates: { canonical: 'https://djsmarketingservices.com/terms' },
 }
 
 export default function Terms() {

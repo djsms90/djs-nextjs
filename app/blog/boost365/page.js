@@ -1,8 +1,9 @@
 import BlogLayout from '../../../components/BlogLayout'
 
 export const metadata = {
-  title: 'Why One-Off Marketing Tactics Do Not Work, And What to Do Instead | DJS Marketing Services',
+  title: 'Why Marketing Tactics Fail (And What Works) | DJS Marketing',
   description: 'One blog post, one ad campaign, one social push. None of it compounds. Here is why systems beat tactics every time.',
+  alternates: { canonical: 'https://djsmarketingservices.com/blog/boost365' },
 }
 
 export default function BlogPost() {

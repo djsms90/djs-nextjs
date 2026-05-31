@@ -3,6 +3,7 @@ import Link from 'next/link'
 export const metadata = {
   title: 'Privacy Policy | DJS Marketing Services',
   description: 'Privacy Policy for DJS Marketing Services. Learn how we collect, use, and protect your personal information.',
+  alternates: { canonical: 'https://djsmarketingservices.com/privacy-policy' },
 }
 
 export default function PrivacyPolicy() {

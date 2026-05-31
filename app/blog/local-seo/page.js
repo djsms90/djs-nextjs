@@ -1,8 +1,9 @@
 import BlogLayout from '../../../components/BlogLayout'
 
 export const metadata = {
-  title: 'The Local SEO Playbook for Niche Service Professionals in 2026 | DJS Marketing Services',
+  title: 'Local SEO Playbook for Niche Service Pros 2026 | DJS Marketing',
   description: 'If you serve a local market and you are not ranking in the top 3 locally, you are invisible to the clients who are actively looking for you right now.',
+  alternates: { canonical: 'https://djsmarketingservices.com/blog/local-seo' },
 }
 
 export default function BlogPost() {

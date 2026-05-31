@@ -1,8 +1,9 @@
 import BlogLayout from '../../../components/BlogLayout'
 
 export const metadata = {
-  title: 'What Is Answer Engine Optimization and Why Your Competitors Are Already Doing It | DJS Marketing Services',
+  title: 'Answer Engine Optimization (AEO) Explained | DJS Marketing',
   description: 'How we are getting clients appearing in AI-generated search answers before competitors know AEO exists. The shift from search engines to answer engines is already here.',
+  alternates: { canonical: 'https://djsmarketingservices.com/blog/aeo' },
 }
 
 export default function BlogPost() {
