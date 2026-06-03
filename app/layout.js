@@ -35,7 +35,7 @@ export const metadata = {
   openGraph: {
     type: 'website',
     url: 'https://djsmarketingservices.com/',
-    title: 'DJS Marketing Services | Full-Stack Digital Marketing Agency San Diego',
+    title: 'DJS Marketing Services | San Diego Digital Marketing',
     description: 'We build done-for-you marketing systems that turn your expertise into leads, clients, and revenue. BOOST365© Playbook. The system behind the results.',
     images: [{ url: 'https://djsmarketingservices.com/og-image-v2.jpg', width: 1200, height: 630 }],
     siteName: 'DJS Marketing Services',
