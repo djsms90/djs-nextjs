@@ -1,10 +1,12 @@
 import BlogLayout from '../../../components/BlogLayout'
+import { blogMeta } from '../../../lib/seo'
 
-export const metadata = {
-  title: 'Why Marketing Tactics Fail (And What Works) | DJS Marketing',
+export const metadata = blogMeta({
+  title: 'Why One-Off Marketing Tactics Do Not Work, And What to Do Instead',
   description: 'One blog post, one ad campaign, one social push. None of it compounds. Here is why systems beat tactics every time.',
-  alternates: { canonical: 'https://djsmarketingservices.com/blog/boost365' },
-}
+  slug: 'boost365',
+  date: '2026-03-28',
+})
 
 export default function BlogPost() {
   return (

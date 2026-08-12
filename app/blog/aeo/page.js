@@ -1,10 +1,12 @@
 import BlogLayout from '../../../components/BlogLayout'
+import { blogMeta } from '../../../lib/seo'
 
-export const metadata = {
-  title: 'Answer Engine Optimization (AEO) Explained | DJS Marketing',
+export const metadata = blogMeta({
+  title: 'What Is Answer Engine Optimization and Why Your Clients Need It Now',
   description: 'How we are getting clients appearing in AI-generated search answers before competitors know AEO exists. The shift from search engines to answer engines is already here.',
-  alternates: { canonical: 'https://djsmarketingservices.com/blog/aeo' },
-}
+  slug: 'aeo',
+  date: '2026-04-10',
+})
 
 export default function BlogPost() {
   return (

@@ -4,6 +4,13 @@
 
 const blogPosts = [
   {
+    date: '2026-08-11',
+    tag: 'SEO & AEO',
+    title: 'Zero-Click Search Is Here: How to Win When Nobody Clicks',
+    desc: 'Nearly 60% of Google searches now end without a click. Here is how to make zero-click search work for your business instead of against it.',
+    href: '/blog/zero-click-search',
+  },
+  {
     date: '2026-05-09',
     tag: 'Paid Advertising',
     title: 'Meta Just Made AI the Default for All Ads: Should You Let It Run Yours?',

@@ -1,10 +1,12 @@
 import BlogLayout from '../../../components/BlogLayout'
+import { blogMeta } from '../../../lib/seo'
 
-export const metadata = {
-  title: 'YouTube Strategy to Generate Inbound Clients | DJS Marketing',
+export const metadata = blogMeta({
+  title: 'How Professional Service Providers Are Using YouTube to Generate Inbound Clients',
   description: 'The exact strategy we used to take a client from zero to 1M+ views and make YouTube their number one inbound source. Zero cold outreach.',
-  alternates: { canonical: 'https://djsmarketingservices.com/blog/youtube' },
-}
+  slug: 'youtube',
+  date: '2026-04-03',
+})
 
 export default function BlogPost() {
   return (

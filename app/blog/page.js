@@ -5,6 +5,21 @@ export const metadata = {
   title: 'Marketing Intelligence Blog | DJS Marketing Services',
   description: 'Insights on paid ads, SEO, AEO, social media, video marketing, and AI-powered marketing systems from DJS Marketing Services.',
   alternates: { canonical: 'https://djsmarketingservices.com/blog' },
+  openGraph: {
+    type: 'website',
+    url: 'https://djsmarketingservices.com/blog',
+    title: 'Marketing Intelligence Blog | DJS Marketing Services',
+    description: 'Insights on paid ads, SEO, AEO, social media, video marketing, and AI-powered marketing systems from DJS Marketing Services.',
+    images: [{ url: 'https://djsmarketingservices.com/og-image-v2.jpg', width: 1200, height: 630 }],
+    siteName: 'DJS Marketing Services',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Marketing Intelligence Blog | DJS Marketing Services',
+    description: 'Insights on paid ads, SEO, AEO, social media, video marketing, and AI-powered marketing systems.',
+    images: ['https://djsmarketingservices.com/og-image-v2.jpg'],
+  },
 }
 
 export default function BlogPage() {

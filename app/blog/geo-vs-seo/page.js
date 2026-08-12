@@ -1,10 +1,12 @@
 import BlogLayout from '../../../components/BlogLayout'
+import { blogMeta } from '../../../lib/seo'
 
-export const metadata = {
-  title: 'GEO vs SEO: Win AI Search Before Competitors Do | DJS Marketing',
+export const metadata = blogMeta({
+  title: 'GEO vs SEO: The New Optimization Game Your Competitors Do Not Know About',
   description: 'SEO gets you ranked. GEO gets you cited by AI. Learn what Generative Engine Optimization is and how to start winning in AI search.',
-  alternates: { canonical: 'https://djsmarketingservices.com/blog/geo-vs-seo' },
-}
+  slug: 'geo-vs-seo',
+  date: '2026-04-28',
+})
 
 export default function BlogPost() {
   return (

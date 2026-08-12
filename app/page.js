@@ -206,8 +206,22 @@ export default function Home() {
     if (nextBtn) nextBtn.removeAttribute('disabled')
   }
 
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'What makes DJS Marketing Services different from other marketing agencies?', acceptedAnswer: { '@type': 'Answer', text: 'We don\'t just offer services, we build complete marketing systems using the BOOST365© framework. Every strategy is custom-built for your niche, powered by AI for faster delivery, and tracked so you always know what\'s working.' } },
+      { '@type': 'Question', name: 'How long does it take to see results from digital marketing?', acceptedAnswer: { '@type': 'Answer', text: 'Most clients see measurable improvements in visibility and lead quality within 60-90 days. SEO and content compound over time, paid ads and social can move faster. We set clear benchmarks so you\'re never guessing.' } },
+      { '@type': 'Question', name: 'Does DJS Marketing Services work with businesses outside of real estate?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. While we have deep expertise in real estate, legal, and financial services, we work with any niche service business that needs a done-for-you marketing system. If you have expertise and a target audience, we can build the system around it.' } },
+      { '@type': 'Question', name: 'What is the BOOST365 Playbook?', acceptedAnswer: { '@type': 'Answer', text: 'BOOST365© is our proprietary 5-pillar marketing framework covering Branding, Optimization, Outreach, Sales Funnels, and Tracking. It\'s the system we use with every client to build a marketing operation that compounds over time.' } },
+      { '@type': 'Question', name: 'What does a strategy call with DJS Marketing Services involve?', acceptedAnswer: { '@type': 'Answer', text: 'A 30-minute conversation about where your business is, where you want to go, and whether DJSMS is the right fit. No pitch deck, no pressure. You\'ll walk away with at least one actionable insight regardless of whether we work together.' } },
+      { '@type': 'Question', name: 'Does DJS Marketing Services offer month-to-month contracts?', acceptedAnswer: { '@type': 'Answer', text: 'We offer flexible arrangements depending on the scope of work. Some services are project-based, others are ongoing retainers. We\'ll recommend the right structure based on your goals during the strategy call.' } },
+    ],
+  }
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <link rel="canonical" href="https://djsmarketingservices.com" />
       {/* SKIP NAV */}
       <a href="#main-content" className="skip-nav">Skip to main content</a>

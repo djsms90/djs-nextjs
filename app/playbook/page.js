@@ -4,6 +4,21 @@ export const metadata = {
   title: 'BOOST365 Marketing Playbook: Free Download | DJS Marketing',
   description: 'The 5-pillar system used by niche service professionals to build consistent leads, convert prospects, and scale revenue. Free download.',
   alternates: { canonical: 'https://djsmarketingservices.com/playbook' },
+  openGraph: {
+    type: 'website',
+    url: 'https://djsmarketingservices.com/playbook',
+    title: 'BOOST365© Marketing Playbook — Free Download',
+    description: 'The 5-pillar system used by niche service professionals to build consistent leads, convert prospects, and scale revenue.',
+    images: [{ url: 'https://djsmarketingservices.com/og-image-v2.jpg', width: 1200, height: 630 }],
+    siteName: 'DJS Marketing Services',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'BOOST365© Marketing Playbook — Free Download',
+    description: 'The 5-pillar system for niche service professionals. Build consistent leads and scale revenue.',
+    images: ['https://djsmarketingservices.com/og-image-v2.jpg'],
+  },
 }
 
 export default function PlaybookPage() {

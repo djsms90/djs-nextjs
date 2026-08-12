@@ -52,25 +52,78 @@ export const metadata = {
 
 const schemaOrg = {
   '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
+  '@type': ['LocalBusiness', 'MarketingAgency'],
+  '@id': 'https://djsmarketingservices.com/#organization',
   name: 'DJS Marketing Services',
-  description: 'Full-stack digital marketing agency specializing in SEO, paid advertising, social media management, and AI-powered marketing systems.',
+  alternateName: 'DJSMS',
+  description: 'DJS Marketing Services builds done-for-you digital marketing systems that turn your expertise into leads, clients, and revenue. SEO, paid ads, social media, web design & AI-powered marketing for niche service businesses in San Diego.',
   url: 'https://djsmarketingservices.com',
-  logo: 'https://djsmarketingservices.com/logo.png',
+  logo: 'https://djsmarketingservices.com/logo-nav.jpg',
+  image: 'https://djsmarketingservices.com/og-image-v2.jpg',
   telephone: '+1-619-928-4669',
   email: 'marketing@djs90.com',
-  founder: { '@type': 'Person', name: 'Danny Sweis' },
+  founder: {
+    '@type': 'Person',
+    '@id': 'https://djsmarketingservices.com/#danny-sweis',
+    name: 'Danny Sweis',
+    jobTitle: 'Founder & CEO',
+  },
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'San Diego',
     addressRegion: 'CA',
     addressCountry: 'US',
   },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 32.7157,
+    longitude: -117.1611,
+  },
+  areaServed: {
+    '@type': 'City',
+    name: 'San Diego',
+    sameAs: 'https://en.wikipedia.org/wiki/San_Diego',
+  },
   sameAs: [
     'https://www.instagram.com/djsmarketingservices',
     'https://www.facebook.com/djsmarketingservices',
     'https://www.linkedin.com/company/djs-marketing-services/',
   ],
+  knowsAbout: [
+    'Search Engine Optimization',
+    'Answer Engine Optimization',
+    'Generative Engine Optimization',
+    'Paid Advertising',
+    'Social Media Marketing',
+    'AI-Powered Marketing',
+    'Web Design',
+    'Sales Funnels',
+    'Email Marketing',
+    'Video Marketing',
+    'Brand Strategy',
+  ],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Marketing Services',
+    itemListElement: [
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'SEO & AEO Optimization', description: 'Strategic SEO with AEO optimization that starts showing results in 60-90 days' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Paid Advertising', description: 'Precision-targeted ads on Meta, Google, LinkedIn, and TikTok' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Social Media Management', description: 'Content creation and social media management across all platforms' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'AI-Powered Marketing Systems', description: 'Complete AI-powered marketing systems including content production, campaign optimization, and AEO positioning' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Website Design & Development', description: 'Custom website design and development optimized for conversion' } },
+    ],
+  },
+  priceRange: '$$',
+}
+
+const schemaWebsite = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': 'https://djsmarketingservices.com/#website',
+  url: 'https://djsmarketingservices.com',
+  name: 'DJS Marketing Services',
+  publisher: { '@id': 'https://djsmarketingservices.com/#organization' },
+  inLanguage: 'en-US',
 }
 
 export default function RootLayout({ children }) {
@@ -100,10 +153,15 @@ export default function RootLayout({ children }) {
           `}
         </Script>
 
-        {/* Schema.org */}
+        {/* Schema.org — Organization */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}
+        />
+        {/* Schema.org — WebSite */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaWebsite) }}
         />
       </head>
       <body>{children}</body>
