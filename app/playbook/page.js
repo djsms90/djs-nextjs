@@ -84,7 +84,7 @@ export default function PlaybookPage() {
       <footer style={{ background:'white', borderTop:'1px solid #e0e8f0', padding:'28px 48px', display:'flex', alignItems:'center', justifyContent:'space-between', flexWrap:'wrap', gap:'12px' }}>
         <Link href="/"><img src="/logo-footer.jpg" alt="DJS Marketing Services" style={{ height:'40px', width:'auto' }} /></Link>
         <p style={{ fontSize:'12px', color:'#777' }}>
-          © {new Date().getFullYear()} DJS Marketing Services. All Rights Reserved. &nbsp;|&nbsp;
+          © {new Date().getFullYear()}{' '}DJS Marketing Services. All Rights Reserved. &nbsp;|&nbsp;
           <Link href="/privacy-policy" style={{ color:'#0467b1', textDecoration:'none' }}>Privacy Policy</Link>
           &nbsp;|&nbsp;
           <Link href="/terms" style={{ color:'#0467b1', textDecoration:'none' }}>Terms & Conditions</Link>

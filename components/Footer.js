@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="footer-inner">
         <div>
           <p style={{ color: 'rgba(255,255,255,0.7)', marginBottom: 6 }}>
-            © {new Date().getFullYear()} DJS Marketing Services. All rights reserved.
+            © {new Date().getFullYear()}{' '}DJS Marketing Services. All rights reserved.
           </p>
           <p>San Diego, CA · marketing@djs90.com · (619) 928-4669</p>
         </div>

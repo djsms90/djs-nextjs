@@ -114,7 +114,7 @@ Website: djsmarketingservices.com`
 
       <footer style={{ background:'#111', padding:'28px 48px', textAlign:'center' }}>
         <p style={{ fontSize:'12px', color:'rgba(255,255,255,0.5)', margin:0 }}>
-          © {new Date().getFullYear()} DJS Marketing Services. All Rights Reserved. &nbsp;|&nbsp;
+          © {new Date().getFullYear()}{' '}DJS Marketing Services. All Rights Reserved. &nbsp;|&nbsp;
           <Link href="/privacy-policy" style={{ color:'rgba(255,255,255,0.5)', textDecoration:'none' }}>Privacy Policy</Link>
           &nbsp;|&nbsp;
           <Link href="/terms" style={{ color:'rgba(255,255,255,0.5)', textDecoration:'none' }}>Terms & Conditions</Link>
