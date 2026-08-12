@@ -85,13 +85,13 @@ export default function ZeroClickSearch() {
       <p><strong>4.</strong> Submit your sitemap to Google Search Console if you have not already. Pages that are not indexed cannot be cited.</p>
       <p>Zero-click search is not going away. The businesses that adapt their strategy now will own the AI answer layer while competitors are still chasing blue links.</p>
 
-      <h4>Sources</h4>
-      <p>
-        <a href="https://www.goodfirms.co/resources/seo-statistics-ai-search-rankings-zero-click-trends" target="_blank" rel="noopener noreferrer">GoodFirms: AI SEO Statistics 2026</a><br />
-        <a href="https://blog.hubspot.com/marketing/evolution-of-search" target="_blank" rel="noopener noreferrer">HubSpot: SEO Trends for 2026</a><br />
-        <a href="https://www.conductor.com/academy/aeo-search-trends/" target="_blank" rel="noopener noreferrer">Conductor: The Future of AEO &amp; Content Marketing in 2026</a><br />
-        <a href="https://business.adobe.com/blog/seo-in-2026-fundamentals" target="_blank" rel="noopener noreferrer">Adobe: SEO in 2026</a>
-      </p>
+      <div className="sources-box">
+        <h4>Sources</h4>
+        <a href="https://www.goodfirms.co/resources/seo-statistics-ai-search-rankings-zero-click-trends" target="_blank" rel="noopener">GoodFirms: &ldquo;AI SEO Statistics 2026 &mdash; 35+ Verified Stats &amp; Research Findings on SERP Visibility&rdquo; (2026)</a>
+        <a href="https://blog.hubspot.com/marketing/evolution-of-search" target="_blank" rel="noopener">HubSpot: &ldquo;SEO Trends for 2026: How Search and AI Are Changing&rdquo; (2026)</a>
+        <a href="https://www.conductor.com/academy/aeo-search-trends/" target="_blank" rel="noopener">Conductor: &ldquo;The Future of AEO &amp; Content Marketing in 2026: Key Trends &amp; Top Predictions&rdquo; (2026)</a>
+        <a href="https://business.adobe.com/blog/seo-in-2026-fundamentals" target="_blank" rel="noopener">Adobe: &ldquo;SEO in 2026: How AI Is Reshaping the Fundamentals of Search&rdquo; (2026)</a>
+      </div>
     </BlogLayout>
   )
 }
