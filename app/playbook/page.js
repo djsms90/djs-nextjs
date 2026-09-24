@@ -29,8 +29,8 @@ export default function PlaybookPage() {
         <Link href="/" style={{ fontSize:'13px', fontWeight:'700', color:'rgba(255,255,255,0.9)', textDecoration:'none', letterSpacing:'0.5px', textTransform:'uppercase' }}>← Back to Home</Link>
       </nav>
 
-      <div style={{ minHeight:'100vh', background:'linear-gradient(135deg,#0467b1 0%,#035a9e 40%,#024d8a 100%)', display:'flex', alignItems:'center', padding:'100px 48px 80px' }}>
-        <div style={{ maxWidth:'1100px', margin:'0 auto', width:'100%', display:'grid', gridTemplateColumns:'1fr 420px', gap:'64px', alignItems:'center' }}>
+      <div className="playbook-wrapper">
+        <div className="playbook-grid">
 
           {/* LEFT */}
           <div>
@@ -61,14 +61,14 @@ export default function PlaybookPage() {
           </div>
 
           {/* RIGHT — FORM */}
-          <div style={{ background:'white', borderRadius:'12px', padding:'40px', boxShadow:'0 8px 32px rgba(0,0,0,0.2)', borderTop:'4px solid #0467b1' }}>
+          <div className="playbook-form-card">
             <h2 style={{ fontFamily:'Bebas Neue, sans-serif', fontSize:'28px', color:'#111', marginBottom:'6px' }}>Get Instant Access</h2>
             <p style={{ fontSize:'14px', color:'#777', marginBottom:'24px' }}>Enter your details below and we will send your free playbook immediately.</p>
             <a
               href="https://q55uc.share-na2.hsforms.com/2ijaRSaieQMaSfVEKZ7_78A"
               target="_blank"
               rel="noopener noreferrer"
-              style={{ display:'block', background:'#0467b1', color:'white', fontSize:'15px', fontWeight:'900', letterSpacing:'1px', textTransform:'uppercase', padding:'18px 32px', borderRadius:'6px', textDecoration:'none', textAlign:'center' }}
+              className="playbook-cta"
             >
               Complete Your Free Download →
             </a>
@@ -81,7 +81,7 @@ export default function PlaybookPage() {
         </div>
       </div>
 
-      <footer style={{ background:'white', borderTop:'1px solid #e0e8f0', padding:'28px 48px', display:'flex', alignItems:'center', justifyContent:'space-between', flexWrap:'wrap', gap:'12px' }}>
+      <footer className="playbook-footer">
         <Link href="/"><img src="/logo-footer.jpg" alt="DJS Marketing Services" style={{ height:'40px', width:'auto' }} /></Link>
         <p style={{ fontSize:'12px', color:'#777' }}>
           © {new Date().getFullYear()}{' '}DJS Marketing Services. All Rights Reserved. &nbsp;|&nbsp;

@@ -582,3 +582,42 @@ footer p { font-size:12px; color:var(--text-light); }
   .blog-listing { padding:0 20px; margin-top:80px; }
   .blog-grid { grid-template-columns:1fr; }
 }
+
+/* ============================================
+   PLAYBOOK PAGE
+   ============================================ */
+.playbook-wrapper {
+  min-height:100vh;
+  background:linear-gradient(135deg,#0467b1 0%,#035a9e 40%,#024d8a 100%);
+  display:flex; align-items:center;
+  padding:100px 48px 80px;
+}
+.playbook-grid {
+  max-width:1100px; margin:0 auto; width:100%;
+  display:grid; grid-template-columns:1fr 420px;
+  gap:64px; align-items:center;
+}
+.playbook-form-card {
+  background:white; border-radius:12px;
+  padding:40px; box-shadow:0 8px 32px rgba(0,0,0,0.2);
+  border-top:4px solid #0467b1;
+}
+.playbook-cta {
+  display:block; background:#0467b1; color:white;
+  font-size:15px; font-weight:900; letter-spacing:1px;
+  text-transform:uppercase; padding:18px 32px;
+  border-radius:6px; text-decoration:none; text-align:center;
+}
+.playbook-cta:hover { background:#035a9e; }
+.playbook-footer {
+  background:white; border-top:1px solid #e0e8f0;
+  padding:28px 48px; display:flex; align-items:center;
+  justify-content:space-between; flex-wrap:wrap; gap:12px;
+}
+
+@media (max-width:900px) {
+  .playbook-wrapper { padding:80px 20px 48px; }
+  .playbook-grid { grid-template-columns:1fr; gap:32px; }
+  .playbook-form-card { padding:28px 24px; }
+  .playbook-footer { padding:24px 20px; flex-direction:column; text-align:center; }
+}
