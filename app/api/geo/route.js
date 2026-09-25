@@ -10,10 +10,12 @@ const OPT_IN_COUNTRIES = new Set([
 ])
 
 export function GET(request) {
-  // Vercel sets this header on every request at the edge. Missing locally.
+  // Vercel's geolocation header (https://vercel.com/docs/headers/request-headers).
+  // Vercel does not guarantee it is present, so an unknown country is treated
+  // the strict way: ask for consent before loading any tracking.
   const country = request.headers.get('x-vercel-ip-country') || null
   return NextResponse.json(
-    { country, optIn: country ? OPT_IN_COUNTRIES.has(country) : false },
+    { country, optIn: country ? OPT_IN_COUNTRIES.has(country) : true },
     { headers: { 'Cache-Control': 'private, no-store' } }
   )
 }
