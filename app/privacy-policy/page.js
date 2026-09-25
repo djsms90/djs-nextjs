@@ -8,7 +8,7 @@ export const metadata = {
 }
 
 export default function PrivacyPolicy() {
-  const updated = 'May 25, 2026'
+  const updated = 'September 25, 2026'
 
   return (
     <>
@@ -33,7 +33,7 @@ export default function PrivacyPolicy() {
 • Phone number
 • Business information you choose to share
 
-We also automatically collect certain non-personal information, including browser type, IP address, pages visited, and time spent on our site through standard analytics tools (Google Analytics, Meta Pixel).`
+When cookies are permitted (see Section 6), we also automatically collect device and usage information, including browser type, IP address, pages visited, and time spent on our site, through Google Analytics and the Meta Pixel.`
           },
           {
             title: '2. How We Use Your Information',
@@ -48,7 +48,9 @@ We will only contact you for purposes related to the services you expressed inte
           },
           {
             title: '3. How We Share Your Information',
-            body: `We do not sell, trade, rent, or otherwise transfer your personal information to third parties for their marketing purposes.
+            body: `We do not sell your personal information for money, and we do not trade or rent it to third parties for their own marketing purposes.
+
+Our website uses the Meta Pixel and Google Analytics. When these tools are active, device and usage information (such as IP address, cookie identifiers, and pages visited) is disclosed to Meta and Google to measure our advertising and show you relevant ads on other platforms. Under California law this may be considered "sharing" personal information for cross-context behavioral advertising. You can opt out at any time (see Sections 4 and 6).
 
 We may share your information with trusted service providers who assist us in operating our website and conducting business (e.g., HubSpot CRM, email providers), provided those parties agree to keep your information confidential.
 
@@ -58,18 +60,21 @@ We may also disclose your information when required by law or to protect the rig
             title: '4. California Privacy Rights (CCPA)',
             body: `If you are a California resident, you have the right under the California Consumer Privacy Act (CCPA) to:
 
-• Know what personal information we collect about you
+• Know what personal information we collect about you and how it is used and disclosed
 • Request deletion of your personal information
-• Opt out of the sale of your personal information (we do not sell personal information)
+• Request correction of inaccurate personal information
+• Opt out of the sale or sharing of your personal information for cross-context behavioral advertising
 • Non-discrimination for exercising your privacy rights
 
-To exercise any of these rights, contact us at privacy@djsmarketingservices.com or (619) 928-4669.`
+To opt out of sharing, click "Do Not Sell or Share My Personal Information" in the footer of any page, or turn on Global Privacy Control in your browser. We honor Global Privacy Control signals as a valid opt-out request.
+
+To exercise any other right, contact us at marketing@djs90.com or (619) 928-4669. We may need to verify your identity before fulfilling a request.`
           },
           {
             title: '5. GDPR Rights (EEA Residents)',
             body: `If you are located in the European Economic Area, you have the right to access, correct, or delete your personal data. You also have the right to restrict or object to processing, and the right to data portability.
 
-Our lawful basis for processing your data is your explicit consent, provided at the time of form submission. You may withdraw consent at any time by contacting us.`
+Our lawful basis for processing your data is your consent: for information you submit through our forms, consent is given at the time of submission; for analytics and advertising cookies, consent is given through our cookie banner, and these cookies are not set until you click Accept. You may withdraw consent at any time by using the "Do Not Sell or Share My Personal Information" link in the footer or by contacting us.`
           },
           {
             title: '6. Cookies & Tracking Technologies',
@@ -78,7 +83,13 @@ Our lawful basis for processing your data is your explicit consent, provided at 
 • Google Analytics (traffic analysis)
 • Meta Pixel (advertising measurement)
 
-You can control cookie settings through your browser. Disabling cookies may affect some functionality of our website.`
+How these cookies are handled depends on where you are:
+
+• Visitors in the European Economic Area, United Kingdom, and Switzerland: analytics and advertising cookies are only set after you click Accept on our cookie banner.
+• All other visitors, including the United States: these cookies are active by default, and you can opt out using the cookie banner or the "Do Not Sell or Share My Personal Information" link in the footer.
+• If your browser sends a Global Privacy Control signal, these cookies are turned off automatically.
+
+When you opt out, we disable these tools and remove the cookies they set. You can change your choice at any time from the footer link. You can also block cookies through your browser settings.`
           },
           {
             title: '7. Data Retention',
