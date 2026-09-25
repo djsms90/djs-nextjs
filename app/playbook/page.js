@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export const metadata = {
   title: 'BOOST365 Marketing Playbook: Free Download | DJS Marketing',
-  description: 'Download the free BOOST365© Marketing Playbook — the 5-pillar system (Branding, Optimization, Outreach, Sales Funnels, Tracking) used by niche service professionals to build consistent leads, convert prospects, and scale revenue.',
+  description: 'Free BOOST365© Marketing Playbook: the 5-pillar system niche service pros use to generate consistent leads, convert prospects, and scale revenue.',
   alternates: { canonical: 'https://djsmarketingservices.com/playbook' },
   keywords: 'BOOST365 playbook, marketing playbook, free marketing framework, 5-pillar marketing system, lead generation system, niche service marketing, DJS Marketing Services',
   openGraph: {
@@ -121,6 +121,13 @@ const faqSchema = {
   })),
 }
 
+const audiences = [
+  { role: 'Real Estate Professionals', desc: 'Agents, brokers, and teams who need consistent listing leads and buyer pipeline beyond referrals.' },
+  { role: 'Mortgage & Financial Services', desc: 'Loan officers and financial advisors who need to generate their own leads instead of waiting for partner referrals.' },
+  { role: 'Attorneys & Legal Professionals', desc: 'Law firms and solo practitioners building authority in a specific practice area and geographic market.' },
+  { role: 'Local Service Businesses', desc: 'Any niche service business — consultants, coaches, medical practices, trades — that depends on local visibility and trust.' },
+]
+
 export default function PlaybookPage() {
   return (
     <>
@@ -129,210 +136,197 @@ export default function PlaybookPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
+      <a href="#main-content" className="skip-nav">Skip to main content</a>
+
       {/* NAV */}
       <nav role="navigation" aria-label="Main navigation">
-        <Link href="/"><img src="/logo-nav.jpg" alt="DJS Marketing Services" style={{ height: '48px', width: 'auto' }} /></Link>
-        <Link href="/" style={{ fontSize:'13px', fontWeight:'700', color:'rgba(255,255,255,0.9)', textDecoration:'none', letterSpacing:'0.5px', textTransform:'uppercase' }}>← Back to Home</Link>
+        <Link href="/" className="pb-logo-link"><img src="/logo-nav.jpg" alt="DJS Marketing Services home" /></Link>
+        <Link href="/" className="pb-back">← Back to Home</Link>
       </nav>
 
-      {/* HERO — DOWNLOAD CTA */}
-      <div className="playbook-wrapper">
-        <div className="playbook-grid">
+      <main id="main-content">
+        {/* HERO — DOWNLOAD CTA */}
+        <div className="playbook-wrapper">
+          <div className="playbook-grid">
 
-          {/* LEFT */}
-          <div>
-            <p style={{ fontSize:'11px', fontWeight:'900', letterSpacing:'3px', textTransform:'uppercase', color:'#f7e400', marginBottom:'16px' }}>Free Download</p>
-            <h1 style={{ fontFamily:'Bebas Neue, sans-serif', fontSize:'clamp(40px,6vw,72px)', color:'white', lineHeight:'1.0', marginBottom:'24px' }}>
-              The BOOST365© <span style={{ color:'#f7e400' }}>Marketing Playbook</span>
-            </h1>
-            <p style={{ fontSize:'17px', color:'rgba(255,255,255,0.8)', lineHeight:'1.7', marginBottom:'32px' }}>
-              The 5-pillar system used by niche service professionals to build consistent leads, convert prospects, and scale revenue without doing everything manually.
-            </p>
-            <ul style={{ listStyle:'none', margin:'0 0 32px', padding:0 }}>
-              {pillars.map((p, i) => (
-                <li key={i} style={{ display:'flex', gap:'12px', alignItems:'flex-start', marginBottom:'12px', fontSize:'15px', color:'rgba(255,255,255,0.85)' }}>
-                  <span style={{ background:'#f7e400', color:'#c20000', width:'24px', height:'24px', borderRadius:'50%', display:'flex', alignItems:'center', justifyContent:'center', fontWeight:'900', fontSize:'12px', flexShrink:0 }}>{i+1}</span>
-                  <span><strong>{p.title}:</strong> {p.short}</span>
-                </li>
-              ))}
-            </ul>
-            <p style={{ fontSize:'13px', color:'rgba(255,255,255,0.5)' }}>
-              Used by real estate professionals, mortgage experts, attorneys, and niche service businesses across San Diego and beyond.
-            </p>
-          </div>
+            {/* LEFT — on mobile this column flattens so the CTA card sits under the intro */}
+            <div className="pb-hero-copy">
+              <p className="pb-eyebrow">Free Download</p>
+              <h1 className="pb-h1">
+                The BOOST365© <span>Marketing Playbook</span>
+              </h1>
+              <p className="pb-lead">
+                The 5-pillar system used by niche service professionals to build consistent leads, convert prospects, and scale revenue without doing everything manually.
+              </p>
+              <ul className="pb-pillar-list">
+                {pillars.map((p, i) => (
+                  <li key={i}>
+                    <span className="pb-pillar-num" aria-hidden="true">{i + 1}</span>
+                    <span><strong>{p.title}:</strong> {p.short}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="pb-proof">
+                Used by real estate professionals, mortgage experts, attorneys, and niche service businesses across San Diego and beyond.
+              </p>
+            </div>
 
-          {/* RIGHT — FORM */}
-          <div className="playbook-form-card">
-            <h2 style={{ fontFamily:'Bebas Neue, sans-serif', fontSize:'28px', color:'#111', marginBottom:'6px' }}>Get Instant Access</h2>
-            <p style={{ fontSize:'14px', color:'#777', marginBottom:'24px' }}>Enter your details below and we will send your free playbook immediately.</p>
-            <a
-              href="https://q55uc.share-na2.hsforms.com/2ijaRSaieQMaSfVEKZ7_78A"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="playbook-cta"
-            >
-              Complete Your Free Download →
-            </a>
-            <p style={{ fontSize:'12px', color:'#777', marginTop:'10px', textAlign:'center' }}>Opens a quick form. Takes 30 seconds.</p>
-            <div style={{ display:'flex', alignItems:'center', gap:'8px', marginTop:'16px', fontSize:'13px', color:'#666' }}>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="#0467b1"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
-              Your information is secure and will never be shared.
+            {/* RIGHT — FORM */}
+            <div className="playbook-form-card">
+              <h2 className="pb-card-title">Get Instant Access</h2>
+              <p className="pb-card-sub">Enter your details and we will send your free playbook immediately.</p>
+              <a
+                href="https://q55uc.share-na2.hsforms.com/2ijaRSaieQMaSfVEKZ7_78A"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="playbook-cta"
+              >
+                Complete Your Free Download{"\u00a0"}→
+              </a>
+              <p className="pb-card-note">Opens a quick form. Takes 30 seconds.</p>
+              <div className="pb-secure">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#0467b1" aria-hidden="true"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+                Your information is secure and will never be shared.
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* WHAT'S INSIDE */}
-      <section className="playbook-section">
-        <div className="playbook-content">
-          <h2 style={{ fontFamily:'Bebas Neue, sans-serif', fontSize:'36px', color:'#111', marginBottom:'8px' }}>What's Inside the Playbook</h2>
-          <p style={{ fontSize:'16px', color:'#555', lineHeight:'1.7', marginBottom:'40px', maxWidth:'680px' }}>
-            The BOOST365© Marketing Playbook breaks down the five pillars of a complete marketing system. Each pillar builds on the last. Together, they create a compounding engine that grows your visibility, your leads, and your revenue over time.
-          </p>
-
-          <div className="playbook-pillars-grid">
-            {pillars.map((p, i) => (
-              <div key={i} className="playbook-pillar-card">
-                <div style={{ fontSize:'32px', fontWeight:'900', color:'#0467b1', fontFamily:'Bebas Neue, sans-serif', marginBottom:'4px' }}>{p.num}</div>
-                <h3 style={{ fontSize:'20px', fontWeight:'800', color:'#111', marginBottom:'8px' }}>{p.title}</h3>
-                <p style={{ fontSize:'15px', color:'#555', lineHeight:'1.7' }}>{p.detail}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* WHO IT'S FOR */}
-      <section className="playbook-section" style={{ background:'#f8f9fb' }}>
-        <div className="playbook-content">
-          <h2 style={{ fontFamily:'Bebas Neue, sans-serif', fontSize:'36px', color:'#111', marginBottom:'8px' }}>Who This Playbook Is For</h2>
-          <p style={{ fontSize:'16px', color:'#555', lineHeight:'1.7', marginBottom:'32px', maxWidth:'680px' }}>
-            The BOOST365© system is built for niche service professionals — people with real expertise who need a marketing operation that matches the quality of their work.
-          </p>
-          <div className="playbook-audience-grid">
-            {[
-              { role: 'Real Estate Professionals', desc: 'Agents, brokers, and teams who need consistent listing leads and buyer pipeline beyond referrals.' },
-              { role: 'Mortgage & Financial Services', desc: 'Loan officers and financial advisors who need to generate their own leads instead of waiting for partner referrals.' },
-              { role: 'Attorneys & Legal Professionals', desc: 'Law firms and solo practitioners building authority in a specific practice area and geographic market.' },
-              { role: 'Local Service Businesses', desc: 'Any niche service business — consultants, coaches, medical practices, trades — that depends on local visibility and trust.' },
-            ].map((a, i) => (
-              <div key={i} style={{ padding:'24px', background:'white', borderRadius:'8px', border:'1px solid #e0e8f0' }}>
-                <h3 style={{ fontSize:'17px', fontWeight:'800', color:'#0467b1', marginBottom:'8px' }}>{a.role}</h3>
-                <p style={{ fontSize:'14px', color:'#555', lineHeight:'1.6' }}>{a.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* WHY SYSTEMS BEAT TACTICS */}
-      <section className="playbook-section">
-        <div className="playbook-content">
-          <h2 style={{ fontFamily:'Bebas Neue, sans-serif', fontSize:'36px', color:'#111', marginBottom:'8px' }}>Why Systems Beat Tactics</h2>
-          <div style={{ maxWidth:'680px', fontSize:'16px', color:'#555', lineHeight:'1.8' }}>
-            <p style={{ marginBottom:'16px' }}>
-              One blog post does not build a brand. One ad campaign does not create a pipeline. One social media push does not compound into revenue. Tactics in isolation produce spikes that fade. Systems produce results that build on themselves.
+        {/* WHAT'S INSIDE */}
+        <section className="playbook-section">
+          <div className="playbook-content">
+            <h2 className="pb-h2">What's Inside the Playbook</h2>
+            <p className="pb-intro">
+              The BOOST365© Marketing Playbook breaks down the five pillars of a complete marketing system. Each pillar builds on the last. Together, they create a compounding engine that grows your visibility, your leads, and your revenue over time.
             </p>
-            <p style={{ marginBottom:'16px' }}>
-              The BOOST365© Playbook exists because most niche service professionals are doing some marketing, but none of it connects. Their website does not talk to their ads. Their ads do not feed a funnel. Their funnel does not get tracked. They spend money and time without knowing what is working.
+            <div className="playbook-pillars-grid">
+              {pillars.map((p, i) => (
+                <div key={i} className="playbook-pillar-card">
+                  <div className="pb-pillar-card-num" aria-hidden="true">{p.num}</div>
+                  <h3>{p.title}</h3>
+                  <p>{p.detail}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* WHO IT'S FOR */}
+        <section className="playbook-section pb-alt">
+          <div className="playbook-content">
+            <h2 className="pb-h2">Who This Playbook Is For</h2>
+            <p className="pb-intro">
+              The BOOST365© system is built for niche service professionals — people with real expertise who need a marketing operation that matches the quality of their work.
+            </p>
+            <div className="playbook-audience-grid">
+              {audiences.map((a, i) => (
+                <div key={i} className="pb-audience-card">
+                  <h3>{a.role}</h3>
+                  <p>{a.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* WHY SYSTEMS BEAT TACTICS */}
+        <section className="playbook-section">
+          <div className="playbook-content">
+            <h2 className="pb-h2">Why Systems Beat Tactics</h2>
+            <div className="pb-prose">
+              <p>
+                One blog post does not build a brand. One ad campaign does not create a pipeline. One social media push does not compound into revenue. Tactics in isolation produce spikes that fade. Systems produce results that build on themselves.
+              </p>
+              <p>
+                The BOOST365© Playbook exists because most niche service professionals are doing some marketing, but none of it connects. Their website does not talk to their ads. Their ads do not feed a funnel. Their funnel does not get tracked. They spend money and time without knowing what is working.
+              </p>
+              <p>
+                This playbook gives you the framework to connect every piece — branding to optimization to outreach to funnels to tracking — so each dollar and hour you invest compounds instead of evaporating.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ — native accordion; answers stay in the HTML for search + AI crawlers */}
+        <section className="playbook-section pb-alt">
+          <div className="playbook-content">
+            <h2 className="pb-h2">Frequently Asked Questions</h2>
+            <div className="pb-faq">
+              {faqs.map((faq, i) => (
+                <details key={i}>
+                  <summary><h3>{faq.q}</h3></summary>
+                  <p>{faq.a}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* BOTTOM CTA */}
+        <section className="playbook-section pb-cta-band">
+          <div className="playbook-content">
+            <h2 className="pb-h2">Ready to Build a System That Compounds?</h2>
+            <p className="pb-cta-band-text">
+              Download the free BOOST365© Playbook and see the framework behind the results. Or book a strategy call and we will show you how it applies to your business.
+            </p>
+            <div className="pb-btn-row">
+              <a href="https://q55uc.share-na2.hsforms.com/2ijaRSaieQMaSfVEKZ7_78A" target="_blank" rel="noopener noreferrer" className="pb-btn pb-btn-gold">
+                Download the Playbook{"\u00a0"}→
+              </a>
+              <a href="https://meetings-na2.hubspot.com/sweis" target="_blank" rel="noopener noreferrer" className="pb-btn pb-btn-ghost">
+                Book a Free Strategy Call
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* AUTHOR / CREDIBILITY */}
+        <section className="playbook-section">
+          <div className="playbook-content pb-narrow pb-author">
+            <p className="pb-kicker">About the Author</p>
+            <h2 className="pb-h2">Danny Sweis</h2>
+            <p>
+              Founder and CEO of <Link href="/">DJS Marketing Services</Link>, a San Diego-based full-stack digital marketing agency. Danny builds done-for-you marketing systems for niche service professionals — real estate, legal, mortgage, and local service businesses — using the BOOST365© framework.
             </p>
             <p>
-              This playbook gives you the framework to connect every piece — branding to optimization to outreach to funnels to tracking — so each dollar and hour you invest compounds instead of evaporating.
+              DJS Marketing Services handles everything from brand strategy and SEO to paid advertising, sales funnels, and AI-powered content systems. The BOOST365© Playbook is the same framework we deploy with every client.
             </p>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* FAQ */}
-      <section className="playbook-section" style={{ background:'#f8f9fb' }}>
-        <div className="playbook-content">
-          <h2 style={{ fontFamily:'Bebas Neue, sans-serif', fontSize:'36px', color:'#111', marginBottom:'32px' }}>Frequently Asked Questions</h2>
-          <div style={{ maxWidth:'720px' }}>
-            {faqs.map((faq, i) => (
-              <div key={i} style={{ marginBottom:'24px', paddingBottom:'24px', borderBottom: i < faqs.length - 1 ? '1px solid #e0e8f0' : 'none' }}>
-                <h3 style={{ fontSize:'17px', fontWeight:'700', color:'#111', marginBottom:'8px' }}>{faq.q}</h3>
-                <p style={{ fontSize:'15px', color:'#555', lineHeight:'1.7' }}>{faq.a}</p>
-              </div>
-            ))}
+        {/* RELATED CONTENT */}
+        <section className="playbook-section pb-alt">
+          <div className="playbook-content">
+            <h2 className="pb-h2 pb-h2-sm">Related Reading</h2>
+            <div className="playbook-links-grid">
+              <Link href="/blog/aeo" className="pb-link-card">
+                <p className="pb-link-tag">Blog</p>
+                <p className="pb-link-title">How to Actually Show Up in AI-Powered Search Results</p>
+                <p className="pb-link-desc">The Optimization pillar in action — AEO strategy for niche businesses.</p>
+              </Link>
+              <Link href="/blog/local-seo" className="pb-link-card">
+                <p className="pb-link-tag">Blog</p>
+                <p className="pb-link-title">The Local SEO Playbook for Niche Service Professionals</p>
+                <p className="pb-link-desc">How local visibility drives the Outreach pillar for service businesses.</p>
+              </Link>
+              <a href="https://meetings-na2.hubspot.com/sweis" target="_blank" rel="noopener noreferrer" className="pb-link-card">
+                <p className="pb-link-tag">Next Step</p>
+                <p className="pb-link-title">Book a Free 30-Minute Strategy Call</p>
+                <p className="pb-link-desc">No pitch, no pressure. Walk away with at least one actionable insight.</p>
+              </a>
+            </div>
           </div>
-        </div>
-      </section>
-
-      {/* BOTTOM CTA */}
-      <section className="playbook-section" style={{ background:'#0467b1', textAlign:'center' }}>
-        <div className="playbook-content">
-          <h2 style={{ fontFamily:'Bebas Neue, sans-serif', fontSize:'36px', color:'white', marginBottom:'12px' }}>Ready to Build a System That Compounds?</h2>
-          <p style={{ fontSize:'16px', color:'rgba(255,255,255,0.8)', marginBottom:'24px', maxWidth:'560px', margin:'0 auto 24px' }}>
-            Download the free BOOST365© Playbook and see the framework behind the results. Or book a strategy call and we will show you how it applies to your business.
-          </p>
-          <div style={{ display:'flex', gap:'16px', justifyContent:'center', flexWrap:'wrap' }}>
-            <a
-              href="https://q55uc.share-na2.hsforms.com/2ijaRSaieQMaSfVEKZ7_78A"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ display:'inline-block', background:'#f7e400', color:'#c20000', fontSize:'13px', fontWeight:'900', letterSpacing:'1px', textTransform:'uppercase', padding:'16px 32px', borderRadius:'6px', textDecoration:'none' }}
-            >
-              Download the Playbook →
-            </a>
-            <a
-              href="https://meetings-na2.hubspot.com/sweis"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ display:'inline-block', background:'transparent', color:'white', fontSize:'13px', fontWeight:'900', letterSpacing:'1px', textTransform:'uppercase', padding:'16px 32px', borderRadius:'6px', textDecoration:'none', border:'2px solid rgba(255,255,255,0.4)' }}
-            >
-              Book a Free Strategy Call
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* AUTHOR / CREDIBILITY */}
-      <section className="playbook-section">
-        <div className="playbook-content" style={{ maxWidth:'680px' }}>
-          <p style={{ fontSize:'13px', fontWeight:'700', letterSpacing:'2px', textTransform:'uppercase', color:'#0467b1', marginBottom:'12px' }}>About the Author</p>
-          <h2 style={{ fontFamily:'Bebas Neue, sans-serif', fontSize:'28px', color:'#111', marginBottom:'12px' }}>Danny Sweis</h2>
-          <p style={{ fontSize:'15px', color:'#555', lineHeight:'1.7', marginBottom:'16px' }}>
-            Founder and CEO of <Link href="/" style={{ color:'#0467b1', textDecoration:'none', fontWeight:'600' }}>DJS Marketing Services</Link>, a San Diego-based full-stack digital marketing agency. Danny builds done-for-you marketing systems for niche service professionals — real estate, legal, mortgage, and local service businesses — using the BOOST365© framework.
-          </p>
-          <p style={{ fontSize:'15px', color:'#555', lineHeight:'1.7' }}>
-            DJS Marketing Services handles everything from brand strategy and SEO to paid advertising, sales funnels, and AI-powered content systems. The BOOST365© Playbook is the same framework we deploy with every client.
-          </p>
-        </div>
-      </section>
-
-      {/* RELATED CONTENT */}
-      <section className="playbook-section" style={{ background:'#f8f9fb' }}>
-        <div className="playbook-content">
-          <h2 style={{ fontFamily:'Bebas Neue, sans-serif', fontSize:'28px', color:'#111', marginBottom:'24px' }}>Related Reading</h2>
-          <div className="playbook-links-grid">
-            <Link href="/blog/aeo" style={{ display:'block', padding:'20px', background:'white', borderRadius:'8px', border:'1px solid #e0e8f0', textDecoration:'none' }}>
-              <p style={{ fontSize:'12px', fontWeight:'700', textTransform:'uppercase', letterSpacing:'1px', color:'#0467b1', marginBottom:'6px' }}>Blog</p>
-              <p style={{ fontSize:'16px', fontWeight:'700', color:'#111', marginBottom:'4px' }}>How to Actually Show Up in AI-Powered Search Results</p>
-              <p style={{ fontSize:'13px', color:'#777' }}>The Optimization pillar in action — AEO strategy for niche businesses.</p>
-            </Link>
-            <Link href="/blog/local-seo" style={{ display:'block', padding:'20px', background:'white', borderRadius:'8px', border:'1px solid #e0e8f0', textDecoration:'none' }}>
-              <p style={{ fontSize:'12px', fontWeight:'700', textTransform:'uppercase', letterSpacing:'1px', color:'#0467b1', marginBottom:'6px' }}>Blog</p>
-              <p style={{ fontSize:'16px', fontWeight:'700', color:'#111', marginBottom:'4px' }}>The Local SEO Playbook for Niche Service Professionals</p>
-              <p style={{ fontSize:'13px', color:'#777' }}>How local visibility drives the Outreach pillar for service businesses.</p>
-            </Link>
-            <a href="https://meetings-na2.hubspot.com/sweis" target="_blank" rel="noopener noreferrer" style={{ display:'block', padding:'20px', background:'white', borderRadius:'8px', border:'1px solid #e0e8f0', textDecoration:'none' }}>
-              <p style={{ fontSize:'12px', fontWeight:'700', textTransform:'uppercase', letterSpacing:'1px', color:'#0467b1', marginBottom:'6px' }}>Next Step</p>
-              <p style={{ fontSize:'16px', fontWeight:'700', color:'#111', marginBottom:'4px' }}>Book a Free 30-Minute Strategy Call</p>
-              <p style={{ fontSize:'13px', color:'#777' }}>No pitch, no pressure. Walk away with at least one actionable insight.</p>
-            </a>
-          </div>
-        </div>
-      </section>
+        </section>
+      </main>
 
       {/* FOOTER */}
       <footer className="playbook-footer">
-        <Link href="/"><img src="/logo-footer.jpg" alt="DJS Marketing Services" style={{ height:'40px', width:'auto' }} /></Link>
-        <p style={{ fontSize:'12px', color:'#777' }}>
-          © {new Date().getFullYear()}{' '}DJS Marketing Services. All Rights Reserved. &nbsp;|&nbsp;
-          <Link href="/privacy-policy" style={{ color:'#0467b1', textDecoration:'none' }}>Privacy Policy</Link>
-          &nbsp;|&nbsp;
-          <Link href="/terms" style={{ color:'#0467b1', textDecoration:'none' }}>Terms & Conditions</Link>
-        </p>
+        <Link href="/" className="pb-logo-link"><img src="/logo-footer.jpg" alt="DJS Marketing Services home" className="pb-footer-logo" /></Link>
+        <div className="pb-footer-meta">
+          <span>© {new Date().getFullYear()} DJS Marketing Services. All Rights Reserved.</span>
+          <Link href="/privacy-policy">Privacy Policy</Link>
+          <Link href="/terms">Terms & Conditions</Link>
+        </div>
       </footer>
     </>
   )
