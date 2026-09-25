@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import PrivacyChoicesLink from '../components/PrivacyChoicesLink'
 import Quiz from '../components/Quiz'
 import blogPosts from '../data/blog-posts'
 
@@ -596,7 +597,7 @@ export default function Home() {
       <footer>
         <a href="/"><Image src="/logo-footer.jpg" alt="DJS Marketing Services" width={160} height={44} style={{ height:'44px', width:'auto' }} /></a>
         <div className="footer-contact">
-          <p>© {new Date().getFullYear()}{' '}DJS Marketing Services. All Rights Reserved. &nbsp;|&nbsp; <a href="/privacy-policy" style={{ color:'var(--blue)', textDecoration:'none' }}>Privacy Policy</a> &nbsp;|&nbsp; <a href="/terms" style={{ color:'var(--blue)', textDecoration:'none' }}>Terms & Conditions</a></p>
+          <p>© {new Date().getFullYear()}{' '}DJS Marketing Services. All Rights Reserved. &nbsp;|&nbsp; <a href="/privacy-policy" style={{ color:'var(--blue)', textDecoration:'none' }}>Privacy Policy</a> &nbsp;|&nbsp; <a href="/terms" style={{ color:'var(--blue)', textDecoration:'none' }}>Terms & Conditions</a> &nbsp;|&nbsp; <PrivacyChoicesLink style={{ color:'var(--blue)' }} /></p>
           <p><a href="mailto:marketing@djs90.com">marketing@djs90.com</a> &nbsp;|&nbsp; <a href="tel:+16199284669">(619) 928-4669</a></p>
         </div>
         <div className="footer-social">

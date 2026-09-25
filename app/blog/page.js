@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import PrivacyChoicesLink from '../../components/PrivacyChoicesLink'
 import blogPosts from '../../data/blog-posts'
 
 export const metadata = {
@@ -55,6 +56,8 @@ export default function BlogPage() {
           <Link href="/privacy-policy" style={{ color:'var(--blue)', textDecoration:'none' }}>Privacy Policy</Link>
           &nbsp;|&nbsp;
           <Link href="/terms" style={{ color:'var(--blue)', textDecoration:'none' }}>Terms & Conditions</Link>
+          &nbsp;|&nbsp;
+          <PrivacyChoicesLink style={{ color:'var(--blue)' }} />
         </p>
       </footer>
     </>

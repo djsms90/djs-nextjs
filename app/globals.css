@@ -745,19 +745,19 @@ footer p { font-size:12px; color:var(--text-light); }
 
 /* ---------- TABLET + PHONE ---------- */
 @media (max-width:900px) {
-  .playbook-wrapper { min-height:0; padding:88px 20px 48px; }
+  .playbook-wrapper { min-height:0; padding:84px 20px 48px; }
   /* Flatten the left column so the form card can sit right under the intro:
      eyebrow → H1 → lead → CTA card → pillar list → proof line.
      No focusable elements are reordered, so tab order still matches the screen. */
   .playbook-grid { grid-template-columns:1fr; gap:0; }
   .pb-hero-copy { display:contents; }
   .pb-eyebrow { order:1; margin-bottom:12px; }
-  .pb-h1 { order:2; margin-bottom:16px; }
-  .pb-lead { order:3; font-size:16px; line-height:1.6; margin-bottom:24px; }
-  .playbook-form-card { order:4; padding:24px 20px; margin-bottom:32px; }
+  .pb-h1 { order:2; margin-bottom:12px; }
+  .pb-lead { order:3; font-size:16px; line-height:1.55; margin-bottom:20px; }
+  .playbook-form-card { order:4; padding:20px; margin-bottom:32px; }
   .pb-pillar-list { order:5; margin-bottom:20px; }
   .pb-proof { order:6; }
-  .pb-card-sub { margin-bottom:16px; }
+  .pb-card-sub { margin-bottom:14px; }
 
   .playbook-section { padding:48px 20px; }
   .pb-h2 { font-size:32px; }
@@ -774,4 +774,67 @@ footer p { font-size:12px; color:var(--text-light); }
 
   .playbook-footer { padding:24px 20px; flex-direction:column; text-align:center; }
   .pb-footer-meta { justify-content:center; }
+}
+
+/* ============================================
+   COOKIE CONSENT + PRIVACY CHOICES
+   ============================================ */
+.privacy-choices-link {
+  background:none; border:0; padding:0; margin:0;
+  font:inherit; color:inherit; cursor:pointer; text-align:inherit;
+}
+.privacy-choices-link:hover { text-decoration:underline; }
+.privacy-choices-link:focus-visible { outline:2px solid var(--blue); outline-offset:2px; }
+.pb-footer-meta .pb-privacy-choices { display:inline-flex; align-items:center; min-height:44px; color:var(--blue); }
+
+.consent-banner {
+  position:fixed; left:0; right:0; bottom:0; z-index:9999;
+  padding:0 16px 16px; pointer-events:none;
+}
+.consent-inner {
+  position:relative; pointer-events:auto;
+  max-width:960px; margin:0 auto;
+  background:var(--white); color:var(--text);
+  border-top:4px solid var(--blue); border-radius:10px;
+  box-shadow:0 8px 40px rgba(0,0,0,0.25);
+  padding:20px 24px;
+  display:flex; align-items:center; gap:24px;
+}
+.consent-text { flex:1; min-width:0; }
+.consent-text p { font-size:14px; line-height:1.6; color:#333; margin:0; }
+.consent-text a { color:var(--blue); font-weight:600; text-decoration:underline; }
+.consent-title { font-weight:800; font-size:16px !important; color:var(--text) !important; margin-bottom:4px !important; }
+.consent-actions { display:flex; gap:12px; flex-shrink:0; }
+.consent-btn {
+  min-height:44px; padding:10px 22px; border-radius:6px;
+  font-family:'Inter', sans-serif; font-size:13px; font-weight:800;
+  letter-spacing:0.5px; text-transform:uppercase; cursor:pointer; white-space:nowrap;
+}
+.consent-btn-primary { background:var(--blue); color:var(--white); border:2px solid var(--blue); }
+.consent-btn-primary:hover { background:var(--blue-dark); border-color:var(--blue-dark); }
+.consent-btn-secondary { background:var(--white); color:var(--blue); border:2px solid var(--blue); }
+.consent-btn-secondary:hover { background:var(--blue-light); }
+.consent-btn:focus-visible, .consent-close:focus-visible { outline:3px solid var(--gold); outline-offset:2px; }
+.consent-close {
+  position:absolute; top:4px; right:6px;
+  width:44px; height:44px; background:none; border:0; cursor:pointer;
+  font-size:26px; line-height:1; color:#555;
+}
+
+.consent-short { display:none; }
+
+/* Phones: compact bar pinned to the bottom edge so it never covers the hero CTA */
+@media (max-width:700px) {
+  .consent-banner { padding:0; }
+  .consent-inner {
+    flex-direction:column; align-items:stretch; gap:8px;
+    padding:10px 14px calc(12px + env(safe-area-inset-bottom));
+    border-radius:10px 10px 0 0;
+  }
+  .consent-long { display:none; }
+  .consent-short { display:inline; }
+  .consent-text p { font-size:13px; line-height:1.45; }
+  .consent-actions { gap:10px; }
+  .consent-btn { flex:1; padding:8px 12px; white-space:normal; }
+  .consent-title { padding-right:36px; }
 }

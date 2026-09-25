@@ -1,6 +1,7 @@
 'use client'
 import { useEffect } from 'react'
 import Link from 'next/link'
+import PrivacyChoicesLink from './PrivacyChoicesLink'
 
 export default function BlogLayout({ children, title, tag, date, readTime, description }) {
   useEffect(() => {
@@ -51,6 +52,8 @@ export default function BlogLayout({ children, title, tag, date, readTime, descr
           <Link href="/privacy-policy" style={{ color:'var(--blue)', textDecoration:'none' }}>Privacy Policy</Link>
           &nbsp;|&nbsp;
           <Link href="/terms" style={{ color:'var(--blue)', textDecoration:'none' }}>Terms & Conditions</Link>
+          &nbsp;|&nbsp;
+          <PrivacyChoicesLink style={{ color:'var(--blue)' }} />
         </p>
         <Link href="/blog" style={{ fontSize:'13px', fontWeight:'700', color:'var(--blue)', textDecoration:'none' }}>← All Articles</Link>
       </footer>

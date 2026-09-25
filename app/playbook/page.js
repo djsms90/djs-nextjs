@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import PrivacyChoicesLink from '../../components/PrivacyChoicesLink'
 
 export const metadata = {
   title: 'BOOST365 Marketing Playbook: Free Download | DJS Marketing',
@@ -326,6 +327,7 @@ export default function PlaybookPage() {
           <span>© {new Date().getFullYear()} DJS Marketing Services. All Rights Reserved.</span>
           <Link href="/privacy-policy">Privacy Policy</Link>
           <Link href="/terms">Terms & Conditions</Link>
+          <PrivacyChoicesLink className="privacy-choices-link pb-privacy-choices" />
         </div>
       </footer>
     </>
