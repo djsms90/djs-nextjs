@@ -17,6 +17,7 @@ const logos = [
   { src: '/logo-aaba.jpg',        alt: 'Arab American Bar Association' },
   { src: '/logo-wallasigns.jpg',  alt: 'WallaSigns' },
   { src: '/logo-mk-group.jpg',    alt: 'MK Group' },
+  { src: '/logo-wellspring-law.webp', alt: 'Wellspring Law' },
 ]
 
 const quizData = [
