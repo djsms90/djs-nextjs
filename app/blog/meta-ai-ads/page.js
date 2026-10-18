@@ -1,5 +1,5 @@
 import BlogLayout from '../../../components/BlogLayout'
-import { blogMeta } from '../../../lib/seo'
+import { blogMeta, articleSchema } from '../../../lib/seo'
 
 export const metadata = blogMeta({
   title: 'Meta Just Made AI the Default for All Ads: Should You Let It Run Yours?',
@@ -16,6 +16,8 @@ export default function MetaAiAds() {
       date="May 9, 2026"
       readTime="7 min read"
     >
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema({ title: 'Meta Just Made AI the Default for All Ads: Should You Let It Run Yours?', description: 'Meta expanded its AI Business Assistant to every advertiser and made Advantage+ automation the default for all new campaigns. Here is what that means for your budget and brand.', slug: 'meta-ai-ads', date: '2026-05-09', category: 'Paid Advertising', wordCount: 1100 })) }} />
+
       <p>Meta quietly made one of the biggest moves in its advertising history. It expanded its AI Business Assistant to every advertiser and agency on the planet, and made Advantage+ automation the <strong>default</strong> for all new ad campaigns.</p>
       <p>No announcement. No opt-in. No heads-up.</p>
       <p>If you&apos;re running Facebook or Instagram ads right now, AI may already be making decisions on your behalf. The question isn&apos;t whether Meta&apos;s AI is powerful, it is. The question is whether you&apos;re using it intentionally or just letting it run wild with your budget.</p>

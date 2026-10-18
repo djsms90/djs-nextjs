@@ -1,5 +1,5 @@
 import BlogLayout from '../../../components/BlogLayout'
-import { blogMeta } from '../../../lib/seo'
+import { blogMeta, articleSchema as buildArticleSchema } from '../../../lib/seo'
 
 export const metadata = blogMeta({
   title: 'Zero-Click Search Is Here: How to Win When Nobody Clicks',
@@ -8,21 +8,14 @@ export const metadata = blogMeta({
   date: '2026-08-11',
 })
 
-const articleSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Article',
-  headline: 'Zero-Click Search Is Here: How to Win When Nobody Clicks',
+const articleSchema = buildArticleSchema({
+  title: 'Zero-Click Search Is Here: How to Win When Nobody Clicks',
   description: 'Nearly 60% of Google searches now end without a click. Here is how to make zero-click search work for your business instead of against it.',
-  image: 'https://djsmarketingservices.com/og-image-v2.jpg',
-  datePublished: '2026-08-11',
-  dateModified: '2026-08-11',
-  author: { '@type': 'Person', '@id': 'https://djsmarketingservices.com/#danny-sweis', name: 'Danny Sweis', jobTitle: 'Founder & CEO', url: 'https://djsmarketingservices.com' },
-  publisher: { '@type': 'Organization', '@id': 'https://djsmarketingservices.com/#organization', name: 'DJS Marketing Services', logo: { '@type': 'ImageObject', url: 'https://djsmarketingservices.com/logo-nav.jpg' } },
-  mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://djsmarketingservices.com/blog/zero-click-search' },
-  articleSection: 'SEO & AEO',
+  slug: 'zero-click-search',
+  date: '2026-08-11',
+  category: 'SEO & AEO',
   wordCount: 1450,
-  inLanguage: 'en-US',
-}
+})
 
 export default function ZeroClickSearch() {
   return (

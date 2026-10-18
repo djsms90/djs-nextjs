@@ -1,5 +1,5 @@
 import BlogLayout from '../../../components/BlogLayout'
-import { blogMeta } from '../../../lib/seo'
+import { blogMeta, articleSchema } from '../../../lib/seo'
 
 export const metadata = blogMeta({
   title: 'What Is Answer Engine Optimization and Why Your Clients Need It Now',
@@ -16,6 +16,8 @@ export default function BlogPost() {
       date="April 10, 2026"
       readTime="7 min read"
     >
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema({ title: 'What Is Answer Engine Optimization and Why Your Clients Need It Now', description: 'How we are getting clients appearing in AI-generated search answers before competitors know AEO exists. The shift from search engines to answer engines is already here.', slug: 'aeo', date: '2026-04-10', category: 'SEO & AEO', wordCount: 1050 })) }} />
+
       <div dangerouslySetInnerHTML={{ __html: `<p>There is a quiet shift happening in how people find businesses, and most professional service providers are completely unaware of it.</p>
 
     <p>When someone used to search for "probate real estate agent San Diego," they'd get a list of blue links. They'd click a few, compare websites, maybe call one. The game was: rank #1 on Google, get the most clicks.</p>

@@ -1,5 +1,5 @@
 import BlogLayout from '../../../components/BlogLayout'
-import { blogMeta } from '../../../lib/seo'
+import { blogMeta, articleSchema } from '../../../lib/seo'
 
 export const metadata = blogMeta({
   title: 'Google AI Overviews Are Stealing Your Clicks: Here Is How to Fight Back',
@@ -16,6 +16,8 @@ export default function BlogPost() {
       date="April 25, 2026"
       readTime="6 min read"
     >
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema({ title: 'Google AI Overviews Are Stealing Your Clicks: Here Is How to Fight Back', description: 'AI Overviews are answering questions before users click anything. Here is the strategy to get your brand cited inside those answers.', slug: 'ai-overviews', date: '2026-04-21', category: 'SEO & AI Search', wordCount: 1100 })) }} />
+
       <div dangerouslySetInnerHTML={{ __html: `<h2>The #1 Website Traffic Problem Nobody's Talking About</h2>
     <p>You are ranking on page one of Google. You've had that spot for months. Your content is solid. But your traffic is down. Way down. And you cannot figure out why.</p>
     <p>Here Is why: Google is not sending your visitors to you anymore.</p>

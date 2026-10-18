@@ -1,5 +1,5 @@
 import BlogLayout from '../../../components/BlogLayout'
-import { blogMeta } from '../../../lib/seo'
+import { blogMeta, articleSchema } from '../../../lib/seo'
 
 export const metadata = blogMeta({
   title: 'GEO vs SEO: The New Optimization Game Your Competitors Do Not Know About',
@@ -16,6 +16,8 @@ export default function BlogPost() {
       date="April 28, 2026"
       readTime="6 min read"
     >
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema({ title: 'GEO vs SEO: The New Optimization Game Your Competitors Do Not Know About', description: 'SEO gets you ranked. GEO gets you cited by AI. Learn what Generative Engine Optimization is and how to start winning in AI search.', slug: 'geo-vs-seo', date: '2026-04-28', category: 'SEO & GEO', wordCount: 1200 })) }} />
+
       <div dangerouslySetInnerHTML={{ __html: `<p>I want to share something with you that most marketing agencies are not talking about yet.</p>
 
     <p>Not because it is a secret. But because it requires actually paying attention to where things are heading, not just where they've been.</p>
