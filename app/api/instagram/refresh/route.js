@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { readStoredToken, refreshToken, saveToken } from '../../../../lib/instagram'
+import { readStoredToken, refreshToken, saveToken, cleanToken } from '../../../../lib/instagram'
 
 export const dynamic = 'force-dynamic'
 
@@ -17,7 +17,7 @@ export async function GET(request) {
   }
 
   const stored = await readStoredToken()
-  const current = stored?.token || process.env.INSTAGRAM_ACCESS_TOKEN
+  const current = cleanToken(stored?.token) || cleanToken(process.env.INSTAGRAM_ACCESS_TOKEN)
   if (!current) return NextResponse.json({ ok: false, reason: 'no token configured' }, { status: 500 })
 
   if (stored?.refreshedAt && Date.now() - stored.refreshedAt < REFRESH_EVERY) {
