@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import PrivacyChoicesLink from '../components/PrivacyChoicesLink'
 import Quiz from '../components/Quiz'
+import InstagramFeed from '../components/InstagramFeed'
 import blogPosts from '../data/blog-posts'
 
 const logos = [
@@ -525,6 +526,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* INSTAGRAM FEED */}
+      <InstagramFeed />
 
       {/* NEWSLETTER */}
       <section className="newsletter">
