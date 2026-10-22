@@ -26,7 +26,7 @@ export async function GET(request) {
 
   try {
     const record = await refreshToken(current)
-    await saveToken(record)
+    await saveToken(record, { exists: Boolean(stored) })
     return NextResponse.json({ ok: true, refreshed: true, expiresAt: new Date(record.expiresAt).toISOString() })
   } catch (e) {
     console.error('[instagram] refresh failed', e)
