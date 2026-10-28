@@ -7,7 +7,7 @@ const BOOKING_URL = 'https://meetings-na2.hubspot.com/sweis'
 const PAGE_URL = 'https://djsmarketingservices.com/services/website-design'
 const TITLE = 'Website Design for Service Businesses | DJS Marketing'
 const DESCRIPTION =
-  'Website design for service businesses, with clear messaging, mobile-friendly pages, search-ready structure, and straightforward paths to inquiry.'
+  'Websites for service businesses that explain what you do in seconds and turn visitors into booked calls. Search-ready, mobile-friendly, built to convert.'
 
 export const metadata = {
   title: TITLE,
@@ -40,29 +40,28 @@ const navItems = [
 const faqs = [
   {
     q: 'How long does a website build take?',
-    a: 'It depends on the number of pages, how much content already exists and how quickly decisions and feedback move. We discuss a realistic timeline once scope is clear on the strategy call, rather than quoting one up front.',
+    a: 'Depends on how many pages, how much content you already have, and how fast decisions move. You get a real timeline once scope is clear, not a guess up front.',
   },
   {
     q: 'Is ongoing SEO included with a new website?',
     a: (
       <>
-        Not automatically. A good build should be search-ready, with clean structure and crawlable pages,
-        but ongoing SEO is a separate scope of work. Anything beyond the build is agreed during the strategy
-        call. Learn more on our <Link href="/services/seo">SEO and AI-search</Link> page.
+        Every site is built search-ready: clean structure, crawlable pages, clear content. Ongoing SEO is
+        its own scope, agreed on upfront. More on our <Link href="/services/seo">SEO, AEO &amp; GEO</Link> page.
       </>
     ),
   },
   {
     q: 'Can you redesign my existing site instead of starting over?',
-    a: 'Sometimes a tune-up is the right move and sometimes a rebuild is. We look at what you have and recommend the approach that fits your goals.',
+    a: 'Sometimes a tune-up is the right move. Sometimes a rebuild is. We look at what you have and tell you straight which one makes sense.',
   },
   {
     q: 'Do you build landing pages and sales funnels too?',
-    a: 'Yes. Landing pages and sales funnels are among the services we offer, and they can be planned alongside a website or on their own. Which pieces make sense is part of the scoping conversation.',
+    a: 'Yes. Landing pages and sales funnels are part of what we build, alongside your website or on their own. We decide which pieces you need on the strategy call.',
   },
   {
     q: 'Will a new website guarantee more leads?',
-    a: 'No website can guarantee results. What a well-built site does is remove friction: it explains your business clearly and makes it easy to reach out. Traffic, offer and follow-up all play a role too, which is why we think in systems.',
+    a: "No website guarantees leads, and nobody honest will tell you otherwise. A well-built site removes friction: it explains what you do and makes it easy to reach out. Traffic, your offer and your follow-up matter too. That's why we build systems, not just sites.",
   },
 ]
 
@@ -109,14 +108,15 @@ export default function WebsiteDesignPage() {
               </ol>
               <p className={styles.eyebrow}>Website Design &amp; Development</p>
               <h1 id="web-title" className={styles.h1}>
-                Websites Built to <em>Explain Your Business</em> and Generate Inquiries
+                Your Website Should Be <em>Your Best Salesperson.</em>
               </h1>
               <p className={styles.lede}>
-                You are great at what you do. Your website should make that obvious in the first few seconds.
+                You&apos;re great at what you do. If your website doesn&apos;t make that obvious in the first few
+                seconds, visitors leave for a competitor who does.
               </p>
               <p className={styles.heroText}>
-                We design and develop websites for service professionals that say clearly who you help, why
-                you are the right choice and exactly how to get in touch.
+                We design and build websites for service professionals that say exactly who you help, why
+                you&apos;re the obvious choice, and how to get in touch. No fluff.
               </p>
               <div className={styles.btnRow}>
                 <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className={styles.btnPrimary}>
@@ -127,11 +127,11 @@ export default function WebsiteDesignPage() {
             </div>
 
             <div className={styles.heroPanel}>
-              <p className={styles.panelLabel}>A visitor should know</p>
+              <p className={styles.panelLabel}>Every visitor should know</p>
               <ul className={styles.panelList}>
-                <li><span className={styles.panelNum}>01</span><span><strong>What you do</strong>In plain language, without decoding jargon.</span></li>
-                <li><span className={styles.panelNum}>02</span><span><strong>Why you</strong>What makes your expertise worth trusting.</span></li>
-                <li><span className={styles.panelNum}>03</span><span><strong>What to do next</strong>One clear step toward an inquiry.</span></li>
+                <li><span className={styles.panelNum}>01</span><span><strong>What you do</strong>In plain English. No decoding jargon.</span></li>
+                <li><span className={styles.panelNum}>02</span><span><strong>Why you</strong>Why your expertise is worth trusting.</span></li>
+                <li><span className={styles.panelNum}>03</span><span><strong>What&apos;s next</strong>One obvious step toward a booked call.</span></li>
               </ul>
             </div>
           </div>
@@ -147,21 +147,20 @@ export default function WebsiteDesignPage() {
                   A Pretty Site Is Not <span>the Same as a Working One.</span>
                 </h2>
                 <p className={styles.p}>
-                  Many service businesses have a website that looks fine but does not do much. It describes
-                  the business in vague terms, buries the contact details and leaves visitors to figure out the
-                  next step themselves.
+                  Most service businesses have a website that looks fine and does nothing. Vague copy. Buried
+                  contact info. Visitors left to figure out the next step on their own. They won&apos;t.
                 </p>
                 <p className={styles.p}>
-                  <strong>We treat your website as part of a marketing system</strong>, connected to your
-                  brand, search visibility, landing pages and tracking.
+                  <strong>Your website isn&apos;t a brochure. It&apos;s part of your marketing system</strong>,
+                  connected to your brand, your search visibility, your landing pages and your tracking.
                 </p>
               </div>
               <ul className={styles.checklist}>
-                <li><strong>Clear messaging.</strong> Copy structured around what your clients need to know.</li>
+                <li><strong>Clear messaging.</strong> Copy built around what your clients need to know before they call.</li>
                 <li><strong>Brand consistency.</strong> A look and voice that match how you show up everywhere else.</li>
-                <li><strong>Accessible, mobile-friendly build.</strong> Readable, navigable and usable on any device.</li>
-                <li><strong>Search-ready structure.</strong> Logical pages and headings search engines can understand.</li>
-                <li><strong>Conversion paths.</strong> Obvious, repeated routes to book or contact you.</li>
+                <li><strong>Mobile-friendly and accessible.</strong> Fast, readable and usable on any device.</li>
+                <li><strong>Search-ready structure.</strong> Pages and headings Google can understand, and AI can quote.</li>
+                <li><strong>Conversion paths.</strong> Obvious, repeated routes to book a call. Don&apos;t make people hunt.</li>
               </ul>
             </div>
           </div>
@@ -173,20 +172,20 @@ export default function WebsiteDesignPage() {
             <p className={styles.kicker}>How it works</p>
             <h2 id="approach-title" className={styles.h2}>From Conversation <span>to Launch</span></h2>
             <p className={styles.p}>
-              Every project starts by understanding your business. Scope, including which pages, features and
-              any ongoing work, is agreed together before anything is built.
+              Every build starts with your business, not a design. We agree on scope (pages, features and
+              anything ongoing) before a single pixel moves.
             </p>
             <ol className={styles.steps}>
-              <li className={styles.step}><p className={styles.stepNum}>01</p><h3 className={styles.h3}>Strategy call</h3><p>Your services, clients, goals and what is or is not working today.</p></li>
-              <li className={styles.step}><p className={styles.stepNum}>02</p><h3 className={styles.h3}>Positioning</h3><p>Clarify the message and structure before design begins.</p></li>
-              <li className={styles.step}><p className={styles.stepNum}>03</p><h3 className={styles.h3}>Design and build</h3><p>Pages designed around your brand and built to be fast and accessible.</p></li>
-              <li className={styles.step}><p className={styles.stepNum}>04</p><h3 className={styles.h3}>Launch and measure</h3><p>Tracking in place so you can see how visitors use the site.</p></li>
+              <li className={styles.step}><p className={styles.stepNum}>01</p><h3 className={styles.h3}>Strategy call</h3><p>Your services, your clients, your goals, and what is and isn&apos;t working today.</p></li>
+              <li className={styles.step}><p className={styles.stepNum}>02</p><h3 className={styles.h3}>Positioning</h3><p>Nail the message and structure before design starts. Pretty comes second.</p></li>
+              <li className={styles.step}><p className={styles.stepNum}>03</p><h3 className={styles.h3}>Design and build</h3><p>Designed around your brand. Built to be fast and accessible.</p></li>
+              <li className={styles.step}><p className={styles.stepNum}>04</p><h3 className={styles.h3}>Launch and measure</h3><p>Tracking in place from day one, so you see exactly how visitors use the site.</p></li>
             </ol>
             <div className={styles.callout}>
               <p>
-                <strong>Tune-up or custom build?</strong> If you already have a site, we may recommend
-                improving it rather than replacing it. If you are starting fresh, we build the foundation.
-                Either way, you get a recommendation, not a template.
+                <strong>Tune-up or custom build?</strong> If your site has good bones, we&apos;ll tell you to
+                tune it up, not tear it down. Starting fresh? We build the foundation. Either way, you get a
+                straight recommendation, not a sales pitch.
               </p>
             </div>
           </div>
@@ -200,19 +199,19 @@ export default function WebsiteDesignPage() {
             <div className={styles.cards}>
               <div className={styles.card}>
                 <h3 className={styles.h3}>Landing pages and sales funnels</h3>
-                <p>Focused pages for a specific offer or campaign, so ad and email traffic lands somewhere built to convert.</p>
+                <p>Focused pages for one offer, so ad and email traffic lands somewhere built to convert, not your homepage.</p>
               </div>
               <div className={styles.card}>
                 <h3 className={styles.h3}>SEO and AI-search visibility</h3>
-                <p>Help people find you on Google and in AI-generated answers. <Link href="/services/seo" className={styles.inlineLink}>Explore SEO &amp; AEO</Link>.</p>
+                <p>Get found on Google and cited in AI answers. <Link href="/services/seo" className={styles.inlineLink}>Explore SEO, AEO &amp; GEO</Link>.</p>
               </div>
               <div className={styles.card}>
                 <h3 className={styles.h3}>Content</h3>
-                <p>Useful pages and articles that answer client questions and give visitors a reason to trust you.</p>
+                <p>Pages and articles that answer client questions and give visitors a reason to trust you.</p>
               </div>
               <div className={styles.card}>
                 <h3 className={styles.h3}>Brand strategy and tracking</h3>
-                <p>Positioning that makes you the obvious choice, and measurement that shows what is working.</p>
+                <p>Positioning that makes you the obvious choice in your niche, and tracking that shows what&apos;s actually working.</p>
               </div>
             </div>
             <ol className={styles.boost} aria-label="BOOST365© pillars">
@@ -223,8 +222,8 @@ export default function WebsiteDesignPage() {
               <li><span>05</span>Tracking</li>
             </ol>
             <p className={styles.p} style={{ marginTop: 24 }}>
-              Your website sits in the Optimization pillar of BOOST365©, our marketing-system framework. See
-              examples of our work in <Link href="/#results">client results</Link>, or browse{' '}
+              Your website sits in the Optimization pillar of BOOST365©: built to rank, built to convert. See
+              it in action in <Link href="/#results">client results</Link>, or browse{' '}
               <Link href="/#services">all services</Link>.
             </p>
           </div>
@@ -244,7 +243,7 @@ export default function WebsiteDesignPage() {
               ))}
             </div>
             <p className={styles.p} style={{ marginTop: 24 }}>
-              Thinking about how search is changing? Read <Link href="/blog/zero-click-search">zero-click search</Link>{' '}
+              Wondering how search is changing? Read <Link href="/blog/zero-click-search">zero-click search</Link>{' '}
               or visit the <Link href="/blog">blog</Link>.
             </p>
           </div>
@@ -253,12 +252,12 @@ export default function WebsiteDesignPage() {
         {/* CTA */}
         <section className={styles.cta} aria-labelledby="cta-title">
           <h2 id="cta-title" className={styles.ctaH2}>Ready for a Site That <span>Pulls Its Weight?</span></h2>
-          <p>Book a free strategy call. We will talk through your goals, your current site and what a build or tune-up would involve.</p>
+          <p>Book a free 30-minute strategy call. We&apos;ll look at your current site, your goals, and whether a tune-up or a custom build makes sense. No pitch deck, no pressure.</p>
           <div className={styles.ctaRow}>
             <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className={styles.btnPrimary}>
               Book Free Strategy Call
             </a>
-            <Link href="/services/seo" className={styles.btnGhost}>SEO &amp; AI Search</Link>
+            <Link href="/services/seo" className={styles.btnGhost}>See SEO, AEO &amp; GEO</Link>
           </div>
         </section>
       </main>
