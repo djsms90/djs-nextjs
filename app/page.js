@@ -291,7 +291,7 @@ export default function Home() {
             <p className="card-label">Client Results</p>
             <div className="hero-stat"><div className="stat-num">1M+</div><div className="stat-desc">YouTube Views Generated for Clients</div></div>
             <div className="hero-stat"><div className="stat-num">90%+</div><div className="stat-desc">Agent Retention for National Designation Program</div></div>
-            <div className="hero-stat"><div className="stat-num">300+</div><div className="stat-desc">LinkedIn Followers Gained for a Client in Under a Year Through Consistent Posting</div></div>
+            <div className="hero-stat"><div className="stat-num">300+</div><div className="stat-desc">LinkedIn Followers Gained</div></div>
           </div>
         </div>
       </section>
