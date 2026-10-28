@@ -19,7 +19,7 @@ export default function PrivacyPolicy() {
 
       <main style={{ maxWidth:'860px', margin:'0 auto', padding:'120px 48px 80px', fontFamily:'Inter, sans-serif', color:'#111', lineHeight:'1.8' }}>
         <h1 style={{ fontFamily:'Bebas Neue, sans-serif', fontSize:'clamp(40px,6vw,72px)', color:'#111', marginBottom:'8px', lineHeight:'1' }}>Privacy Policy</h1>
-        <p style={{ fontSize:'14px', color:'#777', marginBottom:'48px' }}>Last updated: {updated}</p>
+        <p style={{ fontSize:'14px', color:'var(--text-light)', marginBottom:'48px' }}>Last updated: {updated}</p>
 
         <p style={{ fontSize:'16px', marginBottom:'32px', color:'#444' }}>DJS Marketing Services (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit <strong>djsmarketingservices.com</strong> and interact with our services.</p>
 
@@ -130,7 +130,7 @@ Website: djsmarketingservices.com`
 
         <div style={{ marginTop:'64px', padding:'32px', background:'#f7f9fb', borderRadius:'8px', borderLeft:'4px solid #0467b1' }}>
           <p style={{ fontSize:'14px', color:'#444', margin:0 }}>
-            Questions about your data? Email us at <a href="mailto:marketing@djs90.com" style={{ color:'#0467b1' }}>marketing@djs90.com</a> or call <a href="tel:+16199284669" style={{ color:'#0467b1' }}>(619) 928-4669</a>.
+            Questions about your data? Email us at <a href="mailto:marketing@djs90.com" style={{ color:'#0467b1', textDecoration:'underline' }}>marketing@djs90.com</a> or call <a href="tel:+16199284669" style={{ color:'#0467b1', textDecoration:'underline' }}>(619) 928-4669</a>.
           </p>
         </div>
       </main>

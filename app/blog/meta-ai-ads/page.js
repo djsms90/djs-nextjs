@@ -2,7 +2,7 @@ import BlogLayout from '../../../components/BlogLayout'
 import { blogMeta, articleSchema } from '../../../lib/seo'
 
 export const metadata = blogMeta({
-  title: 'Meta AI Ads: What Advertisers Should Know',
+  title: 'Meta Just Made AI the Default for All Ads: Should You Let It Run Yours?',
   description: 'Meta expanded its AI Business Assistant to every advertiser and made Advantage+ automation the default for all new campaigns. Here is what that means for your budget and brand.',
   slug: 'meta-ai-ads',
   date: '2026-05-09',
@@ -96,7 +96,7 @@ export default function MetaAiAds() {
       <p>If you want a full audit of what Meta&apos;s automation is actually doing inside your account right now, along with a clear strategy for what to automate vs. control, that&apos;s exactly what we do.</p>
 
       <div className="sources-box">
-        <h4>Sources</h4>
+        <h2>Sources</h2>
         <a href="https://www.forbes.com/sites/terdawn-deboe/2026/04/25/meta-will-run-your-entire-ad-campaign-with-ai-should-you-let-it/" target="_blank" rel="noopener">Forbes: &ldquo;Meta Will Run Your Entire Ad Campaign With AI. Should You Let It?&rdquo; (April 25, 2026)</a>
         <a href="https://www.emarketer.com/content/meta-expands-ai-business-assistant-all-advertisers-its-latest-push-toward-automation" target="_blank" rel="noopener">eMarketer: &ldquo;Meta expands AI business assistant to all advertisers&rdquo; (April 2026)</a>
         <a href="https://www.mediapost.com/publications/article/414547/meta-rolls-out-ai-business-assistant-to-all-advert.html" target="_blank" rel="noopener">MediaPost: &ldquo;Meta Rolls Out AI Business Assistant To All Advertisers, Agencies&rdquo; (April 24, 2026)</a>

@@ -2,7 +2,7 @@ import Link from 'next/link'
 import PrivacyChoicesLink from '../../components/PrivacyChoicesLink'
 
 export const metadata = {
-  title: 'BOOST365 Marketing Playbook: Free Download | DJS Marketing',
+  title: 'BOOST365© Marketing Playbook: Free Download | DJS Marketing',
   description: 'Free BOOST365© Marketing Playbook: the 5-pillar system niche service pros use to generate consistent leads, convert prospects, and scale revenue.',
   alternates: { canonical: 'https://djsmarketingservices.com/playbook' },
   keywords: 'BOOST365 playbook, marketing playbook, free marketing framework, 5-pillar marketing system, lead generation system, niche service marketing, DJS Marketing Services',

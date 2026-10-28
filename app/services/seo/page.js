@@ -269,12 +269,12 @@ export default function SeoServicePage() {
         <section className={styles.section} aria-labelledby="boost-title">
           <div className={styles.inner}>
             <p className={styles.kicker}>Where SEO fits</p>
-            <h2 id="boost-title" className={styles.h2}>One Pillar of the <span>BOOST365 System</span></h2>
+            <h2 id="boost-title" className={styles.h2}>One Pillar of the <span>BOOST365© System</span></h2>
             <p className={styles.p}>
-              SEO and AEO live in the Optimization pillar of BOOST365, our marketing-system framework. It is
+              SEO and AEO live in the Optimization pillar of BOOST365©, our marketing-system framework. It is
               connected to your branding, outreach, funnels and tracking so visibility turns into conversations.
             </p>
-            <ol className={styles.boost} aria-label="BOOST365 pillars">
+            <ol className={styles.boost} aria-label="BOOST365© pillars">
               <li><span>01</span>Branding</li>
               <li className={styles.boostActive}><span>02</span>Optimization</li>
               <li><span>03</span>Outreach</li>

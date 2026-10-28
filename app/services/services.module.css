@@ -58,8 +58,8 @@
   border-bottom: 2px solid transparent;
   transition: color 0.2s, border-color 0.2s;
 }
-.navLink:hover { color: var(--gold); }
-.navLink[aria-current='page'] { color: var(--gold); border-bottom-color: var(--red); }
+.navLink:hover { color: var(--white); border-bottom-color: var(--gold); }
+.navLink[aria-current='page'] { color: var(--white); border-bottom-color: var(--gold); }
 .navCta {
   display: inline-block;
   background: var(--gold);
@@ -115,7 +115,7 @@
   color: rgba(255, 255, 255, 0.7);
 }
 .crumbs a { color: rgba(255, 255, 255, 0.85); text-decoration: underline; text-underline-offset: 3px; }
-.crumbs a:hover { color: var(--gold); }
+.crumbs a:hover { color: var(--white); }
 .crumbs li + li::before { content: '/'; margin-right: 8px; color: var(--gold); }
 .eyebrow {
   display: inline-flex;
@@ -125,7 +125,7 @@
   font-weight: 800;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--white);
   margin-bottom: 18px;
 }
 .eyebrow::before { content: ''; width: 32px; height: 2px; background: var(--gold); }
@@ -177,7 +177,7 @@
   border-radius: 12px;
   padding: 28px;
 }
-.panelLabel { font-size: 10px; font-weight: 900; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
+.panelLabel { font-size: 10px; font-weight: 900; letter-spacing: 3px; text-transform: uppercase; color: var(--white); margin-bottom: 14px; }
 .panelList { list-style: none; margin: 0; padding: 0; }
 .panelList li {
   display: grid;

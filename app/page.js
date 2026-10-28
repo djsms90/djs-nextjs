@@ -214,8 +214,8 @@ export default function Home() {
     '@type': 'FAQPage',
     mainEntity: [
       { '@type': 'Question', name: 'What makes DJS Marketing Services different from other marketing agencies?', acceptedAnswer: { '@type': 'Answer', text: 'We don\'t just offer services, we build complete marketing systems using the BOOST365© framework. Every strategy is custom-built for your niche, powered by AI for faster delivery, and tracked so you always know what\'s working.' } },
-      { '@type': 'Question', name: 'How long does it take to see results?', acceptedAnswer: { '@type': 'Answer', text: 'Progress depends on your starting point, competition, and scope of work. SEO and content take time to develop. We discuss practical priorities and how to measure progress without promising a fixed ranking or results deadline.' } },
-      { '@type': 'Question', name: 'Do you help businesses appear in AI-generated answers?', acceptedAnswer: { '@type': 'Answer', text: 'We help strengthen the foundations that support visibility on Google and in AI-generated answers, including accessible websites, clear service information, useful content, and appropriate structured data. This work is often called AEO or GEO. No agency can guarantee a particular ranking or AI citation.' } },
+      { '@type': 'Question', name: 'How long does it take to see results from digital marketing?', acceptedAnswer: { '@type': 'Answer', text: 'It depends on the channel. Paid ads and social can move fast. SEO and content compound over time, and every month builds on the last. We set clear benchmarks from day one so you\'re never guessing.' } },
+      { '@type': 'Question', name: 'Do you help businesses appear in AI-generated answers?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. That\'s AEO and GEO, and it\'s built into the Optimization pillar of BOOST365©. We structure your website, content, and business information so Google and AI tools can find you, understand you, and cite you. Nobody can guarantee an AI citation, and anyone who promises one is selling you something.' } },
       { '@type': 'Question', name: 'Does DJS Marketing Services work with businesses outside of real estate?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. While we have deep expertise in real estate, legal, and financial services, we work with any niche service business that needs a done-for-you marketing system. If you have expertise and a target audience, we can build the system around it.' } },
       { '@type': 'Question', name: 'What is the BOOST365 Playbook?', acceptedAnswer: { '@type': 'Answer', text: 'BOOST365© is our proprietary 5-pillar marketing framework covering Branding, Optimization, Outreach, Sales Funnels, and Tracking. It\'s the system we use with every client to build a marketing operation that compounds over time.' } },
       { '@type': 'Question', name: 'What does a strategy call with DJS Marketing Services involve?', acceptedAnswer: { '@type': 'Answer', text: 'A 30-minute conversation about where your business is, where you want to go, and whether DJSMS is the right fit. No pitch deck, no pressure. You\'ll walk away with at least one actionable insight regardless of whether we work together.' } },
@@ -243,7 +243,7 @@ export default function Home() {
         <button className="hamburger" id="hamburger" aria-label="Menu"><span /><span /><span /></button>
         <ul className="nav-links" style={{ listStyle: 'none', margin: 0, padding: 0 }}>
           <li><a href="#services">Services</a></li>
-          <li><a href="#boost">BOOST365</a></li>
+          <li><a href="#boost">BOOST365©</a></li>
           <li><a href="#results">Results</a></li>
           <li><a href="/blog">Blog</a></li>
           <li><a href="#about">About</a></li>
@@ -255,7 +255,7 @@ export default function Home() {
       <div className="mobile-menu" id="mobileMenu">
         <button className="close-btn" id="closeMenu" aria-label="Close menu">✕</button>
         <a href="#services">Services</a>
-        <a href="#boost">BOOST365</a>
+        <a href="#boost">BOOST365©</a>
         <a href="#results">Results</a>
         <a href="/blog">Blog</a>
         <a href="#about">About</a>
@@ -284,7 +284,7 @@ export default function Home() {
             <p className="hero-hook">Most businesses don&apos;t have a marketing problem. They have a system problem. And we fix systems.</p>
             <div className="hero-btns">
               <a href="https://meetings-na2.hubspot.com/sweis" target="_blank" rel="noopener noreferrer" className="btn-primary">Book Free Strategy Call</a>
-              <a href="#boost" className="btn-secondary">See Our BOOST365 Playbook</a>
+              <a href="#boost" className="btn-secondary">See Our BOOST365© Playbook</a>
             </div>
           </div>
           <div className="hero-card">
@@ -306,7 +306,7 @@ export default function Home() {
           <div className="myths-grid">
             {[
               { n: 'Myth #1', m: '"I just need more followers."', t: <>Followers don&apos;t pay bills. Systems do. A <strong>500-follower account with a real funnel</strong> beats a 50,000-follower account with no strategy.</> },
-              { n: 'Myth #2', m: '"SEO takes too long."', t: <>SEO progress depends on your starting point, competition, and scope. We set practical priorities and measure progress, <strong>without promising a fixed ranking or results deadline.</strong></> },
+              { n: 'Myth #2', m: '"SEO takes too long."', t: <>Bad SEO takes forever. <strong>Strategic SEO with AEO optimization</strong> compounds. Every month it works harder than the month before.</> },
               { n: 'Myth #3', m: '"I tried ads. They didn\'t work."', t: <>Ads don&apos;t fail. Ad strategy fails. Most businesses run ads without proper <strong>targeting, landing pages, or follow-up systems.</strong></> },
               { n: 'Myth #4', m: '"My referrals are enough."', t: <>Referrals are great, until they stop. A real marketing system creates <strong>consistent, predictable lead flow</strong> independent of your network.</> },
               { n: 'Myth #5', m: '"Marketing is too expensive."', t: <>The real cost is the revenue you&apos;re not generating. <strong>A proper system pays for itself.</strong> Guesswork is what&apos;s expensive.</> },
@@ -429,13 +429,13 @@ export default function Home() {
           <div className="pillars-grid">
             {[
               { n: '01', t: 'Branding', d: 'Clarify your positioning and make your brand the obvious choice in your niche.' },
-              { n: '02', t: 'Optimization', d: 'Strengthen your website, search visibility, and conversion paths so people can find your business on Google, understand your expertise, and take the next step, including through AI-generated answers.' },
+              { n: '02', t: 'Optimization', d: 'Your website, SEO and AEO, built to rank, built to get cited by AI, built to convert visitors into leads.' },
               { n: '03', t: 'Outreach', d: 'Precision-targeted ads and content across every platform your ideal client uses.' },
               { n: '04', t: 'Sales Funnels', d: 'Landing pages, email sequences, and automation that turns prospects into paying clients.' },
               { n: '05', t: 'Tracking', d: 'Every click, lead, and dollar measured and used to compound results week after week.' },
             ].map((p, i) => (
               <div key={i} className="pillar-card">
-                <div className="p-num">{p.n}</div>
+                <div className="p-num" aria-hidden="true">{p.n}</div>
                 <h3>{p.t}</h3>
                 <p>{p.d}</p>
               </div>
@@ -457,7 +457,7 @@ export default function Home() {
           </div>
           <div className="services-list">
             {[
-              'SEO & AI-Search Optimization (AEO/GEO)',
+              'Search Engine Optimization (SEO, AEO & GEO)',
               'Paid Advertising: Meta, Google, LinkedIn, TikTok',
               'Social Media Management & Content Creation',
               'Email Marketing & Automation',
@@ -502,7 +502,7 @@ export default function Home() {
             <p>While your competitors are still doing everything manually, your brand runs on a system built for the speed of today&apos;s market.</p>
             <ul className="ai-points">
               <li>AI-powered content production, consistent output at scale</li>
-              <li>AI-search readiness: clear, credible content and business information that support visibility in AI-generated answers</li>
+              <li>AEO positioning: your brand in AI-generated search answers</li>
               <li>Automated reporting: you see results without waiting for a meeting</li>
               <li>Real-time campaign optimization, data-driven decisions, not guesses</li>
             </ul>
@@ -575,8 +575,8 @@ export default function Home() {
           <div className="faq-grid">
             {[
               { q: 'What makes DJSMS different from other marketing agencies?', a: "We don't just offer services, we build complete marketing systems using the BOOST365© framework. Every strategy is custom-built for your niche, powered by AI for faster delivery, and tracked so you always know what's working." },
-              { q: 'How long does it take to see results?', a: 'Progress depends on your starting point, competition, and scope of work. SEO and content take time to develop. We discuss practical priorities and how to measure progress without promising a fixed ranking or results deadline.' },
-              { q: 'Do you help businesses appear in AI-generated answers?', a: 'We help strengthen the foundations that support visibility on Google and in AI-generated answers, including accessible websites, clear service information, useful content, and appropriate structured data. This work is often called AEO or GEO. No agency can guarantee a particular ranking or AI citation.' },
+              { q: 'How long does it take to see results?', a: 'It depends on the channel. Paid ads and social can move fast. SEO and content compound over time, and every month builds on the last. We set clear benchmarks from day one so you\'re never guessing.' },
+              { q: 'Do you help businesses appear in AI-generated answers?', a: 'Yes. That\'s AEO and GEO, and it\'s built into the Optimization pillar of BOOST365©. We structure your website, content, and business information so Google and AI tools can find you, understand you, and cite you. Nobody can guarantee an AI citation, and anyone who promises one is selling you something.' },
               { q: 'Do you work with businesses outside of real estate?', a: "Yes. While we have deep expertise in real estate, legal, and financial services, we work with any niche service business that needs a done-for-you marketing system. If you have expertise and a target audience, we can build the system around it." },
               { q: 'What is the BOOST365© Playbook?', a: 'BOOST365© is our proprietary 5-pillar marketing framework covering Branding, Optimization, Outreach, Sales Funnels, and Tracking. It\'s the system we use with every client to build a marketing operation that compounds over time. Download the free version above.' },
               { q: 'What does a strategy call involve?', a: "A 30-minute conversation about where your business is, where you want to go, and whether DJSMS is the right fit. No pitch deck, no pressure. You'll walk away with at least one actionable insight regardless of whether we work together." },

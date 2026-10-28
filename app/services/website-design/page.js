@@ -215,7 +215,7 @@ export default function WebsiteDesignPage() {
                 <p>Positioning that makes you the obvious choice, and measurement that shows what is working.</p>
               </div>
             </div>
-            <ol className={styles.boost} aria-label="BOOST365 pillars">
+            <ol className={styles.boost} aria-label="BOOST365© pillars">
               <li><span>01</span>Branding</li>
               <li className={styles.boostActive}><span>02</span>Optimization</li>
               <li><span>03</span>Outreach</li>
@@ -223,7 +223,7 @@ export default function WebsiteDesignPage() {
               <li><span>05</span>Tracking</li>
             </ol>
             <p className={styles.p} style={{ marginTop: 24 }}>
-              Your website sits in the Optimization pillar of BOOST365, our marketing-system framework. See
+              Your website sits in the Optimization pillar of BOOST365©, our marketing-system framework. See
               examples of our work in <Link href="/#results">client results</Link>, or browse{' '}
               <Link href="/#services">all services</Link>.
             </p>

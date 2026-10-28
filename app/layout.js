@@ -106,11 +106,11 @@ const schemaOrg = {
     '@type': 'OfferCatalog',
     name: 'Marketing Services',
     itemListElement: [
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'SEO & AI-Search Optimization (AEO/GEO)', url: 'https://djsmarketingservices.com/services/seo', description: 'Search optimization supported by accessible websites, clear service information, and useful content. Timelines and scope depend on the business.' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'SEO, AEO & GEO Optimization', url: 'https://djsmarketingservices.com/services/seo', description: 'Strategic SEO with AEO and GEO optimization that gets your business found on Google and cited by AI' } },
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Paid Advertising', description: 'Precision-targeted ads on Meta, Google, LinkedIn, and TikTok' } },
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Social Media Management', description: 'Content creation and social media management across all platforms' } },
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'AI-Powered Marketing Systems', description: 'Complete AI-powered marketing systems including content production, campaign optimization, and AEO positioning' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Website Design & Development', url: 'https://djsmarketingservices.com/services/website-design', description: 'Custom website design and development with clear messaging and paths to inquiry' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Website Design & Development', url: 'https://djsmarketingservices.com/services/website-design', description: 'Custom website design and development optimized for conversion' } },
     ],
   },
   priceRange: '$$',

@@ -14,7 +14,7 @@ export default function Navbar() {
         </Link>
         <ul className="nav-links">
           <li><Link href="#services">Services</Link></li>
-          <li><Link href="#boost">BOOST365</Link></li>
+          <li><Link href="#boost">BOOST365©</Link></li>
           <li><Link href="#results">Results</Link></li>
           <li><Link href="/blog">Blog</Link></li>
           <li><Link href="#about">About</Link></li>

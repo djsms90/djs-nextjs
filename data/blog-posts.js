@@ -7,7 +7,7 @@ const blogPosts = [
     date: '2026-08-11',
     tag: 'SEO & AEO',
     title: 'Zero-Click Search Is Here: How to Win When Nobody Clicks',
-    desc: 'Understand zero-click search and how useful content, clear business information, and meaningful conversion tracking support your search strategy.',
+    desc: 'Nearly 7 in 10 U.S. Google searches now end without a click. Here is how to make zero-click search work for your business instead of against it.',
     href: '/blog/zero-click-search',
   },
   {
@@ -20,22 +20,22 @@ const blogPosts = [
   {
     date: '2026-04-28',
     tag: 'SEO & GEO',
-    title: 'GEO vs SEO: How They Work Together',
-    desc: 'Understand how SEO and generative engine optimization overlap, and why accessible pages, useful content, and reliable information matter.',
+    title: 'GEO vs SEO: The New Optimization Game Your Competitors Do Not Know About',
+    desc: 'SEO gets you ranked. GEO gets you cited by AI. Learn what Generative Engine Optimization is and how to start winning in AI search before your competitors figure it out.',
     href: '/blog/geo-vs-seo',
   },
   {
-    date: '2026-04-25',
+    date: '2026-04-21',
     tag: 'SEO & AEO',
-    title: 'Google AI Overviews: What Businesses Should Know',
-    desc: 'Learn what Google AI Overviews are, how normal SEO supports eligibility, and how to measure search performance without promises of AI placement.',
+    title: 'Google AI Overviews Are Stealing Your Clicks: Here Is How to Fight Back',
+    desc: 'AI Overviews are answering questions before users click anything. Here is the strategy to get your brand cited inside those answers instead of buried below them.',
     href: '/blog/ai-overviews',
   },
   {
     date: '2026-04-10',
     tag: 'SEO & AEO',
-    title: 'What Is AEO? Answer Engine Optimization Explained',
-    desc: 'Learn how answer engine optimization builds on SEO with useful content, clear answers, and accurate business information. No AI placement guarantees.',
+    title: 'What Is Answer Engine Optimization and Why Your Clients Need It Now',
+    desc: 'How we are getting clients appearing in AI-generated search answers before competitors know AEO exists. The shift from search engines to answer engines is already here.',
     href: '/blog/aeo',
   },
 ]

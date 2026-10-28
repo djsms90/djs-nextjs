@@ -39,7 +39,7 @@ export default function BlogLayout({ children, title, tag, date, updated, readTi
 
         {/* STANDARD CTA */}
         <div className="cta-box">
-          <h3>Ready to Build a System That Actually Works?</h3>
+          <h2>Ready to Build a System That Actually Works?</h2>
           <p>Book a free 30-minute strategy call. No pitch. No pressure. Just clarity on what your business needs to grow.</p>
           <a href="https://meetings-na2.hubspot.com/sweis" target="_blank" rel="noopener noreferrer">Book Your Free Strategy Call</a>
         </div>

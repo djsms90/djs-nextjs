@@ -13,7 +13,7 @@ export default function Footer() {
         <div className="footer-links">
           <Link href="/blog">Blog</Link>
           <Link href="#services">Services</Link>
-          <Link href="#boost">BOOST365</Link>
+          <Link href="#boost">BOOST365©</Link>
           <Link href="#about">About</Link>
           <a href="https://meetings-na2.hubspot.com/sweis" target="_blank" rel="noopener noreferrer">Book a Call</a>
         </div>

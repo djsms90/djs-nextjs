@@ -66,8 +66,8 @@ for (const path of paths) {
     assert.ok(html.includes('developers.google.com/search/docs/appearance/ai-features'), `${path}: missing official source`)
     assert.ok(html.includes('/services/seo'), `${path}: missing service link`)
     if (path === '/blog/ai-overviews') {
-      assert.equal(article.datePublished, '2026-04-25')
-      assert.ok(html.includes('April 25, 2026'))
+      assert.equal(article.datePublished, '2026-04-21')
+      assert.ok(html.includes('April 21, 2026'))
     }
   }
   for (const tag of html.matchAll(/<a\b[^>]*>/g)) {
@@ -103,6 +103,7 @@ const question = homeSchemas.find((s) => s['@type'] === 'FAQPage')?.mainEntity
   .find((q) => q.name === 'Do you help businesses appear in AI-generated answers?')
 assert.ok(question, 'Missing new FAQ in structured data')
 const visibleHome = home.replace(/<script\b[^>]*>[\s\S]*?<\/script>/g, '')
+  .replace(/&#x27;|&#39;/g, "'").replace(/&quot;/g, '"').replace(/&amp;/g, '&')
 assert.ok(visibleHome.includes(question.acceptedAnswer.text), 'FAQ markup does not match visible answer')
 const robots = await page('/robots.txt')
 assert.match(robots, /User-agent:\s*\*/)

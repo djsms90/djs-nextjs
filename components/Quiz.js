@@ -206,7 +206,7 @@ export default function Quiz({ onClose }) {
                     onFocus={e => e.target.style.borderColor = '#0467b1'}
                     onBlur={e => e.target.style.borderColor = '#e0e0e0'}
                   />
-                  <label style={{ display:'flex', alignItems:'flex-start', gap:'10px', fontSize:'12px', color:'#777', cursor:'pointer', lineHeight:'1.5' }}>
+                  <label style={{ display:'flex', alignItems:'flex-start', gap:'10px', fontSize:'12px', color:'var(--text-light)', cursor:'pointer', lineHeight:'1.5' }}>
                     <input
                       type="checkbox"
                       checked={consent}
