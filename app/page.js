@@ -214,7 +214,8 @@ export default function Home() {
     '@type': 'FAQPage',
     mainEntity: [
       { '@type': 'Question', name: 'What makes DJS Marketing Services different from other marketing agencies?', acceptedAnswer: { '@type': 'Answer', text: 'We don\'t just offer services, we build complete marketing systems using the BOOST365© framework. Every strategy is custom-built for your niche, powered by AI for faster delivery, and tracked so you always know what\'s working.' } },
-      { '@type': 'Question', name: 'How long does it take to see results from digital marketing?', acceptedAnswer: { '@type': 'Answer', text: 'Most clients see measurable improvements in visibility and lead quality within 60-90 days. SEO and content compound over time, paid ads and social can move faster. We set clear benchmarks so you\'re never guessing.' } },
+      { '@type': 'Question', name: 'How long does it take to see results?', acceptedAnswer: { '@type': 'Answer', text: 'Progress depends on your starting point, competition, and scope of work. SEO and content take time to develop. We discuss practical priorities and how to measure progress without promising a fixed ranking or results deadline.' } },
+      { '@type': 'Question', name: 'Do you help businesses appear in AI-generated answers?', acceptedAnswer: { '@type': 'Answer', text: 'We help strengthen the foundations that support visibility on Google and in AI-generated answers, including accessible websites, clear service information, useful content, and appropriate structured data. This work is often called AEO or GEO. No agency can guarantee a particular ranking or AI citation.' } },
       { '@type': 'Question', name: 'Does DJS Marketing Services work with businesses outside of real estate?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. While we have deep expertise in real estate, legal, and financial services, we work with any niche service business that needs a done-for-you marketing system. If you have expertise and a target audience, we can build the system around it.' } },
       { '@type': 'Question', name: 'What is the BOOST365 Playbook?', acceptedAnswer: { '@type': 'Answer', text: 'BOOST365© is our proprietary 5-pillar marketing framework covering Branding, Optimization, Outreach, Sales Funnels, and Tracking. It\'s the system we use with every client to build a marketing operation that compounds over time.' } },
       { '@type': 'Question', name: 'What does a strategy call with DJS Marketing Services involve?', acceptedAnswer: { '@type': 'Answer', text: 'A 30-minute conversation about where your business is, where you want to go, and whether DJSMS is the right fit. No pitch deck, no pressure. You\'ll walk away with at least one actionable insight regardless of whether we work together.' } },
@@ -225,7 +226,6 @@ export default function Home() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <link rel="canonical" href="https://djsmarketingservices.com" />
       {/* SKIP NAV */}
       <a href="#main-content" className="skip-nav">Skip to main content</a>
 
@@ -239,7 +239,7 @@ export default function Home() {
       {/* NAV */}
       <nav role="navigation" aria-label="Main navigation">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <a href="/"><img src="/logo-nav.jpg" alt="DJS Marketing Services" style={{ height: '56px', width: 'auto', display: 'block' }} /></a>
+        <Link href="/"><img src="/logo-nav.jpg" alt="DJS Marketing Services" style={{ height: '56px', width: 'auto', display: 'block' }} /></Link>
         <button className="hamburger" id="hamburger" aria-label="Menu"><span /><span /><span /></button>
         <ul className="nav-links" style={{ listStyle: 'none', margin: 0, padding: 0 }}>
           <li><a href="#services">Services</a></li>
@@ -306,7 +306,7 @@ export default function Home() {
           <div className="myths-grid">
             {[
               { n: 'Myth #1', m: '"I just need more followers."', t: <>Followers don&apos;t pay bills. Systems do. A <strong>500-follower account with a real funnel</strong> beats a 50,000-follower account with no strategy.</> },
-              { n: 'Myth #2', m: '"SEO takes too long."', t: <>Bad SEO takes forever. <strong>Strategic SEO with AEO optimization</strong> starts showing results in 60–90 days when done right.</> },
+              { n: 'Myth #2', m: '"SEO takes too long."', t: <>SEO progress depends on your starting point, competition, and scope. We set practical priorities and measure progress, <strong>without promising a fixed ranking or results deadline.</strong></> },
               { n: 'Myth #3', m: '"I tried ads. They didn\'t work."', t: <>Ads don&apos;t fail. Ad strategy fails. Most businesses run ads without proper <strong>targeting, landing pages, or follow-up systems.</strong></> },
               { n: 'Myth #4', m: '"My referrals are enough."', t: <>Referrals are great, until they stop. A real marketing system creates <strong>consistent, predictable lead flow</strong> independent of your network.</> },
               { n: 'Myth #5', m: '"Marketing is too expensive."', t: <>The real cost is the revenue you&apos;re not generating. <strong>A proper system pays for itself.</strong> Guesswork is what&apos;s expensive.</> },
@@ -372,19 +372,19 @@ export default function Home() {
           <div className="results-grid">
             <div className="result-card">
               <div className="r-stat">1M+</div>
-              <h4>YouTube Views, Probate Real Estate</h4>
+              <h3>YouTube Views, Probate Real Estate</h3>
               <p>A probate real estate professional had the expertise but no system to scale it. We built an AI-powered content strategy, created educational video content, and optimized every upload for search. The result: 8,000+ subscribers and over a million total views.</p>
               <div className="result-lead">→ YouTube is now her #1 source of inbound clients, zero cold outreach</div>
             </div>
             <div className="result-card">
               <div className="r-stat">90%+</div>
-              <h4>Full System Build, National Designation Program</h4>
+              <h3>Full System Build, National Designation Program</h3>
               <p>A national real estate designation program needed everything rebuilt: sales funnels, automated marketing campaigns, standardized systems, and AI-powered AEO positioning across the country. We documented, automated, and scaled their entire operation.</p>
               <div className="result-lead">→ 90%+ agent retention. Nationwide visibility. More agents staying = more recurring program revenue.</div>
             </div>
             <div className="result-card">
               <div className="r-stat">End-to-End</div>
-              <h4>AI-Powered Revenue System, Custom Apparel</h4>
+              <h3>AI-Powered Revenue System, Custom Apparel</h3>
               <p>A custom apparel company needed an entire AI-powered revenue machine: graphics automation, persuasive copy, landing pages, funnels, automated purchasing flows, and nurture campaigns. Built, integrated, and running on autopilot.</p>
               <div className="result-lead">→ Fully automated revenue system, more orders, more repeat buyers, owner focused on growth not operations.</div>
             </div>
@@ -403,15 +403,15 @@ export default function Home() {
           </div>
           <div className="three-stages">
             <div className="stage">
-              <h4>The Tune-Up</h4>
+              <h3>The Tune-Up</h3>
               <p>Your system exists but underperforms. We audit, optimize, and fix what&apos;s holding you back from the results you should already be seeing.</p>
             </div>
             <div className="stage gold">
-              <h4>The Custom Build</h4>
+              <h3>The Custom Build</h3>
               <p>You have the vision. We build the infrastructure, strategy, execution, and systems, delivered as one complete marketing operation.</p>
             </div>
             <div className="stage red">
-              <h4>The BOOST</h4>
+              <h3>The BOOST</h3>
               <p>Foundation is solid. Now we scale it. BOOST365© is the framework that takes a functioning system and compounds it, more visibility, more leads, more revenue.</p>
             </div>
           </div>
@@ -429,14 +429,14 @@ export default function Home() {
           <div className="pillars-grid">
             {[
               { n: '01', t: 'Branding', d: 'Clarify your positioning and make your brand the obvious choice in your niche.' },
-              { n: '02', t: 'Optimization', d: 'Your website and SEO, built to rank, built to convert visitors into leads.' },
+              { n: '02', t: 'Optimization', d: 'Strengthen your website, search visibility, and conversion paths so people can find your business on Google, understand your expertise, and take the next step, including through AI-generated answers.' },
               { n: '03', t: 'Outreach', d: 'Precision-targeted ads and content across every platform your ideal client uses.' },
               { n: '04', t: 'Sales Funnels', d: 'Landing pages, email sequences, and automation that turns prospects into paying clients.' },
               { n: '05', t: 'Tracking', d: 'Every click, lead, and dollar measured and used to compound results week after week.' },
             ].map((p, i) => (
               <div key={i} className="pillar-card">
                 <div className="p-num">{p.n}</div>
-                <h4>{p.t}</h4>
+                <h3>{p.t}</h3>
                 <p>{p.d}</p>
               </div>
             ))}
@@ -457,7 +457,7 @@ export default function Home() {
           </div>
           <div className="services-list">
             {[
-              'Search Engine Optimization (SEO & AEO)',
+              'SEO & AI-Search Optimization (AEO/GEO)',
               'Paid Advertising: Meta, Google, LinkedIn, TikTok',
               'Social Media Management & Content Creation',
               'Email Marketing & Automation',
@@ -467,7 +467,11 @@ export default function Home() {
               'Brand Strategy & Positioning',
               'AI-Powered Marketing Systems',
             ].map((s, i) => (
-              <div key={i} className="service-item"><div className="s-dot" /><span>{s}</span></div>
+              <div key={i} className="service-item">
+                <div className="s-dot" />
+                {i === 0 ? <Link href="/services/seo">{s}</Link> :
+                  i === 5 ? <Link href="/services/website-design">{s}</Link> : <span>{s}</span>}
+              </div>
             ))}
           </div>
           <div className="tiers">
@@ -480,7 +484,7 @@ export default function Home() {
             ].map((t, i) => (
               <div key={i} className={`tier ${t.cls}`}>
                 <div className="t-icon">{t.icon}</div>
-                <h4>{t.name}</h4>
+                <h3>{t.name}</h3>
                 <p>{t.desc}</p>
                 <a href="https://meetings-na2.hubspot.com/sweis" target="_blank" rel="noopener noreferrer">Learn more →</a>
               </div>
@@ -498,7 +502,7 @@ export default function Home() {
             <p>While your competitors are still doing everything manually, your brand runs on a system built for the speed of today&apos;s market.</p>
             <ul className="ai-points">
               <li>AI-powered content production, consistent output at scale</li>
-              <li>AEO positioning: your brand in AI-generated search answers</li>
+              <li>AI-search readiness: clear, credible content and business information that support visibility in AI-generated answers</li>
               <li>Automated reporting: you see results without waiting for a meeting</li>
               <li>Real-time campaign optimization, data-driven decisions, not guesses</li>
             </ul>
@@ -571,7 +575,8 @@ export default function Home() {
           <div className="faq-grid">
             {[
               { q: 'What makes DJSMS different from other marketing agencies?', a: "We don't just offer services, we build complete marketing systems using the BOOST365© framework. Every strategy is custom-built for your niche, powered by AI for faster delivery, and tracked so you always know what's working." },
-              { q: 'How long does it take to see results?', a: 'Most clients see measurable improvements in visibility and lead quality within 60-90 days. SEO and content compound over time, paid ads and social can move faster. We set clear benchmarks so you\'re never guessing.' },
+              { q: 'How long does it take to see results?', a: 'Progress depends on your starting point, competition, and scope of work. SEO and content take time to develop. We discuss practical priorities and how to measure progress without promising a fixed ranking or results deadline.' },
+              { q: 'Do you help businesses appear in AI-generated answers?', a: 'We help strengthen the foundations that support visibility on Google and in AI-generated answers, including accessible websites, clear service information, useful content, and appropriate structured data. This work is often called AEO or GEO. No agency can guarantee a particular ranking or AI citation.' },
               { q: 'Do you work with businesses outside of real estate?', a: "Yes. While we have deep expertise in real estate, legal, and financial services, we work with any niche service business that needs a done-for-you marketing system. If you have expertise and a target audience, we can build the system around it." },
               { q: 'What is the BOOST365© Playbook?', a: 'BOOST365© is our proprietary 5-pillar marketing framework covering Branding, Optimization, Outreach, Sales Funnels, and Tracking. It\'s the system we use with every client to build a marketing operation that compounds over time. Download the free version above.' },
               { q: 'What does a strategy call involve?', a: "A 30-minute conversation about where your business is, where you want to go, and whether DJSMS is the right fit. No pitch deck, no pressure. You'll walk away with at least one actionable insight regardless of whether we work together." },
@@ -600,7 +605,7 @@ export default function Home() {
 
       {/* FOOTER */}
       <footer>
-        <a href="/"><Image src="/logo-footer.jpg" alt="DJS Marketing Services" width={160} height={44} style={{ height:'44px', width:'auto' }} /></a>
+        <Link href="/"><Image src="/logo-footer.jpg" alt="DJS Marketing Services" width={160} height={44} style={{ height:'44px', width:'auto' }} /></Link>
         <div className="footer-contact">
           <p>© {new Date().getFullYear()}{' '}DJS Marketing Services. All Rights Reserved. &nbsp;|&nbsp; <a href="/privacy-policy" style={{ color:'var(--blue)', textDecoration:'none' }}>Privacy Policy</a> &nbsp;|&nbsp; <a href="/terms" style={{ color:'var(--blue)', textDecoration:'none' }}>Terms & Conditions</a> &nbsp;|&nbsp; <PrivacyChoicesLink style={{ color:'var(--blue)' }} /></p>
           <p><a href="mailto:marketing@djs90.com">marketing@djs90.com</a> &nbsp;|&nbsp; <a href="tel:+16199284669">(619) 928-4669</a></p>

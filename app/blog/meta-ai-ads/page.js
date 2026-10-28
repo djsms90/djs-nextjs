@@ -2,7 +2,7 @@ import BlogLayout from '../../../components/BlogLayout'
 import { blogMeta, articleSchema } from '../../../lib/seo'
 
 export const metadata = blogMeta({
-  title: 'Meta Just Made AI the Default for All Ads: Should You Let It Run Yours?',
+  title: 'Meta AI Ads: What Advertisers Should Know',
   description: 'Meta expanded its AI Business Assistant to every advertiser and made Advantage+ automation the default for all new campaigns. Here is what that means for your budget and brand.',
   slug: 'meta-ai-ads',
   date: '2026-05-09',

@@ -2,69 +2,50 @@ import BlogLayout from '../../../components/BlogLayout'
 import { blogMeta, articleSchema } from '../../../lib/seo'
 
 export const metadata = blogMeta({
-  title: 'Google AI Overviews Are Stealing Your Clicks: Here Is How to Fight Back',
-  description: 'AI Overviews are answering questions before users click anything. Here is the strategy to get your brand cited inside those answers.',
+  title: 'Google AI Overviews: What Businesses Should Know',
+  description: 'Learn what Google AI Overviews are, how normal SEO supports eligibility, and how to measure search performance without promises of AI placement.',
   slug: 'ai-overviews',
-  date: '2026-04-21',
+  date: '2026-04-25',
+  modified: '2026-10-28',
 })
 
 export default function BlogPost() {
   return (
     <BlogLayout
       tag="SEO & AI Search"
-      title="Google AI Overviews Are Stealing Your Clicks: Here Is How to Fight Back"
+      title="Google AI Overviews: What Businesses Should Know"
       date="April 25, 2026"
-      readTime="6 min read"
+      updated="October 28, 2026"
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema({ title: 'Google AI Overviews Are Stealing Your Clicks: Here Is How to Fight Back', description: 'AI Overviews are answering questions before users click anything. Here is the strategy to get your brand cited inside those answers.', slug: 'ai-overviews', date: '2026-04-21', category: 'SEO & AI Search', wordCount: 1100 })) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema({ title: 'Google AI Overviews: What Businesses Should Know', description: metadata.description, slug: 'ai-overviews', date: '2026-04-25', modified: '2026-10-28', category: 'SEO & AI Search' })) }} />
 
-      <div dangerouslySetInnerHTML={{ __html: `<h2>The #1 Website Traffic Problem Nobody's Talking About</h2>
+      <div dangerouslySetInnerHTML={{ __html: `<p><strong>Google AI Overviews are AI-generated summaries that appear for some searches and may include links to supporting websites.</strong> There is no special submission process or required AI schema. Pages must meet Google's normal search requirements, be indexed, and be eligible to appear with a snippet to be considered as supporting links.</p>
+    <h2>What a Change in Search Traffic Can Mean</h2>
     <p>You are ranking on page one of Google. You've had that spot for months. Your content is solid. But your traffic is down. Way down. And you cannot figure out why.</p>
-    <p>Here Is why: Google is not sending your visitors to you anymore.</p>
-    <p>They're answering the question <em>for</em> them. Right there on the search page. No click required.</p>
-    <p>That's what <strong>Google AI Overviews</strong> do. And if you have not adjusted your strategy to account for them, you are competing in a game that changed the rules on you.</p>
+    <p>An AI Overview may be one factor, but a traffic change alone does not establish the cause. Seasonality, demand, competitors, site changes, and other search updates can also affect performance.</p>
+    <p>Check which pages and queries changed in Search Console, then compare traffic with qualified inquiries and bookings. Our guide to <a href="/blog/zero-click-search">zero-click search</a> explains why website visits are only part of the picture.</p>
 
     <h2>What Are Google AI Overviews?</h2>
-    <p>AI Overviews (previously called Search Generative Experience, or SGE) are AI-generated answer summaries that appear at the <em>very top</em> of Google search results, above every ad, every ranking, every featured snippet.</p>
-    <p>Google's AI (powered by Gemini) pulls from multiple websites, synthesizes the information, and delivers a complete answer directly on the page. The user never has to click. The user never visits your site.</p>
-    <p>For searchers: great. For businesses: brutal.</p>
+    <p>AI Overviews summarize information and provide links for further exploration. They do not appear for every query, and their position is not fixed above every ad or other search feature.</p>
+    <p>Google says AI Overviews and AI Mode may issue related searches across subtopics to develop a response. The responses and supporting links can differ between features and over time.</p>
+    <p>Some users continue to the linked sources; others may find enough information in the summary. Do not assume every AI Overview prevents a visit.</p>
 
-    <h2>The Numbers Are Not Pretty</h2>
-    <p>This is not speculation. The data is in.</p>
+    <h2>Use Your Own Performance Data</h2>
+    <p>Industry studies can be useful, but their samples, queries, countries, and time periods differ. A percentage from one study is not a forecast for every business.</p>
+    <p>Google includes traffic from AI Overviews and AI Mode within Search Console's Web performance reporting. This is not a separate report identifying every AI citation. Combine those reports with referral data, qualified inquiries, and booking outcomes.</p>
 
-    <div className="stat-grid">
-      <div className="stat-card">
-        <div className="num">46.7%</div>
-        <div className="label">Relative decline in clicks when an AI Overview appears, across 68,000 real queries</div>
-      </div>
-      <div className="stat-card">
-        <div className="num">48%</div>
-        <div className="label">Of all Google searches now show an AI Overview. Nearly half of every search you care about.</div>
-      </div>
-      <div className="stat-card">
-        <div className="num">58%</div>
-        <div className="label">Lower click-through rate for the top-ranking page when an AI Overview is present</div>
-      </div>
-      <div className="stat-card">
-        <div className="num">25%</div>
-        <div className="label">Projected drop in traditional search engine volume by 2026. Gartner's forecast, playing out now.</div>
-      </div>
-    </div>
-
-    <p>If your business depends on organic Google traffic, and most service businesses do, this is a five-alarm fire.</p>
-
-    <h2>Who's Getting Hit Hardest</h2>
-    <p>Some industries are feeling this more than others. If your business or your clients fall into any of these categories, you are already in the danger zone:</p>
+    <h2>Start with Your Clients' Questions</h2>
+    <p>These examples illustrate topics to consider; they are not evidence that a particular query currently triggers an AI Overview:</p>
 
     <ul>
-      <li><strong>Real estate professionals:</strong> Buyers and sellers search "how does probate work in California" or "what is a divorce real estate specialist." AI Overviews now answer those questions completely. The person who used to find your blog now never sees your site.</li>
-      <li><strong>Legal and financial professionals:</strong> "How to find a probate attorney," "what does a mortgage broker do," "steps in a divorce home sale." All prime AI Overview territory.</li>
-      <li><strong>Service businesses and agencies:</strong> Educational and informational content that drives top-of-funnel traffic gets hit hardest. If you built an SEO strategy on being the go-to answer, Google has positioned itself as the answer instead.</li>
+      <li><strong>Real estate professionals:</strong> "How does probate work in California?" or "What is a divorce real estate specialist?" Provide accurate, jurisdiction-appropriate information within your expertise.</li>
+      <li><strong>Legal and financial professionals:</strong> "How do I find a probate attorney?" or "What does a mortgage broker do?" Include relevant qualifications and avoid unsupported advice.</li>
+      <li><strong>Service businesses and agencies:</strong> Explain your services, process, and common decision points clearly enough that a prospect can evaluate whether you are a fit.</li>
     </ul>
 
     <div className="callout">
       <strong>The shift in mindset</strong>
-      <p>The goal is no longer just to <em>rank</em>. The goal is to be <strong>cited</strong> inside the AI Overview itself. When you are a cited source, your brand appears inside Google's answer at the top of the page, with a link back to your site. That's more valuable than a #1 ranking. Most of your competitors have not figured this out yet.</p>
+      <p>AI citations can provide another source of visibility alongside traditional rankings. Their value depends on whether they reach relevant prospects and contribute to qualified inquiries or sales. A citation is not automatically more valuable than a first-place ranking.</p>
     </div>
 
     <h2>5 Strategies to Win in an AI Overview World</h2>
@@ -72,7 +53,7 @@ export default function BlogPost() {
     <div className="strategy-card">
       <div className="num">01</div>
       <h3>Answer Questions Directly and Immediately</h3>
-      <p>Google's AI rewards content that gets to the point. If your article answers "What is a divorce real estate specialist?" with two paragraphs of preamble before actually answering, you are getting skipped.</p>
+      <p>Help readers find the answer without working through an unrelated introduction. Clear content is useful whether someone arrives from a traditional result, an AI feature, or a referral.</p>
       <div className="fix-box">
         <strong>The Fix</strong>
         <p>Lead with the direct answer in the first 1-2 sentences. Then expand. Think: concise statement → supporting context → depth. Structure every piece of content this way.</p>
@@ -82,56 +63,52 @@ export default function BlogPost() {
     <div className="strategy-card">
       <div className="num">02</div>
       <h3>Build Topical Authority, Not Just Individual Posts</h3>
-      <p>Google does not just look at one article when deciding who to cite. It evaluates whether your <em>entire website</em> is a credible, comprehensive resource on a given subject.</p>
+      <p>Cover related questions when you have useful expertise to contribute, rather than repeating the same information across many pages.</p>
       <div className="fix-box">
         <strong>The Fix</strong>
-        <p>Build content clusters. A hub page on "Probate Real Estate" that links to supporting articles on "How to Sell a Home in Probate," "Probate Timelines by State," and "Probate Real Estate Agent vs. Traditional Agent." When Google sees depth and consistency, it trusts you as an authority.</p>
+        <p>A useful hub can connect guides on probate-sale steps, jurisdiction-specific timelines, and professional roles. Each guide should provide distinct value, be reviewed for accuracy, and link to related resources in context.</p>
       </div>
     </div>
 
     <div className="strategy-card">
       <div className="num">03</div>
       <h3>Optimize for E-E-A-T</h3>
-      <p>Experience, Expertise, Authoritativeness, Trust. This is Google's framework for deciding whose content to pull into AI Overviews. HubSpot saw organic traffic collapse 70-80% after a 2024 algorithm update. They rebuilt around E-E-A-T: expert authors, semantic clarity, schema markup, community presence. The result? A 642% increase in AI citations.</p>
+      <p>Show who created your content, explain relevant expertise, and make claims that readers can verify. Do not treat an E-E-A-T checklist as a formula that guarantees selection by an AI feature.</p>
       <div className="fix-box">
         <strong>The Fix</strong>
-        <p>Publish content with attributed authors who have real credentials. Use schema markup to identify your expertise. Get cited in third-party sources: directories, press mentions, local news. Refresh existing content regularly to stay "credible" in AI eyes.</p>
+        <p>Attribute content to its real author, cite reliable sources, and correct outdated information. Include genuine first-hand examples when you have permission to share them. Do not manufacture credentials or results.</p>
       </div>
     </div>
 
     <div className="strategy-card">
       <div className="num">04</div>
       <h3>Use Structured Data and Schema Markup</h3>
-      <p>Schema markup is code that tells Google exactly what your content is about: FAQ schema, how-to schema, local business schema, professional service schema. AI crawlers prioritize it. It is like handing Google a clean, organized map of your content.</p>
+      <p>Relevant structured data can help search engines understand a page. It must match visible information. Google does not require special schema for AI Overviews or AI Mode.</p>
       <div className="fix-box">
         <strong>The Fix</strong>
-        <p>Add FAQ schema to every page that answers common questions. Add local business schema with your specialization (e.g., "Probate Real Estate Agent" or "Divorce Mortgage Specialist"). If implementation feels daunting, your marketing team can handle it in a single technical SEO session.</p>
+        <p>Review existing markup for accuracy and use only types that fit the page. Do not mark up a service description as an article or add irrelevant FAQ markup merely to target AI features.</p>
       </div>
     </div>
 
     <div className="strategy-card">
       <div className="num">05</div>
       <h3>Publish Proprietary Insight, Not Generic Content</h3>
-      <p>The content that gets cited in AI Overviews is specific, credible, and hard to replicate. Generic "10 tips for home sellers" posts are a dime a dozen. Google will not cite you when five bigger sites already said the same thing better.</p>
+      <p>Specific, well-supported experience can make content more useful than generic advice. That is a reason to improve the content, not a promise of an AI citation.</p>
       <div className="fix-box">
         <strong>The Fix</strong>
-        <p>Draw on your actual experience: "What I have seen in 50+ probate real estate transactions in San Diego." "The 3 mistakes divorcing couples make when selling their home, from a certified specialist." When no one else can replicate what you wrote, you become the source.</p>
+        <p>Explain a real client problem, your approach, and what can be documented about the outcome. Use client names, figures, and examples only when accurate and approved for publication.</p>
       </div>
     </div>
 
     <h2>The Bigger Picture: This Isn't Going Away</h2>
-    <p>Google's AI search is not a test phase. It is the future of search. Businesses that adapt now, shifting from chasing rankings to earning citations, will build a compounding advantage over the next 12-24 months.</p>
-    <p>The businesses that do not? They'll keep watching their traffic slide and wonder what happened.</p>
-
-    <blockquote>"The goal is not to rank #1 anymore. The goal is to be the source Google quotes at the top of the page."</blockquote>
+    <p>Strong SEO foundations still matter. Keep pages accessible, explain your business clearly, publish helpful content, and measure whether the work contributes to meaningful business outcomes.</p>
+    <p>Our <a href="/blog/aeo">answer engine optimization guide</a> explains the terminology, and our <a href="/services/seo">SEO and AI-search optimization service</a> describes how it fits into a wider marketing system.</p>
 
     <div className="sources-box">
-      <h4>Sources</h4>
-      <a href="https://www.stackmatix.com/blog/google-ai-overview-seo-impact" target="_blank" rel="noopener">Stackmatix: Google AI Overview SEO Impact, 2026 Data &amp; Statistics</a>
-      <a href="https://almcorp.com/blog/google-ai-overviews-surge-9-industries/" target="_blank" rel="noopener">ALM Corp: Google AI Overviews Surge 58%, BrightEdge Data 2026</a>
-      <a href="https://ahrefs.com/blog/ai-overviews-reduce-clicks-update/" target="_blank" rel="noopener">Ahrefs: AI Overviews Reduce Clicks</a>
-      <a href="https://emarketed.com/ai/gartner-predicts-25-percent-search-volume-drop-2026/" target="_blank" rel="noopener">Emarketed: Gartner Predicts 25% Search Volume Drop by 2026</a>
-      <a href="https://www.digivate.com/blog/aeo/how-to-rank-in-google-ai-overviews-2026-2/" target="_blank" rel="noopener">Digivate: Optimizing Content for Google AI Overviews 2026</a>
+      <h2>Sources</h2>
+      <a href="https://developers.google.com/search/docs/appearance/ai-features" target="_blank" rel="noopener noreferrer">Google Search Central: AI features and your website</a>
+      <a href="https://developers.google.com/search/docs/appearance/structured-data/sd-policies" target="_blank" rel="noopener noreferrer">Google Search Central: General structured data guidelines</a>
+      <a href="https://developers.google.com/search/docs/crawling-indexing/links-crawlable" target="_blank" rel="noopener noreferrer">Google Search Central: Link best practices</a>
     </div>` }} />
     </BlogLayout>
   )

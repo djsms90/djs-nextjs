@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import Link from 'next/link'
 import PrivacyChoicesLink from './PrivacyChoicesLink'
 
-export default function BlogLayout({ children, title, tag, date, readTime, description }) {
+export default function BlogLayout({ children, title, tag, date, updated, readTime }) {
   useEffect(() => {
     // Scroll to top button
     const btn = document.getElementById('scrollTopBlog')
@@ -30,6 +30,7 @@ export default function BlogLayout({ children, title, tag, date, readTime, descr
         <div className="article-meta">
           <span>By Danny Sweis, DJS Marketing Services</span>
           <span>{date}</span>
+          {updated && <span>Updated {updated}</span>}
           {readTime && <span>{readTime}</span>}
         </div>
         <div className="article-body">

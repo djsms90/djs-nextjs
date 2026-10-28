@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://djsmarketingservices.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority><lastmod>2026-10-18</lastmod></url>
-  <url><loc>https://djsmarketingservices.com/blog</loc><changefreq>weekly</changefreq><priority>0.8</priority><lastmod>2026-10-18</lastmod></url>
+  <url><loc>https://djsmarketingservices.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://djsmarketingservices.com/blog</loc><changefreq>weekly</changefreq><priority>0.8</priority><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://djsmarketingservices.com/services/seo</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://djsmarketingservices.com/services/website-design</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-10-28</lastmod></url>
   <url><loc>https://djsmarketingservices.com/playbook</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://djsmarketingservices.com/privacy-policy</loc><changefreq>yearly</changefreq><priority>0.3</priority><lastmod>2026-04-10</lastmod></url>
   <url><loc>https://djsmarketingservices.com/terms</loc><changefreq>yearly</changefreq><priority>0.3</priority><lastmod>2026-04-10</lastmod></url>
-  <url><loc>https://djsmarketingservices.com/blog/zero-click-search</loc><changefreq>monthly</changefreq><priority>0.6</priority><lastmod>2026-08-11</lastmod></url>
+  <url><loc>https://djsmarketingservices.com/blog/zero-click-search</loc><changefreq>monthly</changefreq><priority>0.6</priority><lastmod>2026-10-28</lastmod></url>
   <url><loc>https://djsmarketingservices.com/blog/meta-ai-ads</loc><changefreq>monthly</changefreq><priority>0.6</priority><lastmod>2026-05-09</lastmod></url>
-  <url><loc>https://djsmarketingservices.com/blog/geo-vs-seo</loc><changefreq>monthly</changefreq><priority>0.6</priority><lastmod>2026-04-28</lastmod></url>
-  <url><loc>https://djsmarketingservices.com/blog/ai-overviews</loc><changefreq>monthly</changefreq><priority>0.6</priority><lastmod>2026-04-21</lastmod></url>
-  <url><loc>https://djsmarketingservices.com/blog/aeo</loc><changefreq>monthly</changefreq><priority>0.6</priority><lastmod>2026-04-10</lastmod></url>
+  <url><loc>https://djsmarketingservices.com/blog/geo-vs-seo</loc><changefreq>monthly</changefreq><priority>0.6</priority><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://djsmarketingservices.com/blog/ai-overviews</loc><changefreq>monthly</changefreq><priority>0.6</priority><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://djsmarketingservices.com/blog/aeo</loc><changefreq>monthly</changefreq><priority>0.6</priority><lastmod>2026-10-28</lastmod></url>
 </urlset>

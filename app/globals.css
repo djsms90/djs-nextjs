@@ -1,11 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800;900&display=swap');
 @import "tailwindcss";
 
 /* ============================================
    DJS MARKETING SERVICES — ORIGINAL CSS
    Carbon copy from index.html style tag
    ============================================ */
-
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800;900&display=swap');
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -278,7 +277,7 @@ nav img { height: 48px; }
 .results-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
 .result-card { background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.15); border-radius:8px; padding:32px; }
 .result-card .r-stat { font-family:'Bebas Neue', sans-serif; font-size:52px; color:var(--gold); line-height:1; margin-bottom:8px; }
-.result-card h4 { font-size:15px; font-weight:800; color:var(--white); margin-bottom:10px; }
+.result-card h3 { font-size:15px; font-weight:800; color:var(--white); margin-bottom:10px; }
 .result-card p { font-size:14px; color:rgba(255,255,255,0.8); line-height:1.7; }
 .result-card .result-lead { margin-top:12px; padding-top:12px; border-top:1px solid rgba(255,255,255,0.15); font-size:13px; font-weight:700; color:var(--gold); }
 
@@ -293,7 +292,7 @@ nav img { height: 48px; }
 .stage { background:var(--off-white); border:1px solid var(--border); border-left:5px solid var(--blue); border-radius:4px; padding:20px 24px; }
 .stage.gold { border-left-color:var(--gold-dark); }
 .stage.red  { border-left-color:var(--red); }
-.stage h4 { font-size:14px; font-weight:900; text-transform:uppercase; letter-spacing:1px; color:var(--text); margin-bottom:6px; }
+.stage h3 { font-size:14px; font-weight:900; text-transform:uppercase; letter-spacing:1px; color:var(--text); margin-bottom:6px; }
 .stage p { font-size:14px; color:var(--text-mid); margin:0; line-height:1.6; }
 
 /* BOOST365 */
@@ -306,7 +305,7 @@ nav img { height: 48px; }
 .pillars-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:16px; }
 .pillar-card { background:var(--white); border:1px solid var(--border); border-top:4px solid var(--blue); border-radius:4px; padding:24px 20px; text-align:center; }
 .pillar-card .p-num { font-family:'Bebas Neue', sans-serif; font-size:48px; color:var(--blue-light); line-height:1; margin-bottom:8px; }
-.pillar-card h4 { font-size:13px; font-weight:900; color:var(--text); margin-bottom:8px; text-transform:uppercase; letter-spacing:1px; }
+.pillar-card h3 { font-size:13px; font-weight:900; color:var(--text); margin-bottom:8px; text-transform:uppercase; letter-spacing:1px; }
 .pillar-card p { font-size:13px; color:var(--text-light); line-height:1.5; }
 
 /* SERVICES */
@@ -326,8 +325,8 @@ nav img { height: 48px; }
 .tier.featured { background:var(--blue); border-color:var(--blue); transform:translateY(-4px); box-shadow:0 12px 32px rgba(4,103,177,0.3); }
 .tier.featured:hover { transform:translateY(-10px); box-shadow:0 20px 48px rgba(4,103,177,0.4); }
 .tier .t-icon { font-size:28px; margin-bottom:12px; }
-.tier h4 { font-family:'Bebas Neue', sans-serif; font-size:24px; color:var(--text); margin-bottom:4px; }
-.tier.featured h4 { color:var(--white); }
+.tier h3 { font-family:'Bebas Neue', sans-serif; font-size:24px; color:var(--text); margin-bottom:4px; }
+.tier.featured h3 { color:var(--white); }
 .tier p { font-size:13px; color:var(--text-light); }
 .tier.featured p { color:rgba(255,255,255,0.75); }
 .tier a { display:inline-block; margin-top:16px; font-size:12px; font-weight:900; letter-spacing:1px; text-transform:uppercase; color:var(--white); text-decoration:none; background:var(--blue); padding:8px 20px; border-radius:100px; transition:all 0.2s; }
@@ -338,7 +337,7 @@ nav img { height: 48px; }
 .ai-tier a:hover { background:#ffe800 !important; }
 .ai-tier { background:linear-gradient(135deg, #0a0a0a, #1a1a2e); border:2px solid var(--gold); position:relative; overflow:hidden; }
 .ai-tier::before { content:"PREMIUM"; position:absolute; top:10px; right:-20px; background:var(--red); color:var(--white); font-size:9px; font-weight:900; letter-spacing:2px; padding:4px 28px; transform:rotate(35deg); }
-.ai-tier h4 { color:var(--gold); }
+.ai-tier h3 { color:var(--gold); }
 .ai-tier p { color:rgba(255,255,255,0.6); }
 
 /* AI SECTION */
@@ -554,7 +553,10 @@ footer p { font-size:12px; color:var(--text-light); }
 .audit-list li { padding-left:36px; position:relative; margin-bottom:10px; counter-increment:audit; }
 .audit-list li::before { content:counter(audit)"."; position:absolute; left:0; font-weight:900; color:var(--blue); }
 .sources-box { background:var(--off-white); border:1px solid var(--border); border-radius:4px; padding:24px; margin:40px 0; }
-.sources-box h4 { font-size:11px; font-weight:900; letter-spacing:2px; text-transform:uppercase; color:var(--text-light); margin-bottom:12px; }
+.sources-box h2, .sources-box h4 { font-size:11px; font-weight:900; letter-spacing:2px; text-transform:uppercase; color:var(--text-light); margin-bottom:12px; }
+.service-item a { color:inherit; text-decoration:underline; text-underline-offset:4px; }
+.service-item a:hover { color:var(--blue); }
+.service-item a:focus-visible { outline:2px solid var(--blue); outline-offset:4px; }
 .sources-box a { display:block; font-size:14px; color:var(--blue); text-decoration:none; margin-bottom:8px; }
 .sources-box a:hover { text-decoration:underline; }
 .cta-box { background:var(--blue); border-radius:8px; padding:40px; text-align:center; margin-top:48px; }
