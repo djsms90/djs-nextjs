@@ -533,7 +533,6 @@ export default function Home() {
             <h2>The S Stands for More Than a Name.</h2>
             <p>The S in our logo stands for Sweis. It also stands for the belief that when a business needs help, someone should actually show up and fix it. <strong>No excuses. No runaround. Just results.</strong></p>
             <p>Danny Sweis has spent 30+ years navigating adversity, building businesses, and learning what actually moves the needle. DJS Marketing Services isn&apos;t a template agency, it&apos;s a system built from real experience and a genuine commitment to winning for every client we take on.</p>
-            <p><strong>We don&apos;t take on clients we can&apos;t win for.</strong></p>
           </div>
           <div className="about-quote">
             <blockquote>&ldquo;We optimize and build the machines, pour in traffic, and keep tightening the gears until <em>revenue climbs.</em>&rdquo;</blockquote>
