@@ -1,6 +1,6 @@
+import SiteFooter from '../../components/SiteFooter'
 import Link from 'next/link'
 import SiteNav from '../../components/SiteNav'
-import PrivacyChoicesLink from '../../components/PrivacyChoicesLink'
 
 export const metadata = {
   title: 'Privacy Policy | DJS Marketing Services',
@@ -133,16 +133,7 @@ Website: djsmarketingservices.com`
         </div>
       </main>
 
-      <footer style={{ background:'#111', padding:'28px 48px', textAlign:'center' }}>
-        <p style={{ fontSize:'12px', color:'rgba(255,255,255,0.5)', margin:0 }}>
-          © {new Date().getFullYear()}{' '}DJS Marketing Services. All Rights Reserved. &nbsp;|&nbsp;
-          <Link href="/privacy-policy" style={{ color:'rgba(255,255,255,0.5)', textDecoration:'none' }}>Privacy Policy</Link>
-          &nbsp;|&nbsp;
-          <Link href="/terms" style={{ color:'rgba(255,255,255,0.5)', textDecoration:'none' }}>Terms & Conditions</Link>
-          &nbsp;|&nbsp;
-          <PrivacyChoicesLink style={{ color:'rgba(255,255,255,0.5)' }} />
-        </p>
-      </footer>
+      <SiteFooter />
     </>
   )
 }

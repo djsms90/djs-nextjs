@@ -1,7 +1,7 @@
 'use client'
+import SiteFooter from './SiteFooter'
 import { useEffect } from 'react'
 import Link from 'next/link'
-import PrivacyChoicesLink from './PrivacyChoicesLink'
 import SiteNav from './SiteNav'
 import blogPosts, { clusters } from '../data/blog-posts'
 
@@ -69,18 +69,7 @@ export default function BlogLayout({ children, title, tag, date, updated, readTi
       </main>
 
       {/* FOOTER */}
-      <footer style={{ background:'var(--white)', borderTop:'1px solid var(--border)', padding:'28px 48px', display:'flex', alignItems:'center', justifyContent:'space-between', flexWrap:'wrap', gap:'12px' }}>
-        <Link href="/"><img src="/logo-footer.jpg" alt="DJS Marketing Services" style={{ height:'40px', width:'auto' }} /></Link>
-        <p style={{ fontSize:'12px', color:'var(--text-light)' }}>
-          © {new Date().getFullYear()}{' '}DJS Marketing Services. All Rights Reserved. &nbsp;|&nbsp;
-          <Link href="/privacy-policy" style={{ color:'var(--blue)', textDecoration:'none' }}>Privacy Policy</Link>
-          &nbsp;|&nbsp;
-          <Link href="/terms" style={{ color:'var(--blue)', textDecoration:'none' }}>Terms & Conditions</Link>
-          &nbsp;|&nbsp;
-          <PrivacyChoicesLink style={{ color:'var(--blue)' }} />
-        </p>
-        <Link href="/blog" style={{ fontSize:'13px', fontWeight:'700', color:'var(--blue)', textDecoration:'none' }}>← All Articles</Link>
-      </footer>
+      <SiteFooter />
 
       {/* SCROLL TOP */}
       <a href="#" className="scroll-top" id="scrollTopBlog" aria-label="Back to top">↑</a>

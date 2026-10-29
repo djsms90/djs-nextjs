@@ -140,7 +140,7 @@ export default function AboutPage() {
       <section className={styles.section} aria-labelledby="roots-title">
         <div className={styles.narrow}>
           <p className={styles.kicker}>Where it started</p>
-          <h2 id="roots-title" className={styles.h2}>Born in Abu Dhabi. <span>Built in San Diego.</span></h2>
+          <h2 id="roots-title" className={styles.h2}>Born in Abu Dhabi. <span>Built in San&nbsp;Diego.</span></h2>
           <p className={styles.p}>
             18 years of hot, humid memories filled with friendships and experiences that shaped everything about
             who I am.
