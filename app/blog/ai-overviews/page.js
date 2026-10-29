@@ -1,7 +1,8 @@
 import BlogLayout from '../../../components/BlogLayout'
-import { blogMeta, articleSchema } from '../../../lib/seo'
+import { blogMeta, articleSchema, blogBreadcrumb, JsonLd } from '../../../lib/seo'
 
 export const metadata = blogMeta({
+  seoTitle: 'Google AI Overviews: How to Get Your Brand Cited',
   title: 'Google AI Overviews Are Stealing Your Clicks: Here Is How to Fight Back',
   description: 'AI Overviews are answering questions before users click anything. Here is the strategy to get your brand cited inside those answers.',
   slug: 'ai-overviews',
@@ -12,6 +13,7 @@ export const metadata = blogMeta({
 export default function BlogPost() {
   return (
     <BlogLayout
+      slug="ai-overviews"
       tag="SEO & AI Search"
       title="Google AI Overviews Are Stealing Your Clicks: Here Is How to Fight Back"
       date="April 21, 2026"
@@ -19,6 +21,7 @@ export default function BlogPost() {
       readTime="6 min read"
     >
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema({ title: 'Google AI Overviews Are Stealing Your Clicks: Here Is How to Fight Back', description: 'AI Overviews are answering questions before users click anything. Here is the strategy to get your brand cited inside those answers.', slug: 'ai-overviews', date: '2026-04-21', modified: '2026-10-28', category: 'SEO & AI Search', wordCount: 1100 })) }} />
+      <JsonLd data={blogBreadcrumb({ title: 'Google AI Overviews Are Stealing Your Clicks: Here Is How to Fight Back', slug: 'ai-overviews' })} />
 
       <div dangerouslySetInnerHTML={{ __html: `<h2>The #1 Website Traffic Problem Nobody's Talking About</h2>
     <p>You are ranking on page one of Google. You've had that spot for months. Your content is solid. But your traffic is down. Way down. And you cannot figure out why.</p>

@@ -1,9 +1,10 @@
 import BlogLayout from '../../../components/BlogLayout'
-import { blogMeta, articleSchema } from '../../../lib/seo'
+import { blogMeta, articleSchema, blogBreadcrumb, JsonLd } from '../../../lib/seo'
 
 export const metadata = blogMeta({
+  seoTitle: 'Meta Made AI the Default for Ads. Should You Use It?',
   title: 'Meta Just Made AI the Default for All Ads: Should You Let It Run Yours?',
-  description: 'Meta expanded its AI Business Assistant to every advertiser and made Advantage+ automation the default for all new campaigns. Here is what that means for your budget and brand.',
+  description: 'Meta made Advantage+ AI automation the default for new campaigns. Here is what that means for your ad budget, your brand, and what to keep control of.',
   slug: 'meta-ai-ads',
   date: '2026-05-09',
 })
@@ -11,12 +12,14 @@ export const metadata = blogMeta({
 export default function MetaAiAds() {
   return (
     <BlogLayout
+      slug="meta-ai-ads"
       tag="Paid Advertising"
       title="Meta Just Made AI the Default for All Ads: Should You Let It Run Yours?"
       date="May 9, 2026"
       readTime="7 min read"
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema({ title: 'Meta Just Made AI the Default for All Ads: Should You Let It Run Yours?', description: 'Meta expanded its AI Business Assistant to every advertiser and made Advantage+ automation the default for all new campaigns. Here is what that means for your budget and brand.', slug: 'meta-ai-ads', date: '2026-05-09', category: 'Paid Advertising', wordCount: 1100 })) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema({ title: 'Meta Just Made AI the Default for All Ads: Should You Let It Run Yours?', description: 'Meta made Advantage+ AI automation the default for new campaigns. Here is what that means for your ad budget, your brand, and what to keep control of.', slug: 'meta-ai-ads', date: '2026-05-09', category: 'Paid Advertising', wordCount: 1100 })) }} />
+      <JsonLd data={blogBreadcrumb({ title: 'Meta Just Made AI the Default for All Ads: Should You Let It Run Yours?', slug: 'meta-ai-ads' })} />
 
       <p>Meta quietly made one of the biggest moves in its advertising history. It expanded its AI Business Assistant to every advertiser and agency on the planet, and made Advantage+ automation the <strong>default</strong> for all new ad campaigns.</p>
       <p>No announcement. No opt-in. No heads-up.</p>

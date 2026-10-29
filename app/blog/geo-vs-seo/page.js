@@ -1,7 +1,8 @@
 import BlogLayout from '../../../components/BlogLayout'
-import { blogMeta, articleSchema } from '../../../lib/seo'
+import { blogMeta, articleSchema, blogBreadcrumb, JsonLd } from '../../../lib/seo'
 
 export const metadata = blogMeta({
+  seoTitle: 'GEO vs SEO: Generative Engine Optimization Explained',
   title: 'GEO vs SEO: The New Optimization Game Your Competitors Do Not Know About',
   description: 'SEO gets you ranked. GEO gets you cited by AI. Learn what Generative Engine Optimization is and how to start winning in AI search.',
   slug: 'geo-vs-seo',
@@ -12,6 +13,7 @@ export const metadata = blogMeta({
 export default function BlogPost() {
   return (
     <BlogLayout
+      slug="geo-vs-seo"
       tag="SEO & GEO"
       title="GEO vs SEO: The New Optimization Game Your Competitors Do Not Know About"
       date="April 28, 2026"
@@ -19,6 +21,7 @@ export default function BlogPost() {
       readTime="6 min read"
     >
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema({ title: 'GEO vs SEO: The New Optimization Game Your Competitors Do Not Know About', description: 'SEO gets you ranked. GEO gets you cited by AI. Learn what Generative Engine Optimization is and how to start winning in AI search.', slug: 'geo-vs-seo', date: '2026-04-28', modified: '2026-10-28', category: 'SEO & GEO', wordCount: 1200 })) }} />
+      <JsonLd data={blogBreadcrumb({ title: 'GEO vs SEO: The New Optimization Game Your Competitors Do Not Know About', slug: 'geo-vs-seo' })} />
 
       <div dangerouslySetInnerHTML={{ __html: `<p>I want to share something with you that most marketing agencies are not talking about yet.</p>
 

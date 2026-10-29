@@ -67,6 +67,8 @@ const schemaOrg = {
     '@id': 'https://djsmarketingservices.com/#danny-sweis',
     name: 'Danny Sweis',
     jobTitle: 'Founder & CEO',
+    url: 'https://djsmarketingservices.com/about',
+    image: 'https://djsmarketingservices.com/danny-sweis.jpg',
   },
   address: {
     '@type': 'PostalAddress',

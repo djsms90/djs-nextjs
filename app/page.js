@@ -246,7 +246,8 @@ export default function Home() {
           <li><a href="#boost">BOOST365©</a></li>
           <li><a href="#results">Results</a></li>
           <li><a href="/blog">Blog</a></li>
-          <li><a href="#about">About</a></li>
+          <li><a href="/industries">Industries</a></li>
+          <li><a href="/about">About</a></li>
           <li><a href="https://meetings-na2.hubspot.com/sweis" target="_blank" rel="noopener noreferrer" className="nav-cta">Book Free Strategy Call</a></li>
         </ul>
       </nav>
@@ -258,7 +259,8 @@ export default function Home() {
         <a href="#boost">BOOST365©</a>
         <a href="#results">Results</a>
         <a href="/blog">Blog</a>
-        <a href="#about">About</a>
+        <a href="/industries">Industries</a>
+        <a href="/about">About</a>
         <a href="https://meetings-na2.hubspot.com/sweis" target="_blank" rel="noopener noreferrer">Book Free Strategy Call</a>
       </div>
 
@@ -533,6 +535,7 @@ export default function Home() {
             <h2>The S Stands for More Than a Name.</h2>
             <p>The S in our logo stands for Sweis. It also stands for the belief that when a business needs help, someone should actually show up and fix it. <strong>No excuses. No runaround. Just results.</strong></p>
             <p>Danny Sweis has spent 30+ years navigating adversity, building businesses, and learning what actually moves the needle. DJS Marketing Services isn&apos;t a template agency, it&apos;s a system built from real experience and a genuine commitment to winning for every client we take on.</p>
+            <p><Link href="/about">Read Danny&apos;s story →</Link></p>
           </div>
           <div className="about-quote">
             <blockquote>&ldquo;We optimize and build the machines, pour in traffic, and keep tightening the gears until <em>revenue climbs.</em>&rdquo;</blockquote>
@@ -618,6 +621,7 @@ export default function Home() {
         <Link href="/"><Image src="/logo-footer.jpg" alt="DJS Marketing Services" width={160} height={44} style={{ height:'44px', width:'auto' }} /></Link>
         <div className="footer-contact">
           <p>© {new Date().getFullYear()}{' '}DJS Marketing Services. All Rights Reserved. &nbsp;|&nbsp; <a href="/privacy-policy" style={{ color:'var(--blue)', textDecoration:'none' }}>Privacy Policy</a> &nbsp;|&nbsp; <a href="/terms" style={{ color:'var(--blue)', textDecoration:'none' }}>Terms & Conditions</a> &nbsp;|&nbsp; <PrivacyChoicesLink style={{ color:'var(--blue)' }} /></p>
+          <p><a href="/about">About</a> &nbsp;|&nbsp; <a href="/industries/real-estate">Real Estate</a> &nbsp;|&nbsp; <a href="/industries/law-firms">Law Firms</a> &nbsp;|&nbsp; <a href="/industries/mortgage">Mortgage</a> &nbsp;|&nbsp; <a href="/blog">Blog</a></p>
           <p><a href="mailto:marketing@djs90.com">marketing@djs90.com</a> &nbsp;|&nbsp; <a href="tel:+16199284669">(619) 928-4669</a></p>
         </div>
         <div className="footer-social">

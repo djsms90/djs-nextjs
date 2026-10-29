@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import PrivacyChoicesLink from '../../../components/PrivacyChoicesLink'
+import { serviceSchemas, JsonLd } from '../../../lib/seo'
 import styles from '../services.module.css'
 
 const BOOKING_URL = 'https://meetings-na2.hubspot.com/sweis'
@@ -31,9 +32,10 @@ export const metadata = {
 }
 
 const navItems = [
-  { href: '/#services', label: 'All Services' },
   { href: '/services/seo', label: 'SEO & AEO' },
   { href: '/services/website-design', label: 'Website Design' },
+  { href: '/industries', label: 'Industries' },
+  { href: '/about', label: 'About' },
   { href: '/blog', label: 'Blog' },
 ]
 
@@ -50,6 +52,7 @@ const faqs = [
         its own scope, agreed on upfront. More on our <Link href="/services/seo">SEO, AEO &amp; GEO</Link> page.
       </>
     ),
+    text: 'Every site is built search-ready: clean structure, crawlable pages, clear content. Ongoing SEO is its own scope, agreed on upfront. More on our SEO, AEO & GEO page.',
   },
   {
     q: 'Can you redesign my existing site instead of starting over?',
@@ -65,9 +68,24 @@ const faqs = [
   },
 ]
 
+
+const schemas = serviceSchemas({
+  name: 'Website Design & Development',
+  serviceType: 'Website design',
+  description: DESCRIPTION,
+  path: '/services/website-design',
+  crumb: [
+    { name: 'Home', path: '/' },
+    { name: 'Services', path: '/#services' },
+    { name: 'Website Design', path: '/services/website-design' },
+  ],
+  faqs: faqs.map((f) => ({ q: f.q, text: f.text || f.a })),
+})
+
 export default function WebsiteDesignPage() {
   return (
     <div className={styles.page}>
+      <JsonLd data={schemas} />
       <a href="#main-content" className="skip-nav">Skip to main content</a>
 
       <header className={styles.header}>

@@ -1,9 +1,10 @@
 import BlogLayout from '../../../components/BlogLayout'
-import { blogMeta, articleSchema } from '../../../lib/seo'
+import { blogMeta, articleSchema, blogBreadcrumb, JsonLd } from '../../../lib/seo'
 
 export const metadata = blogMeta({
+  seoTitle: 'What Is Answer Engine Optimization (AEO)?',
   title: 'What Is Answer Engine Optimization and Why Your Clients Need It Now',
-  description: 'How we are getting clients appearing in AI-generated search answers before competitors know AEO exists. The shift from search engines to answer engines is already here.',
+  description: 'Answer engine optimization gets your business into AI-generated answers. What AEO is, how it differs from SEO, and how to start before competitors do.',
   slug: 'aeo',
   date: '2026-04-10',
   modified: '2026-10-28',
@@ -12,13 +13,15 @@ export const metadata = blogMeta({
 export default function BlogPost() {
   return (
     <BlogLayout
+      slug="aeo"
       tag="SEO & AEO"
       title="What Is Answer Engine Optimization and Why Your Competitors Are Already Doing It"
       date="April 10, 2026"
       updated="October 28, 2026"
       readTime="7 min read"
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema({ title: 'What Is Answer Engine Optimization and Why Your Clients Need It Now', description: 'How we are getting clients appearing in AI-generated search answers before competitors know AEO exists. The shift from search engines to answer engines is already here.', slug: 'aeo', date: '2026-04-10', modified: '2026-10-28', category: 'SEO & AEO', wordCount: 1050 })) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema({ title: 'What Is Answer Engine Optimization and Why Your Clients Need It Now', description: 'Answer engine optimization gets your business into AI-generated answers. What AEO is, how it differs from SEO, and how to start before competitors do.', slug: 'aeo', date: '2026-04-10', modified: '2026-10-28', category: 'SEO & AEO', wordCount: 1050 })) }} />
+      <JsonLd data={blogBreadcrumb({ title: 'What Is Answer Engine Optimization and Why Your Clients Need It Now', slug: 'aeo' })} />
 
       <div dangerouslySetInnerHTML={{ __html: `<p>There is a quiet shift happening in how people find businesses, and most professional service providers are completely unaware of it.</p>
 

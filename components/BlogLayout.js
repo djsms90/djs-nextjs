@@ -2,8 +2,18 @@
 import { useEffect } from 'react'
 import Link from 'next/link'
 import PrivacyChoicesLink from './PrivacyChoicesLink'
+import blogPosts, { clusters } from '../data/blog-posts'
 
-export default function BlogLayout({ children, title, tag, date, updated, readTime }) {
+export default function BlogLayout({ children, title, tag, date, updated, readTime, slug }) {
+  const post = blogPosts.find((p) => p.slug === slug)
+  const cluster = post && clusters[post.cluster]
+  const related = post
+    ? blogPosts
+        .filter((p) => p.cluster === post.cluster && p.slug !== slug)
+        .sort((a, b) => (b.slug === cluster?.pillar) - (a.slug === cluster?.pillar))
+        .slice(0, 3)
+    : []
+
   useEffect(() => {
     // Scroll to top button
     const btn = document.getElementById('scrollTopBlog')
@@ -17,9 +27,13 @@ export default function BlogLayout({ children, title, tag, date, updated, readTi
       {/* NAV */}
       <nav role="navigation" aria-label="Main navigation">
         <Link href="/"><img src="/logo-nav.jpg" alt="DJS Marketing Services" style={{ height: '48px', width: 'auto' }} /></Link>
-        <Link href="/blog" style={{ fontSize:'13px', fontWeight:'700', color:'rgba(255,255,255,0.9)', textDecoration:'none', letterSpacing:'0.5px', textTransform:'uppercase' }}>
-          ← All Articles
-        </Link>
+        <div style={{ display:'flex', gap:'20px', flexWrap:'wrap', justifyContent:'flex-end' }}>
+          {[['/services/seo','SEO & AEO'],['/industries','Industries'],['/about','About'],['/blog','All Articles']].map(([href,label]) => (
+            <Link key={href} href={href} style={{ fontSize:'13px', fontWeight:'700', color:'rgba(255,255,255,0.9)', textDecoration:'none', letterSpacing:'0.5px', textTransform:'uppercase' }}>
+              {label}
+            </Link>
+          ))}
+        </div>
       </nav>
 
       {/* ARTICLE */}
@@ -36,6 +50,24 @@ export default function BlogLayout({ children, title, tag, date, updated, readTi
         <div className="article-body">
           {children}
         </div>
+
+        {/* RELATED READING */}
+        {(related.length > 0 || cluster) && (
+          <aside className="related-reading" aria-labelledby="related-title">
+            <h2 id="related-title">Keep Reading</h2>
+            <ul>
+              {related.map((r) => (
+                <li key={r.slug}>
+                  <Link href={r.href}>{r.title}</Link>
+                  {r.slug === cluster?.pillar && <span className="related-pillar"> Start here</span>}
+                </li>
+              ))}
+              {cluster && (
+                <li><Link href={cluster.service.href}>{cluster.service.label} →</Link></li>
+              )}
+            </ul>
+          </aside>
+        )}
 
         {/* STANDARD CTA */}
         <div className="cta-box">

@@ -305,10 +305,10 @@ export default function PlaybookPage() {
                 <p className="pb-link-title">How to Actually Show Up in AI-Powered Search Results</p>
                 <p className="pb-link-desc">The Optimization pillar in action — AEO strategy for niche businesses.</p>
               </Link>
-              <Link href="/blog/local-seo" className="pb-link-card">
-                <p className="pb-link-tag">Blog</p>
-                <p className="pb-link-title">The Local SEO Playbook for Niche Service Professionals</p>
-                <p className="pb-link-desc">How local visibility drives the Outreach pillar for service businesses.</p>
+              <Link href="/services/seo" className="pb-link-card">
+                <p className="pb-link-tag">Service</p>
+                <p className="pb-link-title">SEO &amp; AI Search Optimization</p>
+                <p className="pb-link-desc">The Optimization pillar done for you: get found on Google and cited by AI.</p>
               </Link>
               <a href="https://meetings-na2.hubspot.com/sweis" target="_blank" rel="noopener noreferrer" className="pb-link-card">
                 <p className="pb-link-tag">Next Step</p>

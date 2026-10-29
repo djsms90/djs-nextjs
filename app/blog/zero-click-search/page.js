@@ -1,7 +1,8 @@
 import BlogLayout from '../../../components/BlogLayout'
-import { blogMeta, articleSchema as buildArticleSchema } from '../../../lib/seo'
+import { blogMeta, articleSchema as buildArticleSchema, blogBreadcrumb, JsonLd } from '../../../lib/seo'
 
 export const metadata = blogMeta({
+  seoTitle: 'Zero-Click Search: How to Win When Nobody Clicks',
   title: 'Zero-Click Search Is Here: How to Win When Nobody Clicks',
   description: 'Nearly 7 in 10 U.S. Google searches now end without a click. Here is how to make zero-click search work for your business instead of against it.',
   slug: 'zero-click-search',
@@ -22,6 +23,7 @@ const articleSchema = buildArticleSchema({
 export default function ZeroClickSearch() {
   return (
     <BlogLayout
+      slug="zero-click-search"
       tag="SEO &amp; AEO"
       title="Zero-Click Search Is Here: How to Win When Nobody Clicks"
       date="August 11, 2026"
@@ -29,6 +31,7 @@ export default function ZeroClickSearch() {
       readTime="6 min read"
     >
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <JsonLd data={blogBreadcrumb({ title: 'Zero-Click Search Is Here: How to Win When Nobody Clicks', slug: 'zero-click-search' })} />
 
       <p>The data now confirms what marketers have been dreading: 68 percent of U.S. Google searches end without anyone clicking a single result.</p>
       <p>Not because people stopped searching. Because Google started answering.</p>

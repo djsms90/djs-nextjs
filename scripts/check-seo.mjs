@@ -4,6 +4,7 @@ import assert from 'node:assert/strict'
 // external booking links. Override only when deliberately checking another host.
 const base = (process.env.SEO_CHECK_BASE_URL || 'http://127.0.0.1:3000').replace(/\/$/, '')
 const site = 'https://djsmarketingservices.com'
+// Unfinished stub articles removed in Oct 2026; they must stay 404 and unlinked.
 const excluded = ['/blog/linkedin-dms', '/blog/pmax', '/blog/youtube', '/blog/local-seo', '/blog/boost365']
 const updated = ['/blog/aeo', '/blog/geo-vs-seo', '/blog/ai-overviews', '/blog/zero-click-search']
 const services = ['/services/seo', '/services/website-design']
@@ -90,9 +91,11 @@ for (const path of services) {
   assert.ok(documents.get('/').includes(`href="${path}"`), `Homepage does not link to ${path}`)
 }
 for (const path of excluded) {
-  const html = await page(path)
-  assert.match(meta(html, 'robots') || '', /noindex/i, `${path}: unfinished article became indexable`)
-  assert.ok(!documents.get('/blog').includes(`href="${path}"`), `${path}: unfinished article appears in listing`)
+  const response = await fetch(`${base}${path}`, { redirect: 'manual' })
+  assert.equal(response.status, 404, `${path}: removed stub article should return 404`)
+  for (const [from, html] of documents) {
+    assert.ok(!html.includes(`href="${path}"`), `${from}: links to removed article ${path}`)
+  }
 }
 for (const path of internalPaths) {
   if (!documents.has(path)) await page(path)

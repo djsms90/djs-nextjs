@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import PrivacyChoicesLink from '../../../components/PrivacyChoicesLink'
+import { serviceSchemas, JsonLd } from '../../../lib/seo'
 import styles from '../services.module.css'
 
 const BOOKING_URL = 'https://meetings-na2.hubspot.com/sweis'
@@ -31,9 +32,10 @@ export const metadata = {
 }
 
 const navItems = [
-  { href: '/#services', label: 'All Services' },
   { href: '/services/seo', label: 'SEO & AEO' },
   { href: '/services/website-design', label: 'Website Design' },
+  { href: '/industries', label: 'Industries' },
+  { href: '/about', label: 'About' },
   { href: '/blog', label: 'Blog' },
 ]
 
@@ -47,6 +49,7 @@ const faqs = [
         guessing.
       </>
     ),
+    text: 'It depends on the channel and where you are starting from. Bad SEO takes forever. Strategic SEO compounds, and every month builds on the last. We set clear benchmarks on day one so you are never guessing.',
   },
   {
     q: 'Can you guarantee my business will appear in Google AI Overviews or ChatGPT answers?',
@@ -58,6 +61,7 @@ const faqs = [
         <Link href="/blog/ai-overviews">AI Overviews</Link> breaks it down.
       </>
     ),
+    text: 'No. And run from anyone who promises one. AI tools decide for themselves which sources to cite, and they change constantly. What we control is making your information clear, consistent and genuinely useful, which is exactly what these tools draw from. Our guide to AI Overviews breaks it down.',
   },
   {
     q: 'Does Google require special schema for AI Overviews or AI Mode?',
@@ -68,6 +72,7 @@ const faqs = [
         your business. It does not buy you a citation. Your content earns that.
       </>
     ),
+    text: 'No. Google says AI Overviews and AI Mode have no extra technical requirements beyond normal search. Your pages need to be indexed and eligible to show a snippet. Schema helps search engines understand your business. It does not buy you a citation. Your content earns that.',
   },
   {
     q: 'Is SEO included when you build my website?',
@@ -78,6 +83,7 @@ const faqs = [
         our <Link href="/services/website-design">website design</Link> page.
       </>
     ),
+    text: 'Every site we build is built with search in mind: clean structure, crawlable pages, clear content. Ongoing SEO is its own scope, and we agree on it upfront. Never assumed. See how builds work on our website design page.',
   },
   {
     q: 'Do you only work with San Diego businesses?',
@@ -88,12 +94,28 @@ const faqs = [
         a target audience, we can build the system around it.
       </>
     ),
+    text: 'We are based in San Diego, but location is not the filter. Fit is. We work with service professionals in real estate, legal, financial services and other niches. If you have expertise and a target audience, we can build the system around it.',
   },
 ]
+
+
+const schemas = serviceSchemas({
+  name: 'SEO, AEO & GEO Optimization',
+  serviceType: 'Search engine optimization',
+  description: DESCRIPTION,
+  path: '/services/seo',
+  crumb: [
+    { name: 'Home', path: '/' },
+    { name: 'Services', path: '/#services' },
+    { name: 'SEO & AEO', path: '/services/seo' },
+  ],
+  faqs: faqs.map((f) => ({ q: f.q, text: f.text || f.a })),
+})
 
 export default function SeoServicePage() {
   return (
     <div className={styles.page}>
+      <JsonLd data={schemas} />
       <a href="#main-content" className="skip-nav">Skip to main content</a>
 
       <header className={styles.header}>
