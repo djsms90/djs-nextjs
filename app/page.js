@@ -8,17 +8,17 @@ import InstagramFeed from '../components/InstagramFeed'
 import blogPosts from '../data/blog-posts'
 
 const logos = [
-  { src: '/logo-ilumni.jpg',      alt: 'The Ilumni Institute' },
-  { src: '/logo-cdre.jpg',        alt: 'CDRE' },
-  { src: '/logo-spring-klein.jpg', alt: 'Spring Klein' },
-  { src: '/logo-barracudas.jpg',  alt: 'Barracudas' },
-  { src: '/logo-wallatees.jpg',   alt: 'Wallatees' },
-  { src: '/logo-tpg.jpg',         alt: 'The Putnam Group' },
-  { src: '/logo-unity-bar.jpg',   alt: 'Unity Bar San Diego' },
-  { src: '/logo-aaba.jpg',        alt: 'Arab American Bar Association' },
-  { src: '/logo-wallasigns.jpg',  alt: 'WallaSigns' },
-  { src: '/logo-mk-group.jpg',    alt: 'MK Group' },
-  { src: '/logo-wellspring-law.webp', alt: 'Wellspring Law' },
+  { src: '/logo-ilumni.jpg',      alt: 'The Ilumni Institute', href: 'https://www.ilumniinstitute.com/' },
+  { src: '/logo-cdre.jpg',        alt: 'CDRE', href: 'https://www.ilumniinstitute.com/' },
+  { src: '/logo-spring-klein.jpg', alt: 'Spring Klein Mold Inspection', href: 'https://springkleinmoldinspection.com/' },
+  { src: '/logo-barracudas.jpg',  alt: 'San Diego Barracudas', href: 'https://www.sdbarracudas.com/' },
+  { src: '/logo-wallatees.jpg',   alt: 'WallaTees', href: 'https://my.wallatees.com/' },
+  { src: '/logo-tpg.jpg',         alt: 'The Putnam Group', href: 'https://crosscountrymortgage.com/salem-or-3927/traci-putnam/' },
+  { src: '/logo-unity-bar.jpg',   alt: 'San Diego Unity Bar', href: 'https://www.sdunitybar.com/' },
+  { src: '/logo-aaba.jpg',        alt: 'Arab American Bar Association of San Diego', href: 'https://www.aabasandiego.com/' },
+  { src: '/logo-wallasigns.jpg',  alt: 'WallaSigns', href: 'https://wallasigns.com/' },
+  { src: '/logo-mk-group.jpg',    alt: 'MK Group Properties', href: 'https://www.corcoran.com/real-estate-agents/detail/agent/michael-klein/28724' },
+  { src: '/logo-wellspring-law.webp', alt: 'Wellspring Law', href: 'https://www.wellspringlaw.com/' },
 ]
 
 const quizData = [
@@ -325,11 +325,25 @@ export default function Home() {
           <div className="trusted-label">Trusted By</div>
           <div className="logos-ticker-wrap">
             <div className="logos-ticker">
-              {[...logos, ...logos].map((l, i) => (
-                <div key={i} className="logo-pill">
-                  <Image src={l.src} alt={l.alt} width={180} height={72} style={{ objectFit: 'contain', width: '180px', height: '72px' }} />
-                </div>
-              ))}
+              {[...logos, ...logos].map((l, i) => {
+                // The second copy only exists to make the scroll loop seamless,
+                // so it is hidden from screen readers and skipped by the Tab key.
+                const copy = i >= logos.length
+                return (
+                  <a
+                    key={i}
+                    className="logo-pill"
+                    href={l.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${l.alt} (opens in a new tab)`}
+                    aria-hidden={copy || undefined}
+                    tabIndex={copy ? -1 : undefined}
+                  >
+                    <Image src={l.src} alt="" width={180} height={72} style={{ objectFit: 'contain', width: '180px', height: '72px' }} />
+                  </a>
+                )
+              })}
             </div>
           </div>
         </div>

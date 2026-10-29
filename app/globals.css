@@ -254,13 +254,16 @@ nav img { height: 48px; }
   display:flex; align-items:center; gap:96px; width:max-content;
   animation:ticker 40s linear infinite;
 }
-.logos-ticker:hover { animation-play-state:paused; }
+.logos-ticker:hover, .logos-ticker:focus-within { animation-play-state:paused; }
+.logo-pill:focus-visible { outline:3px solid var(--blue); outline-offset:4px; border-radius:4px; }
 @keyframes ticker {
   0%   { transform:translateX(0); }
   100% { transform:translateX(-50%); }
 }
 .logo-pill { display:flex; align-items:center; justify-content:center; flex-shrink:0; opacity:1; transition:opacity 0.2s; background:transparent; border:none; padding:0 24px; }
 .logo-pill:hover { opacity:1; }
+.logo-pill img { transition:transform 0.2s; }
+.logo-pill:hover img { transform:scale(1.06); }
 .logo-pill img { display:block; width:180px; height:72px; object-fit:contain; }
 
 /* RESULTS */
