@@ -27,7 +27,7 @@ export const metadata = {
     apple: '/apple-touch-icon.png',
   },
   title: 'DJS Marketing Services | San Diego Digital Marketing Agency',
-  description: 'Done-for-you marketing systems that turn expertise into leads and revenue. SEO, paid ads, social media & web design for service businesses in San Diego.',
+  description: 'Done-for-you marketing systems that turn expertise into leads and revenue. SEO, ads, social & web design. Based in San Diego, serving clients worldwide.',
   keywords: 'digital marketing agency San Diego, SEO San Diego, paid ads agency, social media management, real estate marketing, BOOST365, Danny Sweis, DJS Marketing Services',
   authors: [{ name: 'Danny Sweis, DJS Marketing Services' }],
   robots: 'index, follow',
@@ -56,7 +56,7 @@ const schemaOrg = {
   '@id': 'https://djsmarketingservices.com/#organization',
   name: 'DJS Marketing Services',
   alternateName: 'DJSMS',
-  description: 'Done-for-you marketing systems that turn expertise into leads and revenue. SEO, paid ads, social media & web design for service businesses in San Diego.',
+  description: 'Done-for-you marketing systems that turn expertise into leads and revenue. SEO, ads, social & web design. Based in San Diego, serving clients worldwide.',
   url: 'https://djsmarketingservices.com',
   logo: 'https://djsmarketingservices.com/logo-nav.jpg',
   image: 'https://djsmarketingservices.com/og-image-v2.jpg',
@@ -76,20 +76,17 @@ const schemaOrg = {
     addressRegion: 'CA',
     addressCountry: 'US',
   },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 32.7157,
-    longitude: -117.1611,
-  },
-  areaServed: {
-    '@type': 'City',
-    name: 'San Diego',
-    sameAs: 'https://en.wikipedia.org/wiki/San_Diego',
-  },
+  // Online agency based in San Diego. No storefront, so no street address or map pin.
+  areaServed: [
+    { '@type': 'City', name: 'San Diego', sameAs: 'https://en.wikipedia.org/wiki/San_Diego' },
+    { '@type': 'Country', name: 'United States' },
+    { '@type': 'Place', name: 'Worldwide' },
+  ],
   sameAs: [
     'https://www.instagram.com/djsmarketingservices',
     'https://www.facebook.com/djsmarketingservices',
     'https://www.linkedin.com/company/djs-marketing-services/',
+    'https://www.google.com/maps?cid=4425585470269945872',
   ],
   knowsAbout: [
     'Search Engine Optimization',

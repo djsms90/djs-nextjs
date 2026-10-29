@@ -110,9 +110,9 @@ export default function AboutPage() {
               someone should actually show up and fix it. No excuses. No runaround. Just results.
             </p>
             <p className={styles.heroText}>
-              I run DJS Marketing Services, a full-stack digital marketing agency in San Diego. We turn your
-              expertise into clicks, leads and repeat customers through video, social media, email, search and
-              websites that actually convert.
+              I run DJS Marketing Services, a full-stack digital marketing agency based in San Diego. We work
+              online with clients across the U.S. and internationally, turning their expertise into clicks, leads
+              and repeat customers through video, social media, email, search and websites that actually convert.
             </p>
             <div className={styles.btnRow}>
               <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className={styles.btnPrimary}>
