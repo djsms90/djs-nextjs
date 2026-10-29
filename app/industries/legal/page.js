@@ -67,7 +67,7 @@ const content = {
   proof: [
     {
       t: 'San Diego Unity Bar',
-      d: 'We are building the website for the San Diego Unity Bar, which brings together San Diego’s diverse bar associations, including the Arab American Bar Association of San Diego, the Korean American Bar Association of San Diego and the Filipino American Lawyers of San Diego.',
+      d: 'We are building the website for the San Diego Unity Bar, which brings together San Diego’s diverse bar associations, including the Arab American Bar Association of San Diego, Women of Color in Law, the Korean American Bar Association of San Diego and the Filipino American Lawyers of San Diego.',
     },
     {
       t: 'Attorneys with their own firms',
