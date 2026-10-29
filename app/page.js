@@ -305,12 +305,9 @@ export default function Home() {
           </div>
           <div className="myths-grid">
             {[
-              { n: 'Myth #1', m: '"I just need more followers."', t: <>Followers don&apos;t pay bills. Systems do. A <strong>500-follower account with a real funnel</strong> beats a 50,000-follower account with no strategy.</> },
-              { n: 'Myth #2', m: '"SEO takes too long."', t: <>Bad SEO takes forever. <strong>Strategic SEO with AEO optimization</strong> compounds. Every month it works harder than the month before.</> },
-              { n: 'Myth #3', m: '"I tried ads. They didn\'t work."', t: <>Ads don&apos;t fail. Ad strategy fails. Most businesses run ads without proper <strong>targeting, landing pages, or follow-up systems.</strong></> },
-              { n: 'Myth #4', m: '"My referrals are enough."', t: <>Referrals are great, until they stop. A real marketing system creates <strong>consistent, predictable lead flow</strong> independent of your network.</> },
-              { n: 'Myth #5', m: '"Marketing is too expensive."', t: <>The real cost is the revenue you&apos;re not generating. <strong>A proper system pays for itself.</strong> Guesswork is what&apos;s expensive.</> },
-              { n: 'Myth #6', m: '"We need to go viral."', t: <><strong>Sustainable growth</strong> doesn&apos;t come from viral moments. It comes from systems that compound every single month.</> },
+              { n: 'Myth #1', m: '"I tried ads. They didn\'t work."', t: <>Ads don&apos;t fail. Ad strategy fails. Most businesses run ads without proper <strong>targeting, landing pages, or follow-up systems.</strong></> },
+              { n: 'Myth #2', m: '"Marketing is too expensive."', t: <>The real cost is the revenue you&apos;re not generating. <strong>A proper system pays for itself.</strong> Guesswork is what&apos;s expensive.</> },
+              { n: 'Myth #3', m: '"We need to go viral."', t: <><strong>Sustainable growth</strong> doesn&apos;t come from viral moments. It comes from systems that compound every single month.</> },
             ].map((c, i) => (
               <div key={i} className="myth-card">
                 <div className="myth-label">{c.n}</div>
