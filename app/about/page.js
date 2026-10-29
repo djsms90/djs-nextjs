@@ -1,3 +1,4 @@
+import HeroBackground from '../../components/HeroBackground'
 import Image from 'next/image'
 import Link from 'next/link'
 import PageShell, { BOOKING_URL } from '../../components/PageShell'
@@ -95,6 +96,7 @@ export default function AboutPage() {
 
       {/* HERO */}
       <section className={styles.hero} aria-labelledby="page-title">
+        <HeroBackground />
         <div className={styles.heroInner}>
           <div>
             <ol className={styles.crumbs} aria-label="Breadcrumb">

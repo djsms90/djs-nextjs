@@ -1,3 +1,4 @@
+import HeroBackground from '../../components/HeroBackground'
 import Link from 'next/link'
 import PageShell, { BOOKING_URL } from '../../components/PageShell'
 import { industryMeta } from '../../components/IndustryPage'
@@ -46,6 +47,7 @@ export default function IndustriesPage() {
       <JsonLd data={breadcrumb} />
 
       <section className={styles.hero} aria-labelledby="page-title">
+        <HeroBackground />
         <div className={styles.heroInner}>
           <div>
             <ol className={styles.crumbs} aria-label="Breadcrumb">

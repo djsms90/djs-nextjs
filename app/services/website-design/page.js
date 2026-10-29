@@ -1,3 +1,4 @@
+import HeroBackground from '../../../components/HeroBackground'
 import Image from 'next/image'
 import Link from 'next/link'
 import PrivacyChoicesLink from '../../../components/PrivacyChoicesLink'
@@ -88,6 +89,7 @@ export default function WebsiteDesignPage() {
       <main id="main-content">
         {/* HERO */}
         <section className={styles.hero} aria-labelledby="web-title">
+          <HeroBackground />
           <div className={styles.heroInner}>
             <div>
               <ol className={styles.crumbs} aria-label="Breadcrumb">
