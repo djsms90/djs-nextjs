@@ -184,7 +184,7 @@ export default function AboutPage() {
             </div>
             <div className={styles.card}>
               <h3 className={styles.h3}>Legal</h3>
-              <p>Marketing for San Diego bar associations and law firms. <Link href="/industries/law-firms" className={styles.inlineLink}>See law firm marketing</Link>.</p>
+              <p>Building the San Diego Unity Bar website, plus marketing for attorneys. <Link href="/industries/legal" className={styles.inlineLink}>See legal marketing</Link>.</p>
             </div>
             <div className={styles.card}>
               <h3 className={styles.h3}>Mortgage</h3>

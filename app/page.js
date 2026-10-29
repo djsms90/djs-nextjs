@@ -621,7 +621,7 @@ export default function Home() {
         <Link href="/"><Image src="/logo-footer.jpg" alt="DJS Marketing Services" width={160} height={44} style={{ height:'44px', width:'auto' }} /></Link>
         <div className="footer-contact">
           <p>© {new Date().getFullYear()}{' '}DJS Marketing Services. All Rights Reserved. &nbsp;|&nbsp; <a href="/privacy-policy" style={{ color:'var(--blue)', textDecoration:'none' }}>Privacy Policy</a> &nbsp;|&nbsp; <a href="/terms" style={{ color:'var(--blue)', textDecoration:'none' }}>Terms & Conditions</a> &nbsp;|&nbsp; <PrivacyChoicesLink style={{ color:'var(--blue)' }} /></p>
-          <p><a href="/about">About</a> &nbsp;|&nbsp; <a href="/industries/real-estate">Real Estate</a> &nbsp;|&nbsp; <a href="/industries/law-firms">Law Firms</a> &nbsp;|&nbsp; <a href="/industries/mortgage">Mortgage</a> &nbsp;|&nbsp; <a href="/blog">Blog</a></p>
+          <p><a href="/about">About</a> &nbsp;|&nbsp; <a href="/industries/real-estate">Real Estate</a> &nbsp;|&nbsp; <a href="/industries/legal">Legal</a> &nbsp;|&nbsp; <a href="/industries/mortgage">Mortgage</a> &nbsp;|&nbsp; <a href="/blog">Blog</a></p>
           <p><a href="mailto:marketing@djs90.com">marketing@djs90.com</a> &nbsp;|&nbsp; <a href="tel:+16199284669">(619) 928-4669</a></p>
         </div>
         <div className="footer-social">

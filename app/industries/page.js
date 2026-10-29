@@ -9,7 +9,7 @@ const path = '/industries'
 export const metadata = industryMeta({
   title: 'Industries We Serve | DJS Marketing Services',
   description:
-    'DJS Marketing Services builds marketing systems for niche service professionals: real estate agents, law firms and bar associations, and loan officers.',
+    'DJS Marketing Services builds marketing systems for niche service professionals: real estate agents, bar associations and law firms, and loan officers.',
   path,
 })
 
@@ -20,9 +20,9 @@ const industries = [
     d: 'Probate, divorce and other niche agents. Video, SEO and follow-up that turn expertise into listings.',
   },
   {
-    href: '/industries/law-firms',
-    t: 'Law Firms & Bar Associations',
-    d: 'Websites, content, email and event marketing that build trust with clients and members.',
+    href: '/industries/legal',
+    t: 'Bar Associations & Law Firms',
+    d: 'Websites, member communication and event marketing for nonprofit bar associations and attorneys.',
   },
   {
     href: '/industries/mortgage',
@@ -96,7 +96,7 @@ export default function IndustriesPage() {
           <p className={styles.kicker}>Why niches</p>
           <h2 id="fit-title" className={styles.h2}>Why We Go Deep <span>Instead of Wide</span></h2>
           <p className={styles.p}>
-            A probate agent, a family law firm and a loan officer serving self-employed borrowers all sell the same
+            A probate agent, a license defense attorney and a loan officer serving self-employed borrowers all sell the same
             thing: expertise people need at a stressful moment. Their clients search for answers before they search
             for a provider. The marketing that wins answers those questions clearly, shows proof, and makes the
             next step obvious.
