@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import SiteNav from '../../components/SiteNav'
 import PrivacyChoicesLink from '../../components/PrivacyChoicesLink'
 
 export const metadata = {
@@ -140,10 +141,7 @@ export default function PlaybookPage() {
       <a href="#main-content" className="skip-nav">Skip to main content</a>
 
       {/* NAV */}
-      <nav role="navigation" aria-label="Main navigation">
-        <Link href="/" className="pb-logo-link"><img src="/logo-nav.jpg" alt="DJS Marketing Services home" /></Link>
-        <Link href="/" className="pb-back">← Back to Home</Link>
-      </nav>
+      <SiteNav />
 
       <main id="main-content">
         {/* HERO — DOWNLOAD CTA */}

@@ -2,6 +2,7 @@
 import { useEffect } from 'react'
 import Link from 'next/link'
 import PrivacyChoicesLink from './PrivacyChoicesLink'
+import SiteNav from './SiteNav'
 import blogPosts, { clusters } from '../data/blog-posts'
 
 export default function BlogLayout({ children, title, tag, date, updated, readTime, slug }) {
@@ -24,17 +25,7 @@ export default function BlogLayout({ children, title, tag, date, updated, readTi
 
   return (
     <>
-      {/* NAV */}
-      <nav role="navigation" aria-label="Main navigation">
-        <Link href="/"><img src="/logo-nav.jpg" alt="DJS Marketing Services" style={{ height: '48px', width: 'auto' }} /></Link>
-        <div style={{ display:'flex', gap:'20px', flexWrap:'wrap', justifyContent:'flex-end' }}>
-          {[['/services/seo','SEO & AEO'],['/industries','Industries'],['/about','About'],['/blog','All Articles']].map(([href,label]) => (
-            <Link key={href} href={href} style={{ fontSize:'13px', fontWeight:'700', color:'rgba(255,255,255,0.9)', textDecoration:'none', letterSpacing:'0.5px', textTransform:'uppercase' }}>
-              {label}
-            </Link>
-          ))}
-        </div>
-      </nav>
+      <SiteNav />
 
       {/* ARTICLE */}
       <main className="article-wrap">

@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import PrivacyChoicesLink from '../components/PrivacyChoicesLink'
+import SiteNav from '../components/SiteNav'
 import Quiz from '../components/Quiz'
 import InstagramFeed from '../components/InstagramFeed'
 import blogPosts from '../data/blog-posts'
@@ -73,38 +74,13 @@ export default function Home() {
   const [showQuiz, setShowQuiz] = useState(false)
 
   useEffect(() => {
-    // ── Nav hide on scroll ──
-    let lastScroll = 0
-    const nav = document.querySelector('nav')
+    // ── Scroll-to-top button (nav hide/show lives in SiteNav) ──
     const handleScroll = () => {
       const st = window.scrollY
-      if (st > lastScroll && st > 80) nav?.classList.add('nav-hidden')
-      else nav?.classList.remove('nav-hidden')
-      lastScroll = st
-      // Scroll top button
       const btn = document.getElementById('scrollTop')
       if (btn) btn.classList.toggle('visible', st > 400)
     }
     window.addEventListener('scroll', handleScroll, { passive: true })
-
-    // ── Hamburger ──
-    const hamburger = document.getElementById('hamburger')
-    const mobileMenu = document.getElementById('mobileMenu')
-    const closeMenu = document.getElementById('closeMenu')
-    hamburger?.addEventListener('click', () => {
-      hamburger.classList.toggle('open')
-      mobileMenu?.classList.toggle('open')
-    })
-    closeMenu?.addEventListener('click', () => {
-      hamburger?.classList.remove('open')
-      mobileMenu?.classList.remove('open')
-    })
-    mobileMenu?.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        hamburger?.classList.remove('open')
-        mobileMenu?.classList.remove('open')
-      })
-    })
 
     // ── FAQ accordion ──
     document.querySelectorAll('.faq-q').forEach(btn => {
@@ -237,32 +213,7 @@ export default function Home() {
       </div>
 
       {/* NAV */}
-      <nav role="navigation" aria-label="Main navigation">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <Link href="/"><img src="/logo-nav.jpg" alt="DJS Marketing Services" style={{ height: '56px', width: 'auto', display: 'block' }} /></Link>
-        <button className="hamburger" id="hamburger" aria-label="Menu"><span /><span /><span /></button>
-        <ul className="nav-links" style={{ listStyle: 'none', margin: 0, padding: 0 }}>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#boost">BOOST365©</a></li>
-          <li><a href="#results">Results</a></li>
-          <li><a href="/blog">Blog</a></li>
-          <li><a href="/industries">Industries</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="https://meetings-na2.hubspot.com/sweis" target="_blank" rel="noopener noreferrer" className="nav-cta">Book Free Strategy Call</a></li>
-        </ul>
-      </nav>
-
-      {/* MOBILE MENU */}
-      <div className="mobile-menu" id="mobileMenu">
-        <button className="close-btn" id="closeMenu" aria-label="Close menu">✕</button>
-        <a href="#services">Services</a>
-        <a href="#boost">BOOST365©</a>
-        <a href="#results">Results</a>
-        <a href="/blog">Blog</a>
-        <a href="/industries">Industries</a>
-        <a href="/about">About</a>
-        <a href="https://meetings-na2.hubspot.com/sweis" target="_blank" rel="noopener noreferrer">Book Free Strategy Call</a>
-      </div>
+      <SiteNav />
 
       {/* HERO */}
       <section className="hero" id="main-content" role="main">

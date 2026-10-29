@@ -96,15 +96,14 @@ export default function IndustriesPage() {
           <p className={styles.kicker}>Why niches</p>
           <h2 id="fit-title" className={styles.h2}>Why We Go Deep <span>Instead of Wide</span></h2>
           <p className={styles.p}>
-            A probate agent, a license defense attorney and a loan officer serving self-employed borrowers all sell the same
-            thing: expertise people need at a stressful moment. Their clients search for answers before they search
-            for a provider. The marketing that wins answers those questions clearly, shows proof, and makes the
-            next step obvious.
+            A probate agent, a license defense attorney and a loan officer sell the same thing: expertise someone
+            needs at a stressful moment. Those people go looking for answers long before they go looking for a
+            provider. Whoever answers clearly, shows proof and makes the next step easy gets the call.
           </p>
           <p className={styles.p}>
-            Working in connected niches also means we understand the referral web between them. Agents refer to
-            attorneys. Attorneys refer to agents. Loan officers sit in the middle. Every system we build is designed
-            to work with those relationships, not around them.
+            These industries also feed each other. Attorneys send clients to agents. Agents send clients to
+            attorneys. Loan officers sit in the middle of both. We know who refers whom, so every system we build
+            strengthens those referral relationships instead of ignoring them.
           </p>
         </div>
       </section>

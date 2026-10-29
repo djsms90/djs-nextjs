@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import SiteNav from '../../components/SiteNav'
 import PrivacyChoicesLink from '../../components/PrivacyChoicesLink'
 
 export const metadata = {
@@ -12,10 +13,7 @@ export default function Terms() {
 
   return (
     <>
-      <nav role="navigation" style={{ position:'fixed', top:0, left:0, right:0, zIndex:100, background:'rgba(4,103,177,0.97)', borderBottom:'2px solid #f7e400', padding:'4px 48px', display:'flex', alignItems:'center', justifyContent:'space-between', backdropFilter:'blur(8px)' }}>
-        <Link href="/"><img src="/logo-nav.jpg" alt="DJS Marketing Services" style={{ height:'48px', width:'auto' }} /></Link>
-        <Link href="/" style={{ fontSize:'13px', fontWeight:'700', color:'rgba(255,255,255,0.9)', textDecoration:'none', letterSpacing:'0.5px', textTransform:'uppercase' }}>← Back to Home</Link>
-      </nav>
+      <SiteNav />
 
       <main style={{ maxWidth:'860px', margin:'0 auto', padding:'120px 48px 80px', fontFamily:'Inter, sans-serif', color:'#111', lineHeight:'1.8' }}>
         <h1 style={{ fontFamily:"var(--font-bebas), 'Bebas Neue', sans-serif", fontSize:'clamp(40px,6vw,72px)', color:'#111', marginBottom:'8px', lineHeight:'1' }}>Terms & Conditions</h1>

@@ -134,6 +134,31 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* ROOTS */}
+      <section className={styles.section} aria-labelledby="roots-title">
+        <div className={styles.narrow}>
+          <p className={styles.kicker}>Where it started</p>
+          <h2 id="roots-title" className={styles.h2}>Born in Abu Dhabi. <span>Built in San Diego.</span></h2>
+          <p className={styles.p}>
+            18 years of hot, humid memories filled with friendships and experiences that shaped everything about
+            who I am.
+          </p>
+          <p className={styles.p}>
+            Growing up in Abu Dhabi, spending time with family in Jordan, and building a life in San Diego let me
+            see the world through different lenses.
+          </p>
+          <p className={styles.p}>
+            People ask why I #Abbreciate so much. When you see the good, the bad and the ugly everywhere you go,
+            you realize it&apos;s not the place. It&apos;s the people, and the way they treat each other.
+          </p>
+          <p className={styles.p}>
+            I will be forever grateful to have been born there and to have grown up with people from every corner
+            of the world. It&apos;s why this agency runs on relationships, not transactions. No matter where life
+            takes me, a piece of me will always be in Abu Dhabi.
+          </p>
+        </div>
+      </section>
+
       {/* STORY */}
       <section className={`${styles.section} ${styles.sectionAlt}`} aria-labelledby="story-title">
         <div className={styles.inner}>
@@ -142,9 +167,8 @@ export default function AboutPage() {
               <p className={styles.kicker}>The short version</p>
               <h2 id="story-title" className={styles.h2}>Built on Relationships, <span>Not Transactions.</span></h2>
               <p className={styles.p}>
-                I grew up in Abu Dhabi and earned my BS in Marketing from San Diego State University in 2015. I
-                launched DJS Marketing Services in February 2024, and the agency has grown almost entirely through
-                referrals.
+                I earned my BS in Marketing from San Diego State University in 2015. I launched DJS Marketing
+                Services in February 2024, and the agency has grown almost entirely through referrals.
               </p>
               <p className={styles.p}>
                 That is not an accident. Clients refer you when you treat their business like it is your own. I care
@@ -157,6 +181,7 @@ export default function AboutPage() {
             </div>
             <ul className={styles.checklist}>
               <li><strong>Education.</strong> BS in Marketing, San Diego State University, 2015.</li>
+              <li><strong>Roots.</strong> Born and raised in Abu Dhabi, with family in Jordan. Now building in San Diego.</li>
               <li><strong>Founded.</strong> DJS Marketing Services, San Diego, February 2024.</li>
               <li><strong>Built by referral.</strong> Clients in real estate, legal, mortgage and promotional products.</li>
               <li><strong>Gives back.</strong> Mentor in the SDSU Alumni Mentorship Program.</li>

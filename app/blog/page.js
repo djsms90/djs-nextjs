@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import SiteNav from '../../components/SiteNav'
 import PrivacyChoicesLink from '../../components/PrivacyChoicesLink'
 import blogPosts from '../../data/blog-posts'
 
@@ -26,10 +27,7 @@ export const metadata = {
 export default function BlogPage() {
   return (
     <>
-      <nav role="navigation" aria-label="Main navigation">
-        <Link href="/"><img src="/logo-nav.jpg" alt="DJS Marketing Services" style={{ height:'48px', width:'auto' }} /></Link>
-        <Link href="/" style={{ fontSize:'13px', fontWeight:'700', color:'rgba(255,255,255,0.9)', textDecoration:'none', letterSpacing:'0.5px', textTransform:'uppercase' }}>← Back to Home</Link>
-      </nav>
+      <SiteNav />
 
       <main className="blog-listing">
         <p style={{ fontSize:'11px', fontWeight:'900', letterSpacing:'3px', textTransform:'uppercase', color:'var(--red)', marginBottom:'12px' }}>DJS Marketing Services</p>
