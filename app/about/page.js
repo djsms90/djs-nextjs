@@ -103,13 +103,13 @@ export default function AboutPage() {
               <li><Link href="/">Home</Link></li>
               <li aria-current="page">About</li>
             </ol>
-            <p className={styles.eyebrow}>Founder &amp; CEO, DJS Marketing Services</p>
+            <p className={styles.eyebrow}>About DJS Marketing Services</p>
             <h1 id="page-title" className={styles.h1}>
-              Meet Danny Sweis. <em>The S in DJS.</em>
+              Meet Danny Sweis. <em>Founder &amp; CEO</em>
             </h1>
             <p className={styles.lede}>
-              It stands for Sweis. It also stands for the belief that when a business needs help, someone should
-              actually show up and fix it. No excuses. No runaround. Just results.
+              The S in our logo stands for Sweis. It also stands for the belief that when a business needs help,
+              someone should actually show up and fix it. No excuses. No runaround. Just results.
             </p>
             <p className={styles.heroText}>
               I run DJS Marketing Services, a full-stack digital marketing agency based in San Diego. We work
