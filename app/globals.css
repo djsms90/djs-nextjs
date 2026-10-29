@@ -894,3 +894,21 @@ footer p { font-size:12px; color:var(--text-light); }
 /* Spacer under the fixed site nav on pages whose first section is not padded for it */
 .nav-spacer { height: 66px; background: var(--blue); }
 @media (max-width:900px) { .nav-spacer { height: 86px; } }
+
+/* Particles in shorter page heroes: travel the hero's own height (not the viewport)
+   and start mid-flight so the gold dots are visible as soon as the page loads. */
+.hero-particles.in-box .particle { animation-name: floatInBox; }
+.hero-particles.in-box .particle:nth-child(odd)  { animation-delay: -4s; }
+.hero-particles.in-box .particle:nth-child(3n)   { animation-delay: -9s; }
+.hero-particles.in-box .particle:nth-child(4n)   { animation-delay: -2s; }
+.hero-particles.in-box .particle:nth-child(5n)   { animation-delay: -12s; }
+@keyframes floatInBox {
+  0%   { top: 105%; transform: rotate(0deg);   opacity: 0; }
+  10%  { opacity: 0.6; }
+  90%  { opacity: 0.6; }
+  100% { top: -5%;  transform: rotate(720deg); opacity: 0; }
+}
+
+/* Mobile tap targets: at least 44x44px (QA checklist) */
+.hb-close { min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+.blog-back { min-height: 44px; }

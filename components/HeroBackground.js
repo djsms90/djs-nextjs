@@ -4,7 +4,7 @@ export default function HeroBackground() {
   return (
     <>
       <div className="hero-bg" aria-hidden="true" />
-      <div className="hero-particles" aria-hidden="true">
+      <div className="hero-particles in-box" aria-hidden="true">
         {[...Array(12)].map((_, i) => <div key={i} className="particle" />)}
       </div>
       <div className="hero-lines" aria-hidden="true">
