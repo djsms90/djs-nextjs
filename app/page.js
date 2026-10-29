@@ -13,7 +13,7 @@ const logos = [
   { src: '/logo-spring-klein.jpg', alt: 'Spring Klein' },
   { src: '/logo-barracudas.jpg',  alt: 'Barracudas' },
   { src: '/logo-wallatees.jpg',   alt: 'Wallatees' },
-  { src: '/logo-tbg.jpg',         alt: 'The Benjamin Group' },
+  { src: '/logo-tpg.jpg',         alt: 'The Putnam Group' },
   { src: '/logo-unity-bar.jpg',   alt: 'Unity Bar San Diego' },
   { src: '/logo-aaba.jpg',        alt: 'Arab American Bar Association' },
   { src: '/logo-wallasigns.jpg',  alt: 'WallaSigns' },
