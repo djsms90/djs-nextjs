@@ -18,7 +18,7 @@ export default function PrivacyPolicy() {
       </nav>
 
       <main style={{ maxWidth:'860px', margin:'0 auto', padding:'120px 48px 80px', fontFamily:'Inter, sans-serif', color:'#111', lineHeight:'1.8' }}>
-        <h1 style={{ fontFamily:'Bebas Neue, sans-serif', fontSize:'clamp(40px,6vw,72px)', color:'#111', marginBottom:'8px', lineHeight:'1' }}>Privacy Policy</h1>
+        <h1 style={{ fontFamily:"var(--font-bebas), 'Bebas Neue', sans-serif", fontSize:'clamp(40px,6vw,72px)', color:'#111', marginBottom:'8px', lineHeight:'1' }}>Privacy Policy</h1>
         <p style={{ fontSize:'14px', color:'var(--text-light)', marginBottom:'48px' }}>Last updated: {updated}</p>
 
         <p style={{ fontSize:'16px', marginBottom:'32px', color:'#444' }}>DJS Marketing Services (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit <strong>djsmarketingservices.com</strong> and interact with our services.</p>
@@ -123,7 +123,7 @@ Website: djsmarketingservices.com`
           },
         ].map((section, i) => (
           <div key={i} style={{ marginBottom:'40px' }}>
-            <h2 style={{ fontFamily:'Bebas Neue, sans-serif', fontSize:'28px', color:'#0467b1', marginBottom:'12px' }}>{section.title}</h2>
+            <h2 style={{ fontFamily:"var(--font-bebas), 'Bebas Neue', sans-serif", fontSize:'28px', color:'#0467b1', marginBottom:'12px' }}>{section.title}</h2>
             <div style={{ fontSize:'15px', color:'#444', whiteSpace:'pre-line' }}>{section.body}</div>
           </div>
         ))}

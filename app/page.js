@@ -549,7 +549,7 @@ export default function Home() {
           <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', flexWrap:'wrap', gap:'16px', marginBottom:'40px' }}>
             <div>
               <p style={{ fontSize:'11px', fontWeight:'900', letterSpacing:'3px', textTransform:'uppercase', color:'var(--red)', marginBottom:'8px' }}>Latest Insights</p>
-              <h2 style={{ fontFamily:'Bebas Neue, sans-serif', fontSize:'clamp(32px,5vw,52px)', color:'var(--text)' }}>Marketing Intelligence</h2>
+              <h2 style={{ fontFamily:"var(--font-bebas), 'Bebas Neue', sans-serif", fontSize:'clamp(32px,5vw,52px)', color:'var(--text)' }}>Marketing Intelligence</h2>
             </div>
             <a href="/blog" style={{ fontSize:'13px', fontWeight:'800', letterSpacing:'2px', textTransform:'uppercase', color:'var(--blue)', textDecoration:'none', border:'2px solid var(--blue)', padding:'10px 24px', borderRadius:'4px' }}>View All Posts →</a>
           </div>
